@@ -1,0 +1,72 @@
+@import "functions/rem";
+
+:root {
+	/* --font-- */
+	--font-primary: "Ony Sans", arial, sans-serif;
+	--font-secondary: "ONY Realist", "times new roman", serif;
+
+	/* --color-- */
+	--color-black: #000;
+	--color-secondary-black: #171717;
+	--color-greyscale-black: #2b323a;
+	--color-white: #fff;
+	--color-beige: #F1EDEB;
+	--color-grey-10: #EAEBEC;
+	--color-grey-20: #D5D6D8;
+	--color-grey-40: #AAADB0;
+	--color-grey-60: #808489;
+	--color-grey-70: #6B7076;
+	--color-grey-80: #555B61;
+	--color-grey-90: #41474E;
+	--color-grey: #2B323A;
+	--color-burgundy: #5F1224;
+	--color-orange: #fe6e36;
+	--color-light-orange: #FE8B5E;
+	--color-dark-orange: #ED5A2B;
+
+	--color-red: #FF0C0C;
+	--color-green: #5DBF5E;
+
+
+}
+
+/* --grid-- */
+$padding-content: rem(25px);
+$padding-content_laptop: rem(24px);
+$padding-content_mobile: rem(16px);
+
+/* --font-size-- */
+$font-size-base: rem(22px);
+$font-size-base_laptop: rem(20px);
+$font-size-text: rem(16px);
+$font-size-text_middle: rem(18px);
+$font-size-text_small: rem(12px);
+$font-size-title-h1: rem(108px);
+$font-size-title-h1_mobile: rem(74px);
+$font-size-title-h2: rem(68px);
+$font-size-title-h3: rem(30px);
+$font-size-title-h3_laptop: rem(20px);
+$font-size-title-h2_laptop: rem(48px);
+$font-size-title-h2_mobile: rem(26px);
+
+/* --line height-- */
+$line-height-base: rem(26px);
+$line-height-base_laptop: rem(24px);
+$line-height-text: rem(18px);
+$line-height-text_middle: rem(22px);
+$line-height-text_small: rem(15px);
+$line-height-title-h1: rem(108px);
+$line-height-title-h1_mobile: rem(74px);
+$line-height-title-h2: rem(74px);
+$line-height-title-h3: rem(36px);
+$line-height-title-h3_laptop: rem(24px);
+$line-height-title-h2_laptop: rem(58px);
+$line-height-title-h2_mobile: rem(32px);
+
+/* --viewports-- */
+$mobile-width: 650;
+$tablet-width: 768;
+$laptop-width: 1200;
+$promo-laptop: 800;
+$only-desktop: 1201;
+$content-width: 1440;

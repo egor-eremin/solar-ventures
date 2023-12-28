@@ -1,0 +1,54 @@
+.section {
+	padding-top: rem(50px);
+	padding-bottom: rem(50px);
+
+	@include laptop {
+		padding-top: rem(40px);
+		padding-bottom: rem(40px);
+	}
+
+	@include mobile {
+		padding-top: rem(20px);
+		padding-bottom: rem(20px);
+	}
+
+	&_last {
+		padding-bottom: rem(100px);
+
+		@include laptop {
+			padding-bottom: rem(64px);
+		}
+
+		@include mobile {
+			padding-bottom: rem(40px);
+		}
+	}
+
+	&_first {
+		padding-top: rem(100px);
+
+		@include laptop {
+			padding-top: rem(64px);
+		}
+
+		@include mobile {
+			padding-top: rem(40px);
+		}
+	}
+}
+
+.section__title-h2 {
+	margin-bottom: rem(80px);
+
+	@include mobile {
+		margin-bottom: rem(32px);
+	}
+}
+
+.section__prev-line {
+	margin-bottom: rem(32px);
+
+	@include laptop {
+		margin-bottom: rem(24px);
+	}
+}

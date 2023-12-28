@@ -1,0 +1,25 @@
+mixin products-callback(nameproduct)
+	form.form.products-callback(class="js-form-" + nameproduct action="/" method="POST")
+		.form__item.products-callback__name.products-callback__item
+			input.form__input.form__input_white.products-callback__input(id=`${nameproduct}-user-name` type="text" name="user_name" required)
+			label.form__label(for=`${nameproduct}-user-name`) ФИО
+			span.form__border.form__border_for-white
+		.form__item.products-callback__item
+			input.form__input.form__input_white.products-callback__input.js-phone-input(id=`${nameproduct}-user-phone` type="tel" name="user_phone" required)
+			label.form__label(for=`${nameproduct}-user-phone`) Номер телефона
+			span.form__border.form__border_for-white
+		.form__item.products-callback__item
+			input.form__input.form__input_white.products-callback__input(id=`${nameproduct}-user-mail` type="email" name="user_mail" required)
+			label.form__label(for=`${nameproduct}-user-mail`) E-mail
+			span.form__border.form__border_for-white
+		.form__item.products-callback__form-footer.products-callback__item
+			.products-callback__agreement
+				label.form__label-checkbox.form__label-checkbox_small
+					input.form__checkbox.visually-hidden(type="checkbox" name="personal_mailing")
+					span.form__fake-checked.form__fake-checked_small.form__fake-checked_orange
+					span.form__checkbox-text.form__checkbox-text_small.form__checkbox-text_black <a href="/about_company/doc/soglasie-na-poluchenie-poslednih-novostej-kompanii-soobshchenij-reklamnogo-i-informacionnogo-haraktera.docx" target="_blank">Согласие на получение последних новостей компании, сообщений рекламного и информационного характера.</a>
+				label.form__label-checkbox.form__label-checkbox_small
+					input.form__checkbox.visually-hidden(type="checkbox" name="personal_data" required)
+					span.form__fake-checked.form__fake-checked_small.form__fake-checked_orange
+					span.form__checkbox-text.form__checkbox-text_small.form__checkbox-text_black Нажимая «Запросить консультацию», вы даете согласие на обработку своих данных согласно <a href="/about_company/information/legal/">политике обработки персональных данных</a>.
+			button.btn.btn_big.products-callback__submit(type="submit") Запросить консультацию

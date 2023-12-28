@@ -1,0 +1,47 @@
+.success__title {
+	margin: 0;
+	margin-bottom: rem(24px);
+	text-align: center;
+	color: var(--color-white);
+	font-size: rem(30px);
+	line-height: rem(36px);
+
+	@include laptop {
+		font-size: rem(20px);
+		line-height: rem(24px);
+		margin-bottom: rem(20px);
+	}
+
+	@include mobile {
+		margin-bottom: rem(16px);
+	}
+}
+
+.success__text {
+	margin: 0;
+	margin-bottom: rem(16px);
+	text-align: center;
+	color: var(--color-white);
+	font-size: rem(18px);
+	line-height: rem(22px);
+
+	@include laptop {
+		font-size: rem(16px);
+		line-height: rem(18px);
+		margin-bottom: rem(20px);
+	}
+}
+
+.success__btn-close {
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	min-width: rem(305px);
+	margin-top: rem(40px);
+
+	@include laptop {
+		min-width: auto;
+		width: 100%;
+		margin-top: rem(32px);
+	}
+}

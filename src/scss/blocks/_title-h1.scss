@@ -1,0 +1,14 @@
+.title-h1 {
+	margin: 0;
+	line-height: $line-height-title-h1;
+	text-align: center;
+	font: {
+		size: $font-size-title-h1;
+		weight: 400;
+	};
+
+	@include mobile {
+		font-size: $font-size-title-h1_mobile;
+		line-height: $line-height-title-h1_mobile;
+	}
+}

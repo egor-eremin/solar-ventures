@@ -1,0 +1,14 @@
+.title-h3 {
+	margin: 0;
+	font-size: $font-size-title-h3;
+	line-height: $line-height-title-h3;
+
+	&_dark {
+		color: var(--color-greyscale-black);
+	}
+
+	@include laptop {
+		font-size: $font-size-title-h3_laptop;
+		line-height: $line-height-title-h3_laptop;
+	}
+}

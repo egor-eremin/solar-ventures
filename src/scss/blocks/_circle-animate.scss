@@ -1,0 +1,56 @@
+.circle-animate {
+	display: flex;
+	align-items: center;
+	width: 20px;
+	height: 20px;
+	margin-right: 4px;
+}
+
+.circle-animate__elem {
+	overflow: hidden;
+	width: 50%;
+	height: 100%;
+	position: relative;
+}
+
+.circle-animate__svg {
+	width: calc(100% * 2);
+	height: 100%;
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+}
+
+.circle-animate__svg_1 {
+	left: 0;
+}
+
+.circle-animate__svg_2 {
+	right: 0;
+}
+
+.circle-animate__circle-mask-1 {
+	transition: 0.3s linear;
+	rx: 10px;
+
+	&.transition-no {
+		transition: none;
+	}
+}
+
+.circle-animate__circle-svg-2 {
+	transition: 0.3s linear;
+	rx: 0;
+
+	&.transition-no {
+		transition: none;
+	}
+}
+
+.circle-animate__circle-white {
+	fill: var(--color-white);
+}
+
+.circle-animate__circle-orange {
+	fill: var(--color-orange);
+}

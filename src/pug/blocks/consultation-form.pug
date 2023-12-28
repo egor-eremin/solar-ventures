@@ -1,0 +1,45 @@
+section#callback-form.section.consultation
+	.wrapper
+		p.title-h2.section__title-h2.consultation__title-h2(role="heading" aria-level="2") Получить поддержку
+		form#callback.form.js-form-callback.consultation__form(method="post")
+			.form__item
+				input#user-name.form__input.form__input_white(type="text" name="user_name" required)
+				label.form__label(for="user-name") ФИО
+				span.form__border.form__border_for-white
+			.form__item
+				input#company-name.form__input.form__input_white(type="text" name="company_name" required)
+				label.form__label(for="company-name") Название компании
+				span.form__border.form__border_for-white
+			.form__item
+				input#user-phone.form__input.form__input_white.js-phone-input(type="tel" name="user_phone" required minlength="18" maxlength="18")
+				label.form__label(for="user-phone") Номер телефона
+				span.form__border.form__border_for-white
+			.form__item
+				input#user-mail.form__input.form__input_white(type="email" name="user_mail" required)
+				label.form__label(for="user-mail") E-mail
+				span.form__border.form__border_for-white
+			.form__item
+				input#product-description.form__input.form__input_white(type="text" name="product_description" required)
+				label.form__label(for="product-description") Описание продукта и бизнеса
+				span.form__border.form__border_for-white
+			.form__item
+				input#partnership-goals.form__input.form__input_white(type="text" name="partnership_goals" required)
+				label.form__label(for="partnership-goals") Ожидание от партнерства с Солар
+				span.form__border.form__border_for-white
+			.form__item.consultation__file
+				label.form__file-label.js-custom-type-file
+					input.form__input.form__input_file.visually-hidden(type="file" name="presentation" required)
+					span.form__label Презентация
+					span.form__file-text
+					span.form__file-btn
+						| <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						| <path fill-rule="evenodd" clip-rule="evenodd" d="M16 4.49251C16.8024 4.61765 17.5467 5.0003 18.1173 5.58818C19.5473 7.06159 19.5297 9.41007 18.0778 10.8619L17.7808 11.159L14.3438 14.596L10.5031 18.4366C9.12524 19.8145 6.88908 19.8072 5.52019 18.4205C4.16005 17.0426 4.17156 14.8238 5.5459 13.4601L11.1776 7.87201C11.7153 7.33847 12.5832 7.34014 13.1188 7.87575C13.656 8.41285 13.656 9.28371 13.1189 9.82083L7.21179 15.7279L8.27245 16.7885L14.1795 10.8815C15.3024 9.75857 15.3024 7.93794 14.1795 6.81505C13.0596 5.6953 11.2452 5.6918 10.1211 6.80724L4.48937 12.3954C2.52805 14.3415 2.51163 17.5078 4.45268 19.4742C6.40621 21.4533 9.59742 21.4636 11.5638 19.4973L15.4044 15.6567L18.8414 12.2197L19.1385 11.9226C21.17 9.89113 21.1945 6.60512 19.1937 4.54349C18.3408 3.66473 17.2105 3.11372 16 2.97961V4.49251Z" fill="#2B323A"/>
+						| </svg>
+					span.form__border.form__border_for-white
+			.form__item.consultation__item-checkbox
+				label.form__label-checkbox.consultation__checkbox
+					input.form__checkbox.visually-hidden(type="checkbox" name="personal_data" required)
+					span.form__fake-checked
+					span.form__checkbox-text Передавая свои данные, я принимаю условия <a href="https://rt-solar.ru/about_company/information/legal/" target="_blank">Пользовательского соглашения</a>, соглашаюсь на обработку персональных данных и связь со мной способами, указанными в <a href="https://rt-solar.ru/about_company/information/legal/" target="_blank">Пользовательском соглашении</a>, в целях исполнения условий <a href="https://rt-solar.ru/about_company/information/legal/" target="_blank">Пользовательского соглашения</a>.
+				button.btn.form__submit.consultation__submit-btn(type="submit") Отправить заявку
+		p.text.text_small.consultation_explanation *Статья с рекомендацией по составлению презентации для инвестора

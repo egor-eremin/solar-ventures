@@ -1,0 +1,15 @@
+.title-h2 {
+	margin: 0;
+	font-size: $font-size-title-h2;
+	line-height: $line-height-title-h2;
+
+	@include laptop {
+		font-size: $font-size-title-h2_laptop;
+		line-height: $line-height-title-h2_laptop;
+	}
+
+	@include mobile {
+		font-size: $font-size-title-h2_mobile;
+		line-height: $line-height-title-h2_mobile;
+	}
+}

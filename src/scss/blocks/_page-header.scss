@@ -1,0 +1,27 @@
+.page-header {
+	position: relative;
+}
+
+.page-header__head {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 4;
+	transition: 0.4s ease-out;
+
+	&.fixed {
+		position: fixed;
+		background-color: var(--color-greyscale-black);
+	}
+
+	&_hide {
+		transform: translateY(-100%);
+
+		@include laptop {
+			//transform: translateY(0);
+			//transition: none;
+		}
+
+	}
+}

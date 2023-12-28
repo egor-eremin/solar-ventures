@@ -1,0 +1,15 @@
+.callback__text {
+	margin: 0;
+	margin-bottom: rem(88px);
+	font-size: rem(22px);
+	line-height: rem(26px);
+	color: var(--color-white);
+	max-width: rem(541px);
+
+	@include laptop {
+		font-size: rem(18px);
+		line-height: rem(22px);
+		margin-top: rem(34px);
+		margin-bottom: rem(31px);
+	}
+}

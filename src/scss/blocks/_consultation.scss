@@ -1,0 +1,77 @@
+.consultation__form {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: rem(24px);
+
+	@include laptop {
+		display: flex;
+		flex-direction: column;
+	}
+
+	@include mobile {
+		gap: rem(32px);
+	}
+}
+
+.consultation__file {
+	grid-column-start: 1;
+	grid-column-end: -1;
+	margin-bottom: rem(32px);
+
+	@include laptop {
+		margin-bottom: 0;
+	}
+}
+
+.consultation__item-checkbox {
+	grid-column-start: 1;
+	grid-column-end: -1;
+	display: flex;
+	gap: rem(24px);
+
+	@include laptop {
+		flex-direction: column;
+		gap: 0;
+	}
+}
+
+.consultation__checkbox {
+	width: 100%;
+	max-width: rem(921px);
+
+	@include laptop {
+		margin-bottom: rem(32px);
+	}
+}
+
+.consultation__submit-btn {
+	flex-grow: 1;
+
+	@include laptop {
+		min-width: rem(349px);
+	}
+
+	@include mobile {
+		min-width: auto;
+		width: 100%;
+	}
+}
+
+.consultation_explanation {
+	padding: rem(9px) rem(40px);
+	color: var(--color-grey-70);
+	margin-top: rem(24px);
+
+	@include laptop {
+		padding: 0;
+		font-size: $font-size-text_small;
+		line-height: $line-height-text_small;
+	}
+}
+
+.consultation__title-h2 {
+	@include laptop {
+		margin-bottom: rem(32px);
+	}
+}
+
