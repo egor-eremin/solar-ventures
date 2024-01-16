@@ -445,6 +445,13 @@ function handleFileInputChange() {
 	});
 }
 
+function initCurrentYear() {
+	let currentYear = new Date().getFullYear();
+
+	document.querySelector('.js-current-year').textContent = currentYear;
+
+}
+
 document.addEventListener('DOMContentLoaded', () => {
 	addedMaskPhone();
 	validationForm();
@@ -458,6 +465,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	// submitProductForm('.js-form-dag', '.js-dag-success-wrapper', '.js-dag-title');
 	handleFileInputChange();
 	clearClassesForMobileMenu();
+	initCurrentYear();
 });
 
 $.validator.addMethod('filesize', function (value, element, param) {
