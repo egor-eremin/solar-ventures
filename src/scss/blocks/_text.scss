@@ -1,14 +1,19 @@
 .text {
 	margin: 0;
 
-	&_middle {
-		font-size: $font-size-text_middle;
-		line-height: $line-height-text_middle;
+	&_big {
+		font-size: $font-size-text_big;
+		line-height: $line-height-text_big;
+
+		@include laptop {
+			font-size: $font-size-base_laptop;
+			line-height: $line-height-base;
+		}
 	}
 
-	&_small {
-		font-size: $font-size-text;
-		line-height: $line-height-text;
+	&_middle {
+		font-size: $font-size-base_laptop;
+		line-height: $line-height-base;
 	}
 
 	&_dark {

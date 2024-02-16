@@ -12,13 +12,11 @@
 .prev-line__text {
 	margin: 0;
 	text-transform: uppercase;
-	font-size: $font-size-text_middle;
-	line-height: $line-height-text_middle;
 	color: var(--color-greyscale-black);
 
 	@include laptop {
-		font-size: $font-size-text;
-		line-height: $line-height-text;
+		font-size: $font-size-base_laptop;
+		line-height: $line-height-base;
 	}
 
 }

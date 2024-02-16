@@ -13,7 +13,7 @@
 	}
 
 	&_last {
-		padding-bottom: rem(100px);
+		padding-bottom: rem(72px);
 
 		@include laptop {
 			padding-bottom: rem(64px);
@@ -25,7 +25,7 @@
 	}
 
 	&_first {
-		padding-top: rem(100px);
+		padding-top: rem(72px);
 
 		@include laptop {
 			padding-top: rem(64px);

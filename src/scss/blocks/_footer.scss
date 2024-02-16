@@ -1,6 +1,6 @@
 .footer {
 	background-color: var(--color-greyscale-black);
-	padding-top: rem(40px);
+	padding-top: rem(32px);
 	padding-bottom: rem(32px);
 
 	@include laptop {
@@ -18,12 +18,12 @@
 	display: flex;
 	align-items: flex-start;
 	justify-content: space-between;
-	margin-bottom: rem(294px);
+	margin-bottom: rem(62px);
 
 	@include laptop {
 		flex-direction: column;
 		gap: rem(40px);
-		margin-bottom: rem(124px);
+		margin-bottom: rem(128px);
 	}
 
 	@include mobile {
@@ -55,8 +55,8 @@
 .footer__menu-title {
 	color: var(--color-orange);
 	margin-bottom: rem(16px);
-	font-size: $font-size-text;
-	line-height: $line-height-text;
+	font-size: $font-size-base_laptop;
+	line-height: $line-height-base;
 
 }
 
@@ -75,8 +75,8 @@
 
 .footer__submenu-link {
 	color: var(--color-white);
-	font-size: $font-size-text;
-	line-height: $line-height-text;
+	font-size: $font-size-base_laptop;
+	line-height: $line-height-base;
 
 	&:hover {
 		color: var(--color-light-orange);
@@ -113,8 +113,12 @@
 .footer__text {
 	color: var(--color-white);
 	margin: 0;
-	font-size: $font-size-text;
-	line-height: $line-height-text;
+	font-size: $font-size-base_laptop;
+	line-height: $line-height-base_laptop;
+
+	@include laptop {
+		line-height: $line-height-base;
+	}
 }
 
 .footer__submenu-address {
@@ -156,16 +160,37 @@
 .footer__company-information {
 	display: flex;
 	align-items: flex-end;
-	justify-content: flex-end;
 
 	@include laptop {
-		justify-content: space-between;
-	}
-
-	@include tablet {
 		flex-direction: column;
 		align-items: flex-start;
-		gap: rem(40px);
+	}
+
+}
+
+.footer__company-information-wrapper-inner {
+	margin-right: rem(24px);
+	flex-grow: 1;
+	display: flex;
+	align-items: flex-end;
+	gap: rem(12px);
+
+	@include laptop {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	@include mobile {
+		margin-right: 0;
+		margin-bottom: rem(40px);
+	}
+}
+
+.footer__text_phone {
+	margin-left: auto;
+
+	@include laptop {
+		margin-left: 0;
 	}
 }
 
@@ -269,8 +294,8 @@
 	border-bottom: 1px solid var(--color-grey-80);
 	margin-bottom: rem(32px);
 	display: flex;
-	justify-content: space-between;
-	gap: rem(24px);
+	flex-direction: column;
+	gap: rem(38px);
 
 	@include promo-laptop {
 		flex-direction: column;
@@ -304,6 +329,10 @@
 
 	&:last-child {
 		margin-bottom: 0;
+	}
+
+	@include laptop {
+		margin-bottom: rem(24px);
 	}
 }
 

@@ -1,6 +1,6 @@
 section#callback-form.section.consultation
 	.wrapper
-		p.title-h2.section__title-h2.consultation__title-h2(role="heading" aria-level="2") Получить поддержку
+		p.title-h2.section__title-h2.consultation__title-h2(role="heading" aria-level="2") Подать заявку
 		form#callback.form.js-form-callback.consultation__form(method="post")
 			.form__item
 				input#user-name.form__input.form__input_white(type="text" name="user_name" required)
@@ -24,7 +24,7 @@ section#callback-form.section.consultation
 				span.form__border.form__border_for-white
 			.form__item
 				input#partnership-goals.form__input.form__input_white(type="text" name="partnership_goals" required)
-				label.form__label(for="partnership-goals") Ожидание от партнерства с Солар
+				label.form__label(for="partnership-goals") Ожидание от партнерства с “Солар”
 				span.form__border.form__border_for-white
 			.form__item.consultation__file
 				label.form__file-label.js-custom-type-file
@@ -37,9 +37,14 @@ section#callback-form.section.consultation
 						| </svg>
 					span.form__border.form__border_for-white
 			.form__item.consultation__item-checkbox
-				label.form__label-checkbox.consultation__checkbox
-					input.form__checkbox.visually-hidden(type="checkbox" name="personal_data" required)
-					span.form__fake-checked
-					span.form__checkbox-text Передавая свои данные, я принимаю условия <a href="https://rt-solar.ru/about_company/information/legal/" target="_blank">Пользовательского соглашения</a>, соглашаюсь на обработку персональных данных и связь со мной способами, указанными в <a href="https://rt-solar.ru/about_company/information/legal/" target="_blank">Пользовательском соглашении</a>, в целях исполнения условий <a href="https://rt-solar.ru/about_company/information/legal/" target="_blank">Пользовательского соглашения</a>.
-				button.btn.form__submit.consultation__submit-btn(type="submit") Отправить заявку
-		p.text.text_small.consultation_explanation *Статья с рекомендацией по составлению презентации для инвестора
+				.consultation__col-1
+					label.form__label-checkbox.consultation__checkbox
+						input.form__checkbox.visually-hidden(type="checkbox" name="personal_data" required)
+						span.form__fake-checked
+						span.form__checkbox-text Даю согласие на обработку персональных данных, ознакомлен с <a>Политикой</a>&nbsp;по обработке персональных данных Оператора, <a>Положением</a> о защите персональных данных Оператора.
+					label.form__label-checkbox.consultation__checkbox
+						input.form__checkbox.visually-hidden(type="checkbox" name="program_rules" required)
+						span.form__fake-checked
+						span.form__checkbox-text Подтверждаю ознакомление и согласие с <a>Положением</a> о проведении программы Cyber Stage.
+				.consultation__col-2
+					button.btn.form__submit.consultation__submit-btn(type="submit") Отправить заявку

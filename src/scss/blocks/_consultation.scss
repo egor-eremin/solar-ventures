@@ -27,25 +27,40 @@
 	grid-column-start: 1;
 	grid-column-end: -1;
 	display: flex;
+	justify-content: space-between;
 	gap: rem(24px);
 
 	@include laptop {
 		flex-direction: column;
 		gap: 0;
+		margin-top: rem(8px);
 	}
 }
-
-.consultation__checkbox {
-	width: 100%;
+.consultation__col-1 {
 	max-width: rem(921px);
+	width: 100%;
 
 	@include laptop {
 		margin-bottom: rem(32px);
 	}
 }
 
-.consultation__submit-btn {
+.consultation__checkbox {
+	margin-bottom: rem(24px);
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.consultation__col-2 {
 	flex-grow: 1;
+}
+
+.consultation__submit-btn {
+	max-width: none;
+	min-width: auto;
+	width: 100%;
 
 	@include laptop {
 		min-width: rem(349px);

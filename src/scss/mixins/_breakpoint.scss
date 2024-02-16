@@ -16,6 +16,12 @@
 	}
 }
 
+@mixin laptop_small {
+	@media (max-width: ($laptop-width_small * 1px)) {
+		@content;
+	}
+}
+
 @mixin promo-laptop {
 	@media (max-width: ($promo-laptop * 1px)) {
 		@content;

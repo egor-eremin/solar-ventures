@@ -36,10 +36,9 @@ $padding-content_laptop: rem(24px);
 $padding-content_mobile: rem(16px);
 
 /* --font-size-- */
-$font-size-base: rem(22px);
-$font-size-base_laptop: rem(20px);
-$font-size-text: rem(16px);
-$font-size-text_middle: rem(18px);
+$font-size-base: rem(18px);
+$font-size-base_laptop: rem(16px);
+$font-size-text_big: rem(22px);
 $font-size-text_small: rem(12px);
 $font-size-title-h1: rem(108px);
 $font-size-title-h1_mobile: rem(74px);
@@ -50,10 +49,9 @@ $font-size-title-h2_laptop: rem(48px);
 $font-size-title-h2_mobile: rem(26px);
 
 /* --line height-- */
-$line-height-base: rem(26px);
-$line-height-base_laptop: rem(24px);
-$line-height-text: rem(18px);
-$line-height-text_middle: rem(22px);
+$line-height-base: rem(22px);
+$line-height-base_laptop: rem(18px);
+$line-height-text_big: rem(26px);
 $line-height-text_small: rem(15px);
 $line-height-title-h1: rem(108px);
 $line-height-title-h1_mobile: rem(74px);
@@ -67,6 +65,7 @@ $line-height-title-h2_mobile: rem(32px);
 $mobile-width: 650;
 $tablet-width: 768;
 $laptop-width: 1200;
+$laptop-width_small: 1024;
 $promo-laptop: 800;
 $only-desktop: 1201;
 $content-width: 1440;

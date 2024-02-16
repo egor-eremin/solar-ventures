@@ -49,8 +49,8 @@
 		top: rem(19px);
 		bottom: rem(19px);
 	};
-	font-size: $font-size-text;
-	line-height: $line-height-text;
+	font-size: $font-size-base_laptop;
+	line-height: $line-height-base_laptop;
 
 	&:-webkit-autofill {
 		-webkit-text-fill-color: var(--color-white);
@@ -135,8 +135,8 @@
 	top: rem(19px);
 	color: var(--color-grey-60);
 	transition: 0.3s ease-out;
-	font-size: $font-size-text;
-	line-height: $line-height-text;
+	font-size: $font-size-base_laptop;
+	line-height: $line-height-base_laptop;
 }
 
 .form__label-checkbox {
@@ -155,7 +155,7 @@
 .form__fake-checked {
 	position: absolute;
 	left: 0;
-	top: 0;
+	top: rem(-3px);
 	display: flex;
 	flex-shrink: 0;
 	align-items: center;
@@ -221,8 +221,8 @@
 .form__checkbox-text {
 	color: var(--color-grey-70);
 	display: inline-block;
-	font-size: $font-size-text;
-	line-height: $line-height-text;
+	font-size: $font-size-base_laptop;
+	line-height: $line-height-base_laptop;
 
 	a {
 		color: var(--color-orange);
@@ -302,8 +302,8 @@
 }
 
 .form__file-text {
-	font-size: $font-size-text;
-	line-height: $line-height-text;
+	font-size: $font-size-base_laptop;
+	line-height: $line-height-base;
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	overflow: hidden;

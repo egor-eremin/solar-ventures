@@ -1,7 +1,5 @@
 .link {
 	color: var(--color-orange);
-	text-transform: uppercase;
-	vertical-align: middle;
 
 	&:hover {
 		color: var(--color-light-orange);
@@ -21,26 +19,22 @@
 		height: rem(16px);
 		position: absolute;
 		right: 0;
-		top: 0;
+		top: 50%;
+		transform: translateY(-50%);
 		transition: 0.3s ease-out;
+		fill: var(--color-orange);
 	}
 
-	path {
-		transition: 0.3s ease-out;
-	}
 
 	&:hover {
 		svg {
-			transform: translateX(3px);
-		}
-
-		path {
+			transform: translateX(3px) translateY(-50%);
 			fill: var(--color-light-orange);
 		}
 	}
 
 	&:active {
-		path {
+		svg {
 			fill: var(--color-dark-orange);
 		}
 	}
@@ -52,22 +46,5 @@
 	svg {
 		width: rem(24px);
 		height: rem(24px);
-	}
-}
-
-.link_lowercase {
-	text-transform: lowercase;
-}
-
-.link_arrow_center {
-	svg {
-		top: 50%;
-		transform: translateY(-50%);
-	}
-
-	&:hover {
-		svg {
-			transform: translateY(-50%) translateX(3px);
-		}
 	}
 }
