@@ -40,8 +40,9 @@
 		}
 	}
 
-	@include laptop {
+	@include mobile {
 		padding: rem(12px) rem(19px);
+		width: 100%;
 	}
 
 	&_small {

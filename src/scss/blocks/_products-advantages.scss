@@ -1,0 +1,909 @@
+.products-advantages__prev-line {
+	margin-bottom: rem(32px);
+
+	@include mobile {
+		margin-bottom: rem(24px);
+	}
+}
+
+.products-advantages__title {
+	margin-bottom: rem(96px);
+
+	@include laptop {
+		margin-bottom: rem(80px);
+	}
+
+	@include mobile {
+		margin-bottom: rem(32px);
+	}
+}
+
+.products-advantages__item {
+	padding: rem(24px);
+	background-color: var(--color-beige);
+	min-height: rem(364px);
+	height: auto;
+
+	@include onlyDesctop {
+		&:hover {
+			.products-advantages__icon-1-eye {
+				animation: animationEye 1.2s linear both infinite;
+			}
+
+			.products-advantages__icon-2_arrow-1 {
+				animation: animationArrow1 0.8s linear both infinite;
+			}
+
+			.products-advantages__icon-2_arrow-2 {
+				animation: animationArrow2 0.8s linear both infinite;
+			}
+
+			.products-advantages__icon-2_arrow-3 {
+				animation: animationArrow3 0.8s linear both infinite;
+			}
+
+			.products-advantages__icon-2_arrow-4 {
+				animation: animationArrow4 0.8s linear both infinite;
+			}
+
+			.products-advantages__icon-3_shield {
+				animation: animationShield 1s ease-in both infinite;
+			}
+
+			.products-advantages__icon-bracket_1 {
+				animation: animationBracket1 1s ease-in both infinite;
+			}
+
+			.products-advantages__icon-bracket_2 {
+				animation: animationBracket2 1s ease-in both infinite;
+			}
+
+			.products-advantages__icon-square_1 {
+				animation: animationSquare1 1.2s linear both infinite;
+			}
+
+			.products-advantages__icon-square_2 {
+				animation: animationSquare2 1.2s linear both infinite;
+			}
+
+			.products-advantages__icon-square_3 {
+				animation: animationSquare3 1.2s linear both infinite;
+			}
+
+			.products-advantages__icon-circle {
+				animation: animationCircle 1.8s ease-in both infinite;
+			}
+
+			.products-advantages__icon-lightning {
+				animation: animationLightning 1.8s linear both infinite;
+			}
+
+			.products-advantages__icon-second-hand {
+				animation: animationSecondHand 2.2s linear both infinite;
+			}
+
+			.products-advantages__icon-diagram {
+				animation: animationDiagram 1.3s linear both infinite;
+			}
+
+			.products-advantages__icon-check {
+				animation: animationCheck 1.5s linear both infinite;
+			}
+
+			.products-advantages__icon-convenience-1 {
+				animation: animationConvenience1 1.6s linear both infinite;
+			}
+
+			.products-advantages__icon-convenience-2 {
+				animation: animationConvenience2 1.6s linear both infinite;
+			}
+
+			.products-inrights-advantages-icon-1__1 {
+				animation: products-inrights-advantages-icon-1__1 2s linear both infinite;
+			}
+
+			.products-inrights-advantages-icon-1__2 {
+				animation: products-inrights-advantages-icon-1__2 2s linear both infinite;
+			}
+
+			.products-inrights-advantages-icon-1__3 {
+				animation: products-inrights-advantages-icon-1__3 2s linear both infinite;
+			}
+
+			.products-inrights-advantages-icon-1__4 {
+				animation: products-inrights-advantages-icon-1__4 2s linear both infinite;
+			}
+
+			.products-inrights-advantages-icon-2__1 {
+				animation: products-inrights-advantages-icon-2__1 2s ease-in-out both infinite;
+			}
+
+			.products-inrights-advantages-icon-2__2 {
+				animation: products-inrights-advantages-icon-2__2 2s ease-in-out both infinite;
+			}
+
+			.products-inrights-advantages-icon-3__1 {
+				animation: products-inrights-advantages-icon-3__1 2s ease-in-out both infinite;
+			}
+
+			.products-inrights-advantages-icon-3__2 {
+				animation: products-inrights-advantages-icon-3__2 2s ease-in-out both infinite;
+			}
+
+			.products-inrights-advantages-icon-4__1 {
+				animation: products-inrights-advantages-icon-4__1 2s ease-in-out both infinite;
+			}
+
+			.products-inrights-advantages-icon-4__2 {
+				animation: products-inrights-advantages-icon-4__2 2s ease-in-out both infinite;
+			}
+
+			.products-inrights-advantages-icon-5 {
+				animation: products-inrights-advantages-icon-5 1.8s ease-in-out both infinite;
+			}
+
+			.products-inrights-advantages-icon-5__desktop {
+				animation: products-inrights-advantages-icon-5__desktop 1.8s ease-in-out both infinite;
+			}
+
+			.products-inrights-advantages-icon-5__mobile {
+				animation: products-inrights-advantages-icon-5__mobile 1.8s ease-in-out both infinite;
+			}
+
+			.solar-cpt-advantages__icon-1 {
+				animation: solar-cpt_advantages-icon-1 1.8s ease-in-out both infinite;
+			}
+
+			.solar-cpt-advantages__icon-2_path {
+				animation: solar-cpt_advantages-icon-2 1.8s ease-in-out both infinite;
+			}
+
+			.solar-cpt-advantages__icon-3 {
+				animation: solar-cpt_advantages-icon-3 1.8s ease-in-out both infinite;
+			}
+		}
+	}
+
+	@include laptop {
+		padding: rem(20px);
+		min-height: rem(346px);
+		width: rem(348px) !important;
+	}
+
+	@include mobile {
+		padding: rem(16px) rem(12px);
+		width: rem(228px) !important;
+		min-height: rem(324px);
+	}
+}
+
+.products-advantages__icon-wrapper {
+	height: rem(155px);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: rem(24px);
+
+	svg {
+		overflow: initial;
+		width: auto;
+		max-height: 100%;
+	}
+
+	@include laptop {
+		margin-bottom: rem(20px);
+	}
+
+	@include mobile {
+		height: rem(100px);
+		margin-bottom: rem(16px);
+	}
+}
+
+.products-advantages__item-title {
+	margin-bottom: rem(12px);
+	text-align: center;
+}
+
+.products-advantages__text {
+	text-align: center;
+}
+
+.products-advantages__list-wrapper {
+	margin-bottom: rem(80px);
+
+	@include laptop {
+		margin-bottom: rem(64px);
+	}
+
+	@include mobile {
+		margin-bottom: rem(32px);
+	}
+}
+
+.products-advantages__btn {
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.products-advantages__pagination {
+	position: relative;
+	display: flex;
+	justify-content: flex-end;
+	gap: rem(8px);
+	margin-bottom: rem(16px);
+}
+
+.products-advantages__list {
+	height: auto;
+}
+
+
+@keyframes animationEye {
+	0% {
+		transform: translate(0);
+	}
+
+	25% {
+		transform: translate(-5px);
+	}
+
+	50% {
+		transform: translate(5px);
+	}
+
+	100% {
+		transform: translate(0);
+	}
+}
+
+@keyframes animationArrow1 {
+	0% {
+		transform: translateY(0);
+	}
+
+	50% {
+		transform: translateY(-5px);
+	}
+
+	100% {
+		transform: translateY(0);
+	}
+}
+
+@keyframes animationArrow2 {
+	0% {
+		transform: translateX(0);
+	}
+
+	50% {
+		transform: translateX(5px);
+	}
+
+	100% {
+		transform: translateX(0);
+	}
+}
+
+@keyframes animationArrow3 {
+	0% {
+		transform: translateY(0);
+	}
+
+	50% {
+		transform: translateY(5px);
+	}
+
+	100% {
+		transform: translateY(0);
+	}
+}
+
+@keyframes animationArrow4 {
+	0% {
+		transform: translateX(0);
+	}
+
+	50% {
+		transform: translateX(-5px);
+	}
+
+	100% {
+		transform: translateX(0);
+	}
+}
+
+@keyframes animationShield {
+	0% {
+		transform: translateY(0);
+	}
+
+	33.3% {
+		transform: translateY(12px);
+	}
+
+	66.6% {
+		transform: translateY(-2px);
+	}
+
+	100% {
+		transform: translateY(0);
+	}
+}
+
+@keyframes animationBracket1 {
+	0% {
+		transform-origin: center;
+		transform: translateX(0);
+	}
+
+	50% {
+		transform-origin: center;
+		transform: translateX(0.5rem) scale(1.05, 1.05);
+	}
+
+	100% {
+		transform-origin: center;
+		transform: translateX(0);
+	}
+}
+
+@keyframes animationBracket2 {
+	0% {
+		transform-origin: center;
+		transform: translateX(0);
+	}
+
+	50% {
+		transform-origin: center;
+		transform: translateX(-0.5rem) scale(1.05, 1.05);
+	}
+
+	100% {
+		transform-origin: center;
+		transform: translateX(0);
+	}
+}
+
+@keyframes animationSquare1 {
+	0% {
+		transform-origin: center;
+		transform: translateY(0);
+	}
+
+	30% {
+		transform-origin: center;
+		transform: translateY(4px) scale(0.98);
+	}
+
+	70% {
+		transform-origin: center;
+		transform: translateY(4px) scale(0.98);
+	}
+
+	100% {
+		transform-origin: center;
+		transform: translateY(0);
+	}
+}
+
+@keyframes animationSquare2 {
+	0% {
+		transform-origin: center;
+		transform: translateX(0);
+	}
+
+	30% {
+		transform-origin: center;
+		transform: translateX(-2px) scale(0.98);
+	}
+
+	70% {
+		transform-origin: center;
+		transform: translateX(-2px) scale(0.98);
+	}
+
+	100% {
+		transform-origin: center;
+		transform: translateX(0);
+	}
+}
+
+@keyframes animationSquare3 {
+	0% {
+		transform-origin: center;
+		transform: translateX(0);
+	}
+
+	30% {
+		transform-origin: center;
+		transform: translateX(2px) scale(0.98);
+	}
+
+	70% {
+		transform-origin: center;
+		transform: translateX(2px) scale(0.98);
+	}
+
+	100% {
+		transform-origin: center;
+		transform: translateX(0);
+	}
+}
+
+@keyframes animationCircle {
+	0% {
+		transform: translateX(0);
+	}
+
+	20% {
+		transform: translateX(0);
+	}
+
+	50% {
+		transform: translateX(-28%);
+	}
+
+	70% {
+		transform: translateX(-28%);
+	}
+
+	100% {
+		transform: translateX(0);
+	}
+}
+
+@keyframes animationLightning {
+	0% {
+		opacity: 1;
+	}
+
+	30% {
+		opacity: 0.5;
+	}
+
+	70% {
+		opacity: 0.5;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes animationSecondHand {
+	0% {
+		transform-origin: left 98%;
+		transform: rotate(0);
+	}
+
+	20% {
+		transform-origin: left 98%;
+		transform: rotate(0);
+	}
+
+	40% {
+		transform-origin: left 98%;
+		transform: rotate(15deg);
+	}
+
+	60% {
+		transform-origin: left 98%;
+		transform: rotate(15deg);
+	}
+
+	80% {
+		transform-origin: left 98%;
+		transform: rotate(0);
+	}
+
+	100% {
+		transform-origin: left 98%;
+		transform: rotate(0);
+	}
+}
+
+@keyframes animationDiagram {
+	0% {
+		transform-origin: center;
+		transform: rotate(0);
+	}
+
+	50% {
+		transform-origin: center;
+		transform: rotate(-20deg);
+	}
+
+	100% {
+		transform-origin: center;
+		transform: rotate(0);
+	}
+}
+
+@keyframes animationCheck {
+	0% {
+		transform: translateY(0);
+	}
+
+	30% {
+		transform: translateY(1.25rem);
+	}
+
+	70% {
+		transform: translateY(1.25rem);
+	}
+
+	100% {
+		transform: translateY(0);
+	}
+}
+
+@keyframes animationConvenience1 {
+	0% {
+		transform-origin: top left;
+		transform: translate(0, 0);
+	}
+
+	30% {
+		transform-origin: top left;
+		transform: translate(-1rem, -1rem);
+	}
+
+	70% {
+		transform-origin: top left;
+		transform: translate(-1rem, -1rem);
+	}
+
+	100% {
+		transform-origin: top left;
+		transform: translate(0, 0);
+	}
+}
+
+@keyframes animationConvenience2 {
+	0% {
+		transform-origin: bottom right;
+		transform: translate(0, 0);
+	}
+
+	30% {
+		transform-origin: bottom right;
+		transform: translate(0.5rem, 0.5rem);
+	}
+
+	70% {
+		transform-origin: bottom right;
+		transform: translate(0.5rem, 0.5rem);
+	}
+
+	100% {
+		transform-origin: bottom right;
+		transform: translate(0, 0);
+	}
+}
+
+@keyframes products-inrights-advantages-icon-1__1 {
+	0% {
+		transform-origin: top left;
+		transform: scale(1);
+	}
+
+	30% {
+		transform-origin: top left;
+		transform: scale(0.8);
+	}
+
+	70% {
+		transform-origin: top left;
+		transform: scale(0.8);
+	}
+
+	100% {
+		transform-origin: top left;
+		transform: scale(1);
+	}
+}
+
+@keyframes products-inrights-advantages-icon-1__2 {
+	0% {
+		transform-origin: top right;
+		transform: scale(1);
+	}
+
+	30% {
+		transform-origin: top right;
+		transform: scale(0.8);
+	}
+
+	70% {
+		transform-origin: top right;
+		transform: scale(0.8);
+	}
+
+	100% {
+		transform-origin: top right;
+		transform: scale(1);
+	}
+}
+
+@keyframes products-inrights-advantages-icon-1__3 {
+	0% {
+		transform-origin: bottom right;
+		transform: scale(1);
+	}
+
+	30% {
+		transform-origin: bottom right;
+		transform: scale(0.8);
+	}
+
+	70% {
+		transform-origin: bottom right;
+		transform: scale(0.8);
+	}
+
+	100% {
+		transform-origin: bottom right;
+		transform: scale(1);
+	}
+}
+
+@keyframes products-inrights-advantages-icon-1__4 {
+	0% {
+		transform-origin: bottom left;
+		transform: scale(1);
+	}
+
+	30% {
+		transform-origin: bottom left;
+		transform: scale(0.8);
+	}
+
+	70% {
+		transform-origin: bottom left;
+		transform: scale(0.8);
+	}
+
+	100% {
+		transform-origin: bottom left;
+		transform: scale(1);
+	}
+}
+
+@keyframes products-inrights-advantages-icon-2__1 {
+	0% {
+		transform-origin: left center;
+		transform: translateX(0);
+	}
+
+	30% {
+		transform-origin: left center;
+		transform: translateX(-1.25rem);
+	}
+
+	70% {
+		transform-origin: left center;
+		transform: translateX(-1.25rem);
+	}
+
+	100% {
+		transform-origin: left center;
+		transform: translateX(0);
+	}
+}
+
+@keyframes products-inrights-advantages-icon-2__2 {
+	0% {
+		transform-origin: left center;
+		transform: translateX(0);
+	}
+
+	30% {
+		transform-origin: left center;
+		transform: translateX(-0.3125rem);
+	}
+
+	70% {
+		transform-origin: left center;
+		transform: translateX(-0.3125rem);
+	}
+
+	100% {
+		transform-origin: left center;
+		transform: translateX(0);
+	}
+}
+
+@keyframes products-inrights-advantages-icon-3__1 {
+	0% {
+		transform-origin: left center;
+		transform: translateY(0);
+	}
+
+	30% {
+		transform-origin: left center;
+		transform: translateY(0.3125rem);
+	}
+
+	70% {
+		transform-origin: left center;
+		transform: translateY(0.3125rem);
+	}
+
+	100% {
+		transform-origin: left center;
+		transform: translateY(0);
+	}
+}
+
+@keyframes products-inrights-advantages-icon-3__2 {
+	0% {
+		transform-origin: left center;
+		transform: translateY(0);
+	}
+
+	30% {
+		transform-origin: left center;
+		transform: translateY(-0.3125rem);
+	}
+
+	70% {
+		transform-origin: left center;
+		transform: translateY(-0.3125rem);
+	}
+
+	100% {
+		transform-origin: left center;
+		transform: translateY(0);
+	}
+}
+
+@keyframes products-inrights-advantages-icon-4__1 {
+	0% {
+		transform-origin: left center;
+		transform: translateY(0) translateX(0);
+	}
+
+	30% {
+		transform-origin: left center;
+		transform: translateY(-0.5rem) translateX(0.3125rem);
+	}
+
+	70% {
+		transform-origin: left center;
+		transform: translateY(-0.5rem) translateX(0.3125rem);
+	}
+
+	100% {
+		transform-origin: left center;
+		transform: translateY(0) translateX(0);
+	}
+}
+
+@keyframes products-inrights-advantages-icon-4__2 {
+	0% {
+		transform-origin: left center;
+		transform: translateY(0) translateX(0);
+	}
+
+	30% {
+		transform-origin: left center;
+		transform: translateY(0.5rem) translateX(-0.3125rem);
+	}
+
+	70% {
+		transform-origin: left center;
+		transform: translateY(0.5rem) translateX(-0.3125rem);
+	}
+
+	100% {
+		transform-origin: left center;
+		transform: translateY(0) translateX(0);
+	}
+}
+
+@keyframes products-inrights-advantages-icon-5__desktop {
+	0% {
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes products-inrights-advantages-icon-5__mobile {
+	0% {
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes products-inrights-advantages-icon-5 {
+	0% {
+		transform: rotate(0);
+	}
+
+	50% {
+		transform: rotate(75deg);
+	}
+
+	100% {
+		transform: rotate(0);
+	}
+}
+
+
+@keyframes solar-cpt_advantages-icon-1 {
+	0% {
+		transform: scale(1);
+	}
+
+	33% {
+		transform: scale(0.8);
+	}
+
+	69% {
+		transform: scale(0.8);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+@keyframes solar-cpt_advantages-icon-2 {
+	0% {
+		transform-origin: bottom center;
+		transform: translate(0, 0);
+	}
+
+	33% {
+		transform-origin: bottom center;
+		transform: translate(rem(-8px), 1px);
+	}
+
+	69% {
+		transform-origin: bottom center;
+		transform: translate(rem(-8px), 1px);
+	}
+
+	100% {
+		transform-origin: bottom center;
+		transform: translate(0, 0);
+	}
+}
+
+@keyframes solar-cpt_advantages-icon-3 {
+	0% {
+		transform-origin: bottom center;
+		transform: scaleX(1) scaleY(1);
+	}
+
+	33% {
+		transform-origin: bottom center;
+		transform: scaleX(0.9) scaleY(0.8);
+	}
+
+	69% {
+		transform-origin: bottom center;
+		transform: scaleX(0.9) scaleY(0.8);
+	}
+
+	100% {
+		transform-origin: bottom center;
+		transform: scaleX(1) scaleY(1);
+	}
+}

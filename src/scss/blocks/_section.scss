@@ -40,6 +40,10 @@
 .section__title-h2 {
 	margin-bottom: rem(80px);
 
+	@include laptop {
+		margin-bottom: rem(64px);
+	}
+
 	@include mobile {
 		margin-bottom: rem(32px);
 	}

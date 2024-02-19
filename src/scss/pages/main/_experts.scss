@@ -5,10 +5,10 @@
 .experts__text {
 	position: absolute;
 	width: rem(435px);
-	padding-top: rem(19px);
+	padding-top: rem(15px);
 	transition: 0.3s ease-out;
-	right: rem(-12px);
-	bottom: 0;
+	right: rem(-10px);
+	bottom: rem(14px);
 	transform: translateX(100%);
 	opacity: 0;
 
@@ -25,6 +25,7 @@
 	@include laptop {
 		width: rem(232px);
 		padding-top: rem(15px);
+		bottom: 0;
 	}
 
 	@include tablet {
@@ -37,18 +38,19 @@
 	}
 
 	@include mobile {
-		width: rem(288px);
+		//width: rem(288px);
+		width: calc(100vw - 2rem);
 	}
 }
 
 .experts__slider {
 	overflow: initial;
-	width: rem(1216px);
-	margin-left: rem(304px);
+	width: rem(1050px);
+	margin-left: rem(420px);
 
 	@include laptop {
-		width: rem(736px);
-		margin-left: rem(184px);
+		width: rem(900px);
+		margin-left: rem(180px);
 	}
 
 	@include tablet {
@@ -56,24 +58,24 @@
 	}
 
 	@include mobile {
-		width: rem(488px);
+		width: rem(610px);
 		margin-left: 0;
-		min-height: rem(351px);
+		min-height: rem(366px);
 	}
 }
 
 .experts__slider-item {
 	transition: 0.3s ease-out;
-	padding-left: rem(12px);
-	padding-right: rem(12px);
-	height: rem(678px);
+	padding-left: rem(11px);
+	padding-right: rem(11px);
+	height: rem(483px);
 	position: relative;
 
 	&.swiper-slide-active {
-		width: rem(504px) !important;
+		width: rem(361px) !important;
 
 		.experts__avatar {
-			height: rem(678px);
+			height: rem(483px);
 
 			@include laptop {
 				height: rem(399px);
@@ -97,31 +99,35 @@
 		}
 
 		@include laptop {
-			width: rem(304px) !important;
+			width: rem(300px) !important;
 		}
 
 		@include mobile {
-			width: rem(176px) !important;
+			width: rem(184px) !important;
 		}
 	}
 
 	@include laptop {
 		height: rem(399px);
-	}
-
-	@include tablet {
-		height: auto;
+		padding-left: rem(10px);
+		padding-right: rem(10px);
 	}
 
 	@include mobile {
+		height: auto;
 		padding-right: rem(4px);
 		padding-left: rem(4px);
 	}
 }
 
 .experts__slider-container {
-	margin-right: rem(-12px);
-	margin-left: rem(-12px);
+	margin-right: rem(-11px);
+	margin-left: rem(-11px);
+
+	@include laptop {
+		margin-left: rem(-10px);
+		margin-right: rem(-10px);
+	}
 
 	@include mobile {
 		margin-left: rem(-4px);
@@ -134,7 +140,7 @@
 }
 
 .experts__avatar {
-	height: rem(497px);
+	height: rem(334px);
 	position: relative;
 	width: 100%;
 	transition: 0.3s ease-out;
@@ -175,11 +181,11 @@
 	gap: rem(24px);
 	margin-bottom: rem(80px);
 
-	@include mobile {
-		margin-bottom: rem(32px);
+	@include tablet {
+		margin-bottom: rem(16px);
 		display: grid;
 		grid-template-columns: 1fr;
-		gap: rem(16px);
+		gap: rem(32px);
 	}
 }
 
@@ -203,5 +209,17 @@
 	@include laptop {
 		font-size: $font-size-text_small;
 		line-height: $line-height-text_small;
+	}
+
+	@include mobile {
+		br {
+			display: none;
+		}
+	}
+}
+
+.experts__pagination-wrapper {
+	@include mobile {
+		justify-content: flex-end;
 	}
 }

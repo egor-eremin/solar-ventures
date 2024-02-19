@@ -1,5 +1,9 @@
 .page-header {
 	position: relative;
+
+	&_dark {
+		background-color: var(--color-greyscale-black);
+	}
 }
 
 .page-header__head {
@@ -17,11 +21,5 @@
 
 	&_hide {
 		transform: translateY(-100%);
-
-		@include laptop {
-			//transform: translateY(0);
-			//transition: none;
-		}
-
 	}
 }

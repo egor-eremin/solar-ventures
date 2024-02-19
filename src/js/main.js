@@ -50,7 +50,7 @@ function updateMoon(moonElement, direction) {
 			rightElement.style.rx = '0px';
 			setTimeout(() => {
 				leftElement.style.rx = phaseLeft + 'px';
-			}, 0)
+			}, 200)
 		} else {
 			rightElement.style.rx = '0px';
 			leftElement.style.rx = phaseLeft + 'px';
@@ -352,79 +352,101 @@ function clearClassesForMobileMenu() {
 }
 
 function initExpertsSlider() {
-	const expertsSwiper = new Swiper('.js-experts-slider', {
-		initialSlide: 1,
-		slidesPerView: 4,
-		touchRatio: 0.5,
-		loop: true,
-		slidesPerGroup: 1,
-		// slideToClickedSlide: true,
-		navigation: {
-			prevEl: '.js-experts__prev',
-			nextEl: '.js-experts__next',
-		},
-		keyboard: {
-			enabled: true,
-			onlyInViewport: true,
-		},
-	});
+	if (document.querySelector('.js-experts-slider')) {
 
+		const sliderWrapper = document.querySelector('.experts__slider-wrapper');
+		const fakeSliderWrapper = document.querySelector('.experts__slider-fake-wrapper');
+		const fakeElement = document.createElement('div');
+		const sliderItems = sliderWrapper.querySelectorAll('.experts__slider-item');
 
+		if (sliderItems.length / 5 < 2) {
+			sliderItems.forEach((element) => {
+				const cloneElement = element.cloneNode(true);
+				sliderWrapper.appendChild(cloneElement);
+			})
+		}
 
-	const expertsSwiperFake = new Swiper('.js-experts-fake-slider', {
-		// initialSlide: 1,
-		slidesPerView: 1,
-		touchRatio: 0.5,
-		loop: true,
-		slidesPerGroup: 1,
-		// slideToClickedSlide: false,
-		navigation: {
-			prevEl: '.js-experts__prev',
-			nextEl: '.js-experts__next',
-		},
-		keyboard: {
-			enabled: true,
-			onlyInViewport: true,
-		},
-		on: {
-			init() {
-				showsSlideNumber.call(this,  '.js-experts-number');
-				updateMoon.call(this,  '.js-experts-moon');
+		fakeElement.classList.add('experts__slider-item-fake');
+		fakeElement.classList.add('swiper-slide');
+
+		sliderItems.forEach(() => {
+			const cloneElement = fakeElement.cloneNode(true);
+			fakeSliderWrapper.appendChild(cloneElement);
+		});
+
+		const expertsSwiper = new Swiper('.js-experts-slider', {
+			initialSlide: 2,
+			slidesPerView: 5,
+			touchRatio: 0.5,
+			loop: true,
+			slidesPerGroup: 1,
+			// slideToClickedSlide: true,
+			navigation: {
+				prevEl: '.js-experts__prev',
+				nextEl: '.js-experts__next',
 			},
-			slideChange() {
-				showsSlideNumber.call(this,  '.js-experts-number');
+			keyboard: {
+				enabled: true,
+				onlyInViewport: true,
+			},
+		});
+
+		const expertsSwiperFake = new Swiper('.js-experts-fake-slider', {
+			// initialSlide: 1,
+			slidesPerView: 1,
+			touchRatio: 0.5,
+			loop: true,
+			slidesPerGroup: 1,
+			// slideToClickedSlide: false,
+			navigation: {
+				prevEl: '.js-experts__prev',
+				nextEl: '.js-experts__next',
+			},
+			keyboard: {
+				enabled: true,
+				onlyInViewport: true,
+			},
+			on: {
+				init() {
+					showsSlideNumber.call(this,  '.js-experts-number');
+					updateMoon.call(this,  '.js-experts-moon');
+				},
+				slideChange() {
+					showsSlideNumber.call(this,  '.js-experts-number');
+				}
 			}
-		}
-	});
+		});
 
-	expertsSwiperFake.on('slideNextTransitionStart', function () {
-		const direction = 'toNext';
-		const curSlide = expertsSwiperFake.realIndex + 1;
+		expertsSwiperFake.on('slideNextTransitionStart', function () {
+			const direction = 'toNext';
+			const curSlide = expertsSwiperFake.realIndex + 1;
 
-		updateMoon.call(this,  '.js-experts-moon', direction);
-		if (curSlide === 1) {
-			removeTransition('.js-experts-moon');
-		}
-	});
+			updateMoon.call(this,  '.js-experts-moon', direction);
+			if (curSlide === 1) {
+				removeTransition('.js-experts-moon');
+			}
+		});
 
-	expertsSwiperFake.on('slidePrevTransitionStart', function () {
-		const direction = 'toPrev';
-		const curSlide = expertsSwiperFake.realIndex + 1;
-		const allSlides = expertsSwiperFake.slides.length;
+		expertsSwiperFake.on('slidePrevTransitionStart', function () {
+			const direction = 'toPrev';
+			const curSlide = expertsSwiperFake.realIndex + 1;
+			const allSlides = expertsSwiperFake.slides.length;
 
-		if (curSlide === allSlides) {
-			removeTransition('.js-experts-moon');
-		}
-		updateMoon.call(this,  '.js-experts-moon', direction);
-	});
+			if (curSlide === allSlides) {
+				removeTransition('.js-experts-moon');
+			}
+			updateMoon.call(this,  '.js-experts-moon', direction);
+		});
 
-	expertsSwiper.on('slideNextTransitionStart', function () {
-		expertsSwiperFake.slideNext();
-	});
+		expertsSwiper.on('slideNextTransitionStart', function () {
+			expertsSwiperFake.slideNext();
+		});
 
-	expertsSwiper.on('slidePrevTransitionStart', function () {
-		expertsSwiperFake.slidePrev();
-	});
+		expertsSwiper.on('slidePrevTransitionStart', function () {
+			expertsSwiperFake.slidePrev();
+		});
+
+	}
 }
 
 function handleFileInputChange() {
@@ -452,6 +474,72 @@ function initCurrentYear() {
 
 }
 
+function initProductsAdvantagesSlider() {
+
+	if (document.querySelector('.js-advantages-slider-init') !== null) {
+		let swiperProductsAdvantages;
+		const productsAdvantagesWrapper = document.querySelector('.products-advantages__list');
+		const productsAdvantagesItems = productsAdvantagesWrapper.querySelectorAll('.products-advantages__item');
+
+		if (productsAdvantagesItems.length / 3 < 2) {
+			productsAdvantagesItems.forEach((element) => {
+				const cloneElement = element.cloneNode(true);
+				productsAdvantagesWrapper.appendChild(cloneElement);
+			})
+		}
+
+		function initSwiper() {
+			if (!swiperProductsAdvantages) {
+				swiperProductsAdvantages = new Swiper('.js-advantages-slider-init', {
+					// loop: productsAdvantagesItems.length / 3 >= 2 ? true : false,
+					loop: true,
+					speed: 1500,
+					slidesPerView: 3,
+					spaceBetween: 24,
+					navigation: {
+						prevEl: '.js-products-advantages__prev',
+						nextEl: '.js-products-advantages__next',
+					},
+					keyboard: {
+						enabled: true,
+						onlyInViewport: true,
+					},
+					breakpoints: {
+						120: {
+							slidesPerView: "auto",
+						},
+						1201: {
+							slidesPerView: 3,
+							spaceBetween: 24,
+						},
+					}
+				});
+			}
+		}
+
+		// function destroySwiper() {
+		// 	if (swiperProductsAdvantages) {
+		// 		swiperProductsAdvantages.destroy();
+		// 		swiperProductsAdvantages = undefined;
+		// 	}
+		// }
+
+		// function checkScreenSize() {
+		// 	if (window.innerWidth <= 1200) {
+		// 		destroySwiper();
+		// 	} else {
+		// 		initSwiper();
+		// 	}
+		// }
+
+		// checkScreenSize();
+
+		// window.addEventListener('resize', checkScreenSize);
+
+		initSwiper();
+	}
+}
+
 document.addEventListener('DOMContentLoaded', () => {
 	addedMaskPhone();
 	validationForm();
@@ -466,6 +554,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	handleFileInputChange();
 	clearClassesForMobileMenu();
 	initCurrentYear();
+	initProductsAdvantagesSlider();
 });
 
 $.validator.addMethod('filesize', function (value, element, param) {

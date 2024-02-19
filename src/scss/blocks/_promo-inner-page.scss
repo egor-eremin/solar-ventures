@@ -1,0 +1,29 @@
+.promo-inner-page {
+	padding-top: rem(154px);
+	padding-bottom: rem(80px);
+
+	@include laptop {
+		padding-top: rem(126px);
+		padding-bottom: rem(40px);
+	}
+
+	@include mobile {
+		padding-top: rem(84px);
+		padding-bottom: rem(24px);
+	}
+}
+
+.promo-inner-page__title {
+	max-width: rem(1021px);
+	margin-bottom: rem(32px);
+
+	@include laptop {
+		margin-bottom: rem(24px);
+	}
+}
+
+.promo-inner-page__btn {
+	@include mobile {
+		width: 100%;
+	}
+}

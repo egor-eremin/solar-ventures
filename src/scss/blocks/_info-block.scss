@@ -13,6 +13,10 @@
 	width: 100%;
 	max-width: rem(684px);
 
+	&_inner {
+		max-width: rem(566px);
+	}
+
 	@include laptop_small {
 		max-width: none;
 	}
@@ -39,20 +43,47 @@
 	@include laptop {
 		margin-bottom: rem(32px);
 	}
-
-	@include mobile {
-		margin-bottom: rem(16px);
-	}
 }
 
 .info-block__text {
 	margin-bottom: rem(40px);
 
-	@include laptop {
-		margin-bottom: rem(56px);
+	&:last-child {
+		margin-bottom: 0;
 	}
 
-	@include mobile {
+	@include laptop {
 		margin-bottom: rem(32px);
+	}
+}
+
+.info-block__list {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: rem(12px);
+	margin-bottom: rem(40px);
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	@include laptop {
+		margin-bottom: rem(32px);
+	}
+}
+
+.info-block__list-item {
+	position: relative;
+	padding-left: rem(30px);
+
+	&::before {
+		content: '';
+		position: absolute;
+		width: rem(6px);
+		height: rem(6px);
+		border-radius: 50%;
+		left: rem(8px);
+		top: rem(8px);
+		background-color: var(--color-orange);
 	}
 }
