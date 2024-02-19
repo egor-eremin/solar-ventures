@@ -1,0 +1,51 @@
+section.section.tabs-block
+	.wrapper
+		.prev-line.section__prev-line
+			p.prev-line__text Тестирование разработок при участии solar
+		p.title-h2.section__title-h2(role="heading" aria-level="2") Помогаем сформулировать рекомендации по доработке и развитию
+		.tabs-block__wrapper
+			.tabs-block__list-btn-wrapper
+				ul.tabs-block__list-btn
+					li.tabs-block__list-btn-item
+						.tabs-block__list-btn-link.active(data-href="tab1") Доступ к технологиям Solar
+					li.tabs-block__list-btn-item
+						.tabs-block__list-btn-link(data-href="tab2") Check-up ваших технологий
+					li.tabs-block__list-btn-item
+						.tabs-block__list-btn-link(data-href="tab3") Запуск пилотного проекта
+			.tabs-block__list-sections.info-block
+				#tab1.info-block__wrapper.tabs-block__info-wrapper
+					.info-block__img.info-block__img_inner
+						picture
+							source(media="(max-width: 650px)" srcset=`${baseDir}images/tab-img-1_mobile.jpg` width="576" height="520")
+							source(media="(max-width: 768px)" srcset=`${baseDir}images/tab-img-1_tablet.jpg` width="720" height="416")
+							img.tabs-block__img(width="566" height="476" src=`${baseDir}images/tab-img-1.jpg`)
+					.info-block__text-container.advisory-info-block__text-container
+						p.title-h3.info-block__title(role="heading" aria-level="3") Доступ  к технологиям Solar
+						ul.info-block__list
+							li.info-block__list-item Апробация решения на ресурсах Solar
+							li.info-block__list-item Проверка готовности к модели MSS
+							li.info-block__list-item Проведение исследований и совместных разработок
+				#tab2.info-block__wrapper.tabs-block__info-wrapper.hidden
+					.info-block__img.info-block__img_inner
+						picture
+							source(media="(max-width: 650px)" srcset=`${baseDir}images/tab-img-2_mobile.jpg` width="576" height="520")
+							source(media="(max-width: 768px)" srcset=`${baseDir}images/tab-img-2_tablet.jpg` width="720" height="416")
+							img.tabs-block__img(width="566" height="476" src=`${baseDir}images/tab-img-2.jpg`)
+					.info-block__text-container.advisory-info-block__text-container
+						p.title-h3.info-block__title(role="heading" aria-level="3") Check-up ваших технологий
+						ul.info-block__list
+							li.info-block__list-item Рекомендации по архитектуре решения и выбору технологий
+							li.info-block__list-item Оценка компетенций команды и процессов разработки
+							li.info-block__list-item Оценка рисков долгосрочного развития
+				#tab3.info-block__wrapper.tabs-block__info-wrapper.hidden
+					.info-block__img.info-block__img_inner
+						picture
+							source(media="(max-width: 650px)" srcset=`${baseDir}images/tab-img-3_mobile.jpg` width="576" height="520")
+							source(media="(max-width: 768px)" srcset=`${baseDir}images/tab-img-3_tablet.jpg` width="720" height="416")
+							img.tabs-block__img(width="566" height="476" src=`${baseDir}images/tab-img-3.jpg`)
+					.info-block__text-container.advisory-info-block__text-container
+						p.title-h3.info-block__title(role="heading" aria-level="3") Запуск пилотного проекта
+						ul.info-block__list
+							li.info-block__list-item Оценка эффективности решения поставленной задачи
+							li.info-block__list-item Оценка готовности продукта к коммерциализации
+							li.info-block__list-item Создание референсов для заказчиков (пилоты с Family &Friends-группами)

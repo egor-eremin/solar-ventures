@@ -545,6 +545,37 @@ function initProductsAdvantagesSlider() {
 	}
 }
 
+function initTabs() {
+	if (document.querySelector('.tabs-block')) {
+		const tabsWrapper = document.querySelector('.tabs-block');
+		const tabsBtn = tabsWrapper.querySelectorAll('.tabs-block__list-btn-link');
+		const sectionTabs = tabsWrapper.querySelectorAll('.info-block__wrapper');
+
+		tabsBtn.forEach((element) => {
+			element.addEventListener('click', (e) => {
+				e.preventDefault();
+
+				if (!element.classList.contains('active')) {
+					const curHref = element.dataset.href;
+					const curSection = tabsWrapper.querySelector(`#${curHref}`);
+
+					for (let tabBtn of tabsBtn) {
+						tabBtn.classList.remove('active');
+					}
+
+					element.classList.add('active');
+
+					sectionTabs.forEach((section) => {
+						section.classList.add('hidden');
+					})
+
+					curSection.classList.remove('hidden');
+				}
+			});
+		});
+	}
+}
+
 document.addEventListener('DOMContentLoaded', () => {
 	addedMaskPhone();
 	validationForm();
@@ -560,6 +591,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	clearClassesForMobileMenu();
 	initCurrentYear();
 	initProductsAdvantagesSlider();
+	initTabs();
 });
 
 $.validator.addMethod('filesize', function (value, element, param) {
