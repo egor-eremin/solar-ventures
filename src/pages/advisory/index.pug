@@ -1,0 +1,27 @@
+extends ../../pug/base
+
+append vars
+	- baseDir = '../'
+	- title = "Advisory Board — соединяем стартапы и экспертов"
+	- meta.description = "Advisory Board — соединяем стартапы и экспертов. Advisory Board помогает стартапу сформулировать запрос и найти своего ментора, который поможет создать решающее конкурентное преимущество в развитии бизнеса."
+	- link.icon = "/favicons/favicon.ico"
+	- link.iconSvg = "/favicons/favicon.svg"
+	- link.appleTouchIcon = "/favicons/180.png"
+	- link.manifest = "/favicons/site.webmanifest"
+	- link.canonical = "https://cyberstage.rt-solar.ru/advisory-board/"
+	- currentPage = "advisory"
+
+block body-start
+	header.page-header.page-header_dark
+		+header
+		include ../../pug/pages/advisory/promo
+block content
+	include ../../pug/pages/advisory/products-advantages
+	include ../../pug/pages/advisory/info-block
+	include ../../pug/pages/advisory/experts
+	include ../../pug/blocks/consultation-form
+	include ../../pug/blocks/success-form
+
+block footer
+	include ../../pug/blocks/footer
+

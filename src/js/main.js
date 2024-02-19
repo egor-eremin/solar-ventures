@@ -363,6 +363,11 @@ function initExpertsSlider() {
 			sliderItems.forEach((element) => {
 				const cloneElement = element.cloneNode(true);
 				sliderWrapper.appendChild(cloneElement);
+			});
+
+			sliderItems.forEach((element) => {
+				const cloneElement = element.cloneNode(true);
+				sliderWrapper.appendChild(cloneElement);
 			})
 		}
 

@@ -1,0 +1,17 @@
+section.section.info-block.advisory-info-block
+	.wrapper
+		.prev-line.section__prev-line
+			p.prev-line__text Принцип работы advisory board
+		p.title-h2.section__title-h2(role="heading" aria-level="2") Как работает акселератор
+		.info-block__wrapper
+			.info-block__img.info-block__img_inner
+				picture
+					source(media="(max-width: 650px)" srcset=`${baseDir}images/advisory-info-img_mobile.jpg` width="576" height="520")
+					source(media="(max-width: 768px)" srcset=`${baseDir}images/advisory-info-img_tablet.jpg` width="720" height="534")
+					img(width="566" height="422" src=`${baseDir}images/advisory-info-img.jpg`)
+			.info-block__text-container.advisory-info-block__text-container
+				ul.info-block__list
+					li.info-block__list-item Помогаем сформулировать запрос совету экспертов
+					li.info-block__list-item Организуем взаимодействие с командой экспертов
+					li.info-block__list-item Помогаем структурировать долгосрочную работу с релевантным экспертом-ментором
+				button.btn.info-block__btn.js-go-to-form(data-target="callback-form") Подать заявку
