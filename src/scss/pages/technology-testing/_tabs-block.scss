@@ -62,10 +62,3 @@
 
 	transition: 0.3s ease-in-out;
 }
-
-.tabs-block__img {
-	@include mobile {
-		max-height: rem(300px);
-		object-fit: cover;
-	}
-}

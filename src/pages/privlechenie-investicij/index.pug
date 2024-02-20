@@ -1,0 +1,25 @@
+extends ../../pug/base
+
+append vars
+	- baseDir = '../'
+	- title = "Привлечение инвестиций, Венчурные инвестиции — Cyber Stage"
+	- meta.description = "Перспективным стартапам в сфере информационной безопасности, так же новых технологий для импортозамещения в критически важных и чувствительных отраслях мы поможем привлечь венчурные инвестиции от Solar и других фондов."
+	- link.icon = "/favicons/favicon.ico"
+	- link.iconSvg = "/favicons/favicon.svg"
+	- link.appleTouchIcon = "/favicons/180.png"
+	- link.manifest = "/favicons/site.webmanifest"
+	- link.canonical = "https://cyberstage.rt-solar.ru/privlechenie-investicij/"
+	- currentPage = "attracting-investments"
+
+block body-start
+	header.page-header.page-header_dark
+		+header
+		include ../../pug/pages/privlechenie-investicij/promo
+block content
+	include ../../pug/pages/privlechenie-investicij/info-block
+	include ../../pug/blocks/consultation-form
+	include ../../pug/blocks/success-form
+
+block footer
+	include ../../pug/blocks/footer
+

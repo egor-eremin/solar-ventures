@@ -24,6 +24,8 @@
 	@include tablet {
 		img {
 			width: 100%;
+			max-height: rem(300px);
+			object-fit: cover;
 		}
 	}
 }
@@ -86,4 +88,8 @@
 		top: rem(8px);
 		background-color: var(--color-orange);
 	}
+}
+
+.info-block__text_prev-list {
+	margin-bottom: rem(12px);
 }
