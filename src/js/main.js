@@ -21,8 +21,7 @@ function showsSlideNumber(numberWrapper) {
 
 function updateMoon(moonElement, direction) {
 	const curSlide = this.slides[this.activeIndex];
-	const prevProgress = direction === 'toPrev' ? Math.round((Number(curSlide.dataset.swiperSlideIndex) + 2) / this.slides.length * 100) :
-		Math.round((Number(curSlide.dataset.swiperSlideIndex)) / this.slides.length * 100);
+	const prevProgress = direction === 'toPrev' ? Math.round((Number(curSlide.dataset.swiperSlideIndex) + 2) / this.slides.length * 100) : Math.round((Number(curSlide.dataset.swiperSlideIndex)) / this.slides.length * 100);
 	const progress = Math.round((Number(curSlide.dataset.swiperSlideIndex) + 1) / this.slides.length * 100);
 	const moon = document.querySelector(moonElement);
 	const rightElement = moon.querySelector('.circle-animate__circle-mask-1');
@@ -297,7 +296,7 @@ function validationForm() {
 
 	$.extend($.validator.messages, {
 		required: 'Это поле обязательно для заполнения',
-		email: 'Введите корректный email'
+		email: 'Введите корректный email',
 	});
 }
 
@@ -413,11 +412,11 @@ function initExpertsSlider() {
 			},
 			on: {
 				init() {
-					showsSlideNumber.call(this,  '.js-experts-number');
-					updateMoon.call(this,  '.js-experts-moon');
+					showsSlideNumber.call(this, '.js-experts-number');
+					updateMoon.call(this, '.js-experts-moon');
 				},
 				slideChange() {
-					showsSlideNumber.call(this,  '.js-experts-number');
+					showsSlideNumber.call(this, '.js-experts-number');
 				}
 			}
 		});
@@ -426,7 +425,7 @@ function initExpertsSlider() {
 			const direction = 'toNext';
 			const curSlide = expertsSwiperFake.realIndex + 1;
 
-			updateMoon.call(this,  '.js-experts-moon', direction);
+			updateMoon.call(this, '.js-experts-moon', direction);
 			if (curSlide === 1) {
 				removeTransition('.js-experts-moon');
 			}
@@ -440,7 +439,7 @@ function initExpertsSlider() {
 			if (curSlide === allSlides) {
 				removeTransition('.js-experts-moon');
 			}
-			updateMoon.call(this,  '.js-experts-moon', direction);
+			updateMoon.call(this, '.js-experts-moon', direction);
 		});
 
 		expertsSwiper.on('slideNextTransitionStart', function () {
@@ -467,7 +466,11 @@ function handleFileInputChange() {
 			inputTextElement.textContent = file.name;
 			// inputTextElement.classList.remove('added-file__text_placeholder');
 			fileInput.classList.remove('error');
-			fileInputWrapper.querySelector('label.error').remove();
+			const error = fileInputWrapper?.querySelector('label.error');
+
+			if (error) {
+				error.remove();
+			};
 		});
 	});
 }
@@ -576,6 +579,118 @@ function initTabs() {
 	}
 }
 
+function openBioExpert() {
+	const buttons = document.querySelectorAll('.js-experts-button');
+	const sliderBlock = document.querySelector('.experts__slider-block');
+	const pagination = document.querySelector('.experts__pagination');
+
+	if (!buttons.length || !sliderBlock || !pagination) return;
+
+	buttons.forEach((btn) => {
+		btn.addEventListener('click', () => {
+			const targetId = btn.getAttribute('data-target');
+			const targetNode = document.querySelector(`#${targetId}`);
+			const clientHeight = targetNode.clientHeight;
+
+			if (!targetNode) return;
+
+			targetNode.classList.add('active');
+			sliderBlock.style.height = `${clientHeight}px`;
+			pagination.style.display = 'none';
+		});
+	});
+
+	const itemsBio = document.querySelectorAll('.experts__bio-item');
+
+	if (!itemsBio.length) return;
+
+	itemsBio.forEach((item) => {
+		const buttonBio = item.querySelector('.js-experts-bio-button');
+
+		if (!buttonBio) return;
+
+		buttonBio.addEventListener('click', () => {
+			itemsBio.forEach(itemBio => {
+				itemBio.classList.remove('active');
+			})
+
+			sliderBlock.removeAttribute('style');
+			pagination.style.display = 'flex';
+		})
+	})
+}
+
+function initPartnersSlider() {
+	if (document.querySelector('.partners') !== null) {
+		let swiperPartners;
+		const sliderPartnersWrapper = document.querySelectorAll('.partners');
+
+		sliderPartnersWrapper.forEach((wrapper) => {
+			const partnersSliderItem = wrapper.querySelectorAll('.partners__slider-item');
+			const pagination = wrapper.querySelector('.partners__pagination');
+			const titleH1 = wrapper.querySelector('.section__title-h1_short-margin');
+
+			if (partnersSliderItem.length > 4) {
+
+				pagination.classList.remove('hidden');
+
+				if (partnersSliderItem.length / 4 < 2) {
+					partnersSliderItem.forEach((element, item) => {
+						const cloneElement = element.cloneNode(true);
+						const cloneElementWrapper = wrapper.querySelector('.partners__slider-wrapper');
+
+						cloneElementWrapper.appendChild(cloneElement);
+					})
+				}
+
+				function initPartnersSwiper() {
+					if (!swiperPartners) {
+						swiperPartners = new Swiper('.js-partners-slider-init', {
+							loop: true,
+							speed: 1500,
+							slidesPerView: 4,
+							spaceBetween: 25,
+							navigation: {
+								prevEl: '.js-partners__prev',
+								nextEl: '.js-partners__next',
+							},
+							keyboard: {
+								enabled: true,
+								onlyInViewport: true,
+							},
+							breakpoints: {
+								120: {
+									slidesPerView: 'auto',
+									spaceBetween: 24,
+								},
+								550: {
+									slidesPerView: 2,
+									spaceBetween: 16,
+								},
+								769: {
+									slidesPerView: 3,
+									spaceBetween: 24,
+								},
+								1201: {
+									slidesPerView: 4,
+									spaceBetween: 24,
+								},
+							}
+						});
+					}
+				}
+
+				initPartnersSwiper();
+			} else {
+				if (titleH1 !== null) {
+					titleH1.classList.remove('section__title-h1_short-margin');
+				}
+			}
+		})
+
+	}
+}
+
 document.addEventListener('DOMContentLoaded', () => {
 	addedMaskPhone();
 	validationForm();
@@ -592,6 +707,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	initCurrentYear();
 	initProductsAdvantagesSlider();
 	initTabs();
+	openBioExpert();
+	initPartnersSlider();
 });
 
 $.validator.addMethod('filesize', function (value, element, param) {

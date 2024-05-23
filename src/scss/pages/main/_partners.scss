@@ -1,0 +1,36 @@
+.partners__icon-wrapper {
+	display: flex;
+	align-items: center;
+	height: rem(107px);
+	margin-bottom: rem(26px);
+	justify-content: center;
+
+	img {
+		max-height: 100%;
+	}
+
+	@include laptop {
+		height: rem(80px);
+	}
+}
+
+.partners__slider-wrapper {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+}
+
+.partners__slider {
+	&.swiper-initialized {
+		.partners__slider-wrapper {
+			display: flex;
+		}
+	}
+}
+
+.partners__pagination {
+	position: static;
+	display: flex;
+	gap: rem(8px);
+	justify-content: flex-end;
+	margin-bottom: rem(24px);
+}
