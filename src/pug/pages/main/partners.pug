@@ -1,28 +1,23 @@
 section.section.partners
 	.wrapper
 		p.title-h2.section__title-h2(role="heading" aria-level="2") Участники программы
-		.pagination.partners__pagination.js-partners-pagination.hidden
-			button.pagination__arrow.pagination__arrow-prev.js-partners__prev
-				+svg("arrow-slide-prev")(class="pagination__svg pagination__svg_orange")
-			button.pagination__arrow.pagination__arrow-next.js-partners__next
-				+svg("arrow-slide-next")(class="pagination__svg pagination__svg_orange")
-		.partners__slider.swiper.js-partners-slider-init
-			.partners__slider-wrapper.swiper-wrapper
-				.partners__slider-item.swiper-slide
+		.partners__slider
+			.partners__slider-wrapper
+				.partners__slider-item
 					.partners__icon-wrapper
 						img(src=`${baseDir}images/BearPass.svg` alt="Логотип «BearPass»")
-				.partners__slider-item.swiper-slide
+				.partners__slider-item
 					.partners__icon-wrapper
 						img(src=`${baseDir}images/CloudAdvisor.svg` alt="Логотип «Cloud Advisor»")
-				.partners__slider-item.swiper-slide
+				.partners__slider-item
 					.partners__icon-wrapper
 						img(src=`${baseDir}images/CTRL-Hack.png` alt="Логотип «CTRL-Hack»")
-				.partners__slider-item.swiper-slide
-					.partners__icon-wrapper
-						img(src=`${baseDir}images/TypeMax.png` alt="Логотип «TypeMax»")
-				.partners__slider-item.swiper-slide
+				.partners__slider-item
 					.partners__icon-wrapper
 						img(src=`${baseDir}images/kodera.png` alt="Логотип «Kodera»")
-				.partners__slider-item.swiper-slide
+				.partners__slider-item
+					.partners__icon-wrapper
+						img(src=`${baseDir}images/TypeMax.png` alt="Логотип «TypeMax»")
+				.partners__slider-item
 					.partners__icon-wrapper
 						img(src=`${baseDir}images/webOborona.svg` alt="Логотип «Веб оборона»")
