@@ -16,6 +16,11 @@
 		line-height: $line-height-base;
 	}
 
+	&_small {
+		font-size: $font-size-base_laptop;
+		line-height: $line-height-base;
+	}
+
 	&_dark {
 		color: var(--color-greyscale-black);
 	}
