@@ -1,0 +1,25 @@
+extends ../../pug/base
+
+append vars
+	- baseDir = '../'
+	- title = "Участники программы CYBЕRSTAGE"
+	- meta.description = "Участники программы CYBЕRSTAGE"
+	- link.icon = "/favicons/favicon.ico"
+	- link.iconSvg = "/favicons/favicon.svg"
+	- link.appleTouchIcon = "/favicons/180.png"
+	- link.manifest = "/favicons/site.webmanifest"
+	- link.canonical = "https://cyberstage.rt-solar.ru/participants/"
+	- currentPage = "mentoring"
+
+block body-start
+	header.page-header.page-header_dark
+		+header
+		include ../../pug/pages/participants/promo
+block content
+	include ../../pug/pages/participants/logo-main
+	include ../../pug/blocks/consultation-form
+	include ../../pug/blocks/success-form
+
+block footer
+	include ../../pug/blocks/footer
+
