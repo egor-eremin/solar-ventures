@@ -691,6 +691,71 @@ function initPartnersSlider() {
 	}
 }
 
+function initHoverCaseItem() {
+	const caseItems = document.querySelectorAll('.case__item');
+	const caseList = document.querySelector('.case__list');
+	const firstCaseItem = caseItems[0];
+	const lastCaseItem = caseItems[caseItems.length - 1];
+
+	for (let caseItem of caseItems) {
+		caseItem.addEventListener('mouseenter', () => {
+			for (let elementCaseItem of caseItems) {
+				if (caseItem !== elementCaseItem) {
+					elementCaseItem.classList.add('case__item_no-hover');
+
+					if (caseItem === lastCaseItem) {
+						firstCaseItem.classList.add('case__item_no-hover_first');
+						caseList.classList.add('resize-left');
+					} else {
+						caseList.classList.add('resize-right');
+					}
+				} else {
+					elementCaseItem.classList.add('case__item_hover');
+				}
+			}
+		});
+
+		caseItem.addEventListener('mouseleave', () => {
+			for (let elementCaseItem of caseItems) {
+				elementCaseItem.classList.remove('case__item_no-hover', 'case__item_hover', 'case__item_no-hover_first');
+				caseList.classList.remove('resize-left');
+				caseList.classList.remove('resize-right');
+			}
+		});
+	}
+}
+
+function initHideShowCaseText() {
+	const hideShowBtns = document.querySelectorAll('.case__hide-text');
+
+	if (hideShowBtns.length !== 0) {
+		const wrapperTextSolution = document.querySelectorAll('.case__text-solution');
+		const textWrapper = document.querySelectorAll('.case__text-wrapper');
+
+		if (!textWrapper) {
+			return;
+		}
+
+		hideShowBtns.forEach((hideShowBtn, item) => {
+			hideShowBtn.addEventListener('click', () => {
+				if (!hideShowBtn.classList.contains('show') && !textWrapper[item].classList.contains('case__text-wrapper_burgundy')) {
+					hideShowBtn.classList.add('show');
+					if (wrapperTextSolution.length) {
+						wrapperTextSolution[item].classList.add('show');
+					}
+					textWrapper[item].classList.add('text-show', 'case__text-wrapper_burgundy');
+				} else {
+					hideShowBtn.classList.remove('show');
+					if (wrapperTextSolution.length) {
+						wrapperTextSolution[item].classList.remove('show');
+					}
+					textWrapper[item].classList.remove('text-show', 'case__text-wrapper_burgundy');
+				}
+			});
+		});
+	}
+}
+
 document.addEventListener('DOMContentLoaded', () => {
 	addedMaskPhone();
 	validationForm();
@@ -709,6 +774,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	initTabs();
 	openBioExpert();
 	initPartnersSlider();
+	initHoverCaseItem();
+	initHideShowCaseText();
 });
 
 $.validator.addMethod('filesize', function (value, element, param) {
