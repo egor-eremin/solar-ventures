@@ -13,3 +13,13 @@
 		line-height: $line-height-title-h3_laptop;
 	}
 }
+.title-h3_second {
+	margin: 0;
+	font-size: $font-size-title-h3_second;
+	line-height: $line-height-title-h3_second;
+	font-weight: 400;
+	@include laptop {
+		font-size: $font-size-title-h3_laptop;
+		line-height: $line-height-title-h3_laptop;
+	}
+}

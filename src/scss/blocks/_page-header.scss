@@ -22,4 +22,11 @@
 	&_hide {
 		transform: translateY(-100%);
 	}
+	&_light {
+	}
+}
+.page-header__head_light {
+	&.fixed {
+		background-color: var(--color-violet);
+	}
 }

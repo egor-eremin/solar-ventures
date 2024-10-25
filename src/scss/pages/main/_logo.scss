@@ -5,6 +5,17 @@
 			padding-bottom: rem(32px);
 		}
 	}
+	&__title {
+		margin-bottom: rem(80px);
+
+		@include laptop {
+			margin-bottom: rem(56px);
+		}
+
+		@include mobile {
+			margin-bottom: rem(48px);
+		}
+	}
 }
 
 .logo__img-wrapper {
@@ -29,7 +40,7 @@
 	margin-top: rem(55px);
 
 	&::before {
-		content: '';
+		content: "";
 		position: absolute;
 		width: 100%;
 		height: 1px;
@@ -71,5 +82,7 @@
 
 .logo__btn {
 	margin: rem(80px) auto 0;
-
+	@include mobile {
+		margin-top: rem(32px);
+	}
 }

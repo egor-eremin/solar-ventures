@@ -1,6 +1,5 @@
 @font-face {
-	src:
-		local("ONYSans-Regular"),
+	src: local("ONYSans-Regular"),
 		url("/fonts/ONYSans-Regular.woff2") format("woff2"),
 		url("/fonts/ONYSans-Regular.woff") format("woff");
 	font-family: "Ony Sans";
@@ -10,8 +9,15 @@
 }
 
 @font-face {
-	src:
-		local("ONYRealist-Regular"),
+	src: local("ONYSemimono-Regular"), url("/fonts/ONYSEMIMONO-REGULAR.OTF");
+	font-family: "Ony Semimono";
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	src: local("ONYRealist-Regular"),
 		url("/fonts/ONYRealist-Regular.woff2") format("woff2"),
 		url("/fonts/ONYRealist-Regular.woff") format("woff");
 	font-family: "ONY Realist";

@@ -1,0 +1,23 @@
+nav.wrapper.page-header__nav.main-nav.main-nav_second
+    button.main-nav__burger.js-burger-init
+        span.main-nav__burger-item
+        span.main-nav__burger-item
+    a.main-nav__logo.main-nav__logo-second(href="/")
+        img(width="223" height="27" src=`${baseDir}images/logo_white.svg` alt="Логотип CYBERSTAGE")
+    .main-nav__list-wrapper.main-nav__list-wrapper_second.js-mobile-menu
+        ul.main-nav__list
+            li.main-nav__item(class={active : currentPage == "mentoring"})
+                a.main-nav__link(href="/mentorstvo/") Менторство
+            li.main-nav__item(class={active : currentPage == "advisory"})
+                a.main-nav__link(href="/advisory-board/") Advisory board
+            li.main-nav__item(class={active : currentPage == "technology-testing"})
+                a.main-nav__link(href="#") Matrix
+            li.main-nav__item(class={active : currentPage == "technology-testing"})
+                a.main-nav__link(href="/testirovanie-startap-tekhnologij/") Тестирование технологий
+            li.main-nav__item(class={active : currentPage == "attracting-investments"})
+                a.main-nav__link(href="/privlechenie-investicij/") Привлечение инвестиций
+            li.main-nav__item(class={active : currentPage == ""})
+                a.main-nav__link(href="") Участники программы
+    button.btn.btn_orange.btn_small.main-nav__btn-consultation.main-nav__btn-consultation_second.mobile.js-consultation-btn.js-go-to-form(data-target="callback-form") Подать заявку
+
+

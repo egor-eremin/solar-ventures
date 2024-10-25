@@ -1,0 +1,40 @@
+.title-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: rem(80px);
+	@include laptop {
+		align-items: flex-start;
+		margin-bottom: rem(56px);
+		.title-h2_second {
+			max-width: rem(480px);
+		}
+	}
+	@include tablet {
+		flex-direction: column;
+		align-items: flex-start;
+		margin-bottom: rem(32px);
+		.title-h2_second {
+			order: 2;
+			max-width: 100%;
+		}
+	}
+	&__subtitle {
+		position: relative;
+		top: 4px;
+		text-transform: uppercase;
+		font-size: 1rem;
+		line-height: rem(20px);
+		span {
+			color: var(--color-orange);
+		}
+		@include laptop {
+			top: 16px;
+		}
+		@include tablet {
+			order: 1;
+			margin-bottom: rem(24px) !important;
+			top: auto;
+		}
+	}
+}

@@ -1,3 +1,13 @@
+.info-block {
+	padding-bottom: rem(60px);
+	@include laptop {
+		padding-bottom: rem(40px);
+	}
+
+	@include mobile {
+		padding-bottom: rem(20px);
+	}
+}
 .info-block__wrapper {
 	display: flex;
 	align-items: flex-start;
@@ -13,6 +23,10 @@
 	width: 100%;
 	max-width: rem(684px);
 
+	picture,
+	img {
+		border-radius: 10px;
+	}
 	&_inner {
 		max-width: rem(566px);
 	}
@@ -28,6 +42,13 @@
 			object-fit: cover;
 		}
 	}
+	@include mobile {
+		picture,
+		img {
+			border-radius: 5px;
+			height: 240px;
+		}
+	}
 }
 
 .info-block__text-container {
@@ -40,21 +61,27 @@
 }
 
 .info-block__title {
-	margin-bottom: rem(40px);
+	margin-bottom: rem(32px);
 
 	@include laptop {
 		margin-bottom: rem(32px);
 	}
+	@include mobile {
+		margin-bottom: rem(16px);
+	}
 }
 
 .info-block__text {
-	margin-bottom: rem(40px);
+	margin-bottom: rem(32px);
 
 	&:last-child {
 		margin-bottom: 0;
 	}
 
 	@include laptop {
+		margin-bottom: rem(56px);
+	}
+	@include mobile {
 		margin-bottom: rem(32px);
 	}
 }
@@ -79,7 +106,7 @@
 	padding-left: rem(30px);
 
 	&::before {
-		content: '';
+		content: "";
 		position: absolute;
 		width: rem(6px);
 		height: rem(6px);
@@ -92,4 +119,10 @@
 
 .info-block__text_prev-list {
 	margin-bottom: rem(12px);
+}
+.info-block__btn {
+	@include laptop_small {
+		margin-left: auto;
+		margin-right: auto;
+	}
 }

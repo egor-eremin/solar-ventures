@@ -1,30 +1,30 @@
-section#callback-form.section.consultation
+section#callback-form.section-second.consultation
 	.wrapper
-		p.title-h2.section__title-h2.consultation__title-h2(role="heading" aria-level="2") Подать заявку
+		p.title-h2_second.consultation__title.section__title-h2(role="heading" aria-level="2") Подать заявку
 		form#callback.form.js-form-callback.consultation__form(method="post")
 			.form__item
 				input#user-name.form__input.form__input_white(type="text" name="user_name" required)
-				label.form__label(for="user-name") ФИО
+				label.form__label(for="user-name") ФИО*
 				span.form__border.form__border_for-white
 			.form__item
 				input#company-name.form__input.form__input_white(type="text" name="company_name" required)
-				label.form__label(for="company-name") Название компании
+				label.form__label(for="company-name") Название компании*
 				span.form__border.form__border_for-white
 			.form__item
 				input#user-phone.form__input.form__input_white.js-phone-input(type="tel" name="user_phone" required minlength="18" maxlength="18")
-				label.form__label(for="user-phone") Номер телефона
+				label.form__label(for="user-phone") Номер телефона*
 				span.form__border.form__border_for-white
 			.form__item
 				input#user-mail.form__input.form__input_white(type="email" name="user_mail" required)
-				label.form__label(for="user-mail") E-mail
+				label.form__label(for="user-mail") E-mail*
 				span.form__border.form__border_for-white
 			.form__item
 				input#product-description.form__input.form__input_white(type="text" name="product_description" required)
-				label.form__label(for="product-description") Описание продукта и бизнеса
+				label.form__label(for="product-description") Описание продукта и бизнеса*
 				span.form__border.form__border_for-white
 			.form__item
 				input#partnership-goals.form__input.form__input_white(type="text" name="partnership_goals" required)
-				label.form__label(for="partnership-goals") Ожидание от партнерства с “Солар”
+				label.form__label(for="partnership-goals") Ожидание от партнерства с CyberStage*
 				span.form__border.form__border_for-white
 			.form__item.consultation__file
 				label.form__file-label.js-custom-type-file

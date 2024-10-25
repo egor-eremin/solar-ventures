@@ -12,8 +12,16 @@
 		padding-top: rem(40px);
 		padding-bottom: rem(40px);
 	}
+	&_light {
+		background-color: var(--color-violet);
+	}
 }
-
+.footer__link-footer_second {
+	width: 100%;
+	.footer__logo-footer {
+		width: 100% !important;
+	}
+}
 .footer__top {
 	display: flex;
 	align-items: flex-start;
@@ -30,7 +38,15 @@
 		margin-bottom: rem(43px);
 	}
 }
-
+.footer__top_second {
+	@include laptop {
+		margin-bottom: rem(40px);
+	}
+}
+.footer__main-nav {
+	width: fit-content;
+	margin: 0 auto;
+}
 .footer__menu {
 	display: flex;
 	align-items: flex-start;
@@ -57,7 +73,6 @@
 	margin-bottom: rem(16px);
 	font-size: $font-size-base_laptop;
 	line-height: $line-height-base;
-
 }
 
 .footer__menu-item {
@@ -165,9 +180,17 @@
 		flex-direction: column;
 		align-items: flex-start;
 	}
-
 }
-
+.footer__company-information_second {
+	align-items: center;
+	@include laptop {
+		flex-direction: row;
+	}
+	@media (max-width: 700px) {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+}
 .footer__company-information-wrapper-inner {
 	margin-right: rem(24px);
 	flex-grow: 1;
@@ -185,12 +208,40 @@
 		margin-bottom: rem(40px);
 	}
 }
-
+.footer__company-information-wrapper-inner_second {
+	margin-right: rem(71px);
+	align-items: center;
+	@include laptop {
+		align-items: flex-start;
+		margin-right: 0;
+	}
+}
+.footer__text-links {
+	margin-left: auto;
+	@include laptop {
+		margin-left: 0;
+	}
+	@media (max-width: 700px) {
+		margin-bottom: rem(40px);
+	}
+	@include mobile {
+		margin-bottom: 0;
+		display: flex;
+		flex-direction: column;
+	}
+}
 .footer__text_phone {
 	margin-left: auto;
 
 	@include laptop {
 		margin-left: 0;
+	}
+}
+.footer__text_office {
+	margin-left: rem(32px);
+	@include mobile {
+		margin-left: 0;
+		margin-top: rem(12px);
 	}
 }
 
@@ -220,7 +271,7 @@
 	}
 
 	&:active {
-		color: var(--color-dark-orange)
+		color: var(--color-dark-orange);
 	}
 }
 
@@ -257,7 +308,8 @@
 		height: rem(44px);
 	}
 
-	rect, path {
+	rect,
+	path {
 		transition: 0.3s ease-out;
 	}
 
@@ -295,7 +347,7 @@
 	margin-bottom: rem(32px);
 	display: flex;
 	flex-direction: column;
-	gap: rem(38px);
+	gap: rem(62px);
 
 	@include promo-laptop {
 		flex-direction: column;
@@ -309,6 +361,9 @@
 	@include mobile {
 		padding-bottom: rem(40px);
 		margin-bottom: rem(40px);
+	}
+	&_second {
+		border-bottom: 1px solid var(--color-white);
 	}
 }
 
@@ -335,7 +390,11 @@
 		margin-bottom: rem(24px);
 	}
 }
-
+.footer__text-copy_second {
+	a {
+		color: var(--color-white);
+	}
+}
 .footer__submenu-link_mail {
 	@include laptop {
 		white-space: nowrap;

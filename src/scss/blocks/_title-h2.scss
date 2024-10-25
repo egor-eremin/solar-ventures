@@ -14,3 +14,19 @@
 		line-height: $line-height-title-h2_mobile;
 	}
 }
+.title-h2_second {
+	letter-spacing: -0.02em;
+	margin: 0;
+	font-weight: 400;
+	font-size: $font-size-title-h2_second;
+	line-height: $line-height-title-h2_second;
+	@include laptop {
+		font-size: $font-size-title-h2_laptop-second;
+		line-height: $line-height-title-h2_laptop-second;
+	}
+
+	@include mobile {
+		font-size: $font-size-title-h2_mobile-second;
+		line-height: $line-height-title-h2_mobile-second;
+	}
+}

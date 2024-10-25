@@ -1,8 +1,9 @@
 @import "functions/rem";
 
 :root {
-	/* --font-- */
+	// /* --font-- */
 	--font-primary: "Ony Sans", arial, sans-serif;
+	--font-primary_second: "Ony Semimono", arial, sans-serif;
 	--font-secondary: "ONY Realist", "times new roman", serif;
 
 	/* --color-- */
@@ -10,24 +11,24 @@
 	--color-secondary-black: #171717;
 	--color-greyscale-black: #2b323a;
 	--color-white: #fff;
-	--color-beige: #F1EDEB;
-	--color-grey-10: #EAEBEC;
-	--color-grey-20: #D5D6D8;
-	--color-grey-40: #AAADB0;
+	--color-beige: #f1edeb;
+	--color-grey-10: #eaebec;
+	--color-grey-20: #d5d6d8;
+	--color-grey-40: #aaadb0;
 	--color-grey-60: #808489;
-	--color-grey-70: #6B7076;
-	--color-grey-80: #555B61;
-	--color-grey-90: #41474E;
-	--color-grey: #2B323A;
-	--color-burgundy: #5F1224;
+	--color-grey-70: #6b7076;
+	--color-grey-80: #555b61;
+	--color-grey-90: #41474e;
+	--color-grey: #2b323a;
+	--color-burgundy: #5f1224;
 	--color-orange: #fe6e36;
-	--color-light-orange: #FE8B5E;
-	--color-dark-orange: #ED5A2B;
+	--color-light-orange: #fe8b5e;
+	--color-dark-orange: #ed5a2b;
 
-	--color-red: #FF0C0C;
-	--color-green: #5DBF5E;
+	--color-red: #ff0c0c;
+	--color-green: #5dbf5e;
 
-
+	--color-violet: #ceafff;
 }
 
 /* --grid-- */
@@ -41,12 +42,17 @@ $font-size-base_laptop: rem(16px);
 $font-size-text_big: rem(22px);
 $font-size-text_small: rem(12px);
 $font-size-title-h1: rem(108px);
+$font-size-title-h1_big: rem(96px);
 $font-size-title-h1_mobile: rem(74px);
 $font-size-title-h2: rem(68px);
+$font-size-title-h2_second: rem(52px);
 $font-size-title-h3: rem(30px);
+$font-size-title-h3_second: rem(28px);
 $font-size-title-h3_laptop: rem(20px);
 $font-size-title-h2_laptop: rem(48px);
+$font-size-title-h2_laptop-second: rem(46px);
 $font-size-title-h2_mobile: rem(26px);
+$font-size-title-h2_mobile-second: rem(30px);
 
 /* --line height-- */
 $line-height-base: rem(22px);
@@ -55,12 +61,17 @@ $line-height-text_big: rem(26px);
 $line-height-text_small: rem(15px);
 $line-height-text_small_2: rem(20px);
 $line-height-title-h1: rem(108px);
+$line-height-title_h1_big: rem(96px);
 $line-height-title-h1_mobile: rem(74px);
 $line-height-title-h2: rem(74px);
+$line-height-title-h2_second: rem(48px);
 $line-height-title-h3: rem(36px);
+$line-height-title-h3_second: rem(32px);
 $line-height-title-h3_laptop: rem(24px);
 $line-height-title-h2_laptop: rem(58px);
+$line-height-title-h2_laptop-second: rem(42px);
 $line-height-title-h2_mobile: rem(32px);
+$line-height-title-h2_mobile-second: rem(26px);
 
 /* --viewports-- */
 $mobile-width: 650;

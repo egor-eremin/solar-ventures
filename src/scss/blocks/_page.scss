@@ -8,7 +8,7 @@
 	}
 
 	@include onlyLaptop {
-		font-size: .95vw;
+		font-size: 0.95vw;
 	}
 }
 
@@ -21,10 +21,16 @@
 		family: var(--font-primary);
 		size: $font-size-base;
 		weight: 400;
-	};
+	}
 
 	@include laptop {
 		font-size: $font-size-base_laptop;
 		line-height: $line-height-base;
+	}
+}
+.page__body-second {
+	color: var(--color-grey-90);
+	font: {
+		family: var(--font-primary_second);
 	}
 }

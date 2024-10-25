@@ -36,7 +36,20 @@
 		}
 	}
 }
+.section-second {
+	padding-top: rem(60px);
+	padding-bottom: rem(60px);
 
+	@include laptop {
+		padding-top: rem(40px);
+		padding-bottom: rem(40px);
+	}
+
+	@include mobile {
+		padding-top: rem(20px);
+		padding-bottom: rem(20px);
+	}
+}
 .section__title-h2 {
 	margin-bottom: rem(80px);
 

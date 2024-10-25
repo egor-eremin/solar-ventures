@@ -5,6 +5,9 @@
 	position: relative;
 	border: 1px solid var(--color-white);
 	background-color: var(--color-greyscale-black);
+
+	background: var(--color-violet);
+
 	padding: rem(24px);
 
 	@include laptop {
@@ -15,6 +18,9 @@
 
 .mfp-bg {
 	background: var(--color-greyscale-black);
+
+	background: var(--color-violet);
+
 	opacity: 1;
 }
 

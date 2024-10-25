@@ -12,7 +12,7 @@
 	width: 100%;
 	max-width: rem(330px);
 	transition: 0.3s ease-in-out;
-
+	text-transform: uppercase;
 	&:hover {
 		color: var(--color-white);
 		background-color: var(--color-light-orange);
@@ -27,6 +27,22 @@
 
 	&_orange {
 		background-color: var(--color-orange);
+		color: var(--color-white);
+
+		&:hover {
+			border-color: var(--color-light-orange);
+			background-color: var(--color-light-orange);
+		}
+
+		&:active {
+			background-color: var(--color-dark-orange);
+			border-color: var(--color-dark-orange);
+		}
+	}
+
+	&_white {
+		border: 1px solid var(--color-white);
+		background-color: transparent;
 		color: var(--color-white);
 
 		&:hover {
@@ -55,5 +71,4 @@
 			padding: rem(9px) rem(14px);
 		}
 	}
-
 }

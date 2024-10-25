@@ -1,5 +1,6 @@
 section.section.promo.promo-main
-	.wrapper.promo__wrapper
-		h1.title-h1.promo__title.promo-main__title CYBER <span>STAGE</span>
-		p.text.promo__text.promo-main__text Программа поддержки стартапов в сфере информационной безопасности и смежных направлениях
-		button.btn.promo__btn.js-go-to-form(data-target="callback-form") Подать заявку
+	.wrapper
+		video.promo-main__video(src=`${baseDir}video/main.mp4` autoplay loop=false onended="this.pause(); this.currentTime = this.duration;" style="width: 100%; height: auto;" )
+
+		h1.title-h1_big.promo-main__title Программа <br> поддержки  <br> стартапов иб
+		button.promo-main__btn.btn.btn_white.promo__btn.js-go-to-form(data-target="callback-form") Подать заявку

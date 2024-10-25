@@ -1,4 +1,4 @@
-extends ../pug/base
+extends ../pug/base-second
 
 append vars
 	- baseDir = './'
@@ -12,7 +12,7 @@ append vars
 
 block body-start
 	header.page-header
-		+header
+		+header-second
 		include ../pug/pages/main/promo
 block content
 	include ../pug/blocks/info-block
@@ -26,5 +26,5 @@ block content
 	include ../pug/blocks/success-form
 
 block footer
-	include ../pug/blocks/footer
+	include ../pug/blocks/footer-second
 
