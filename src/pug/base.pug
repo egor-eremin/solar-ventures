@@ -290,7 +290,7 @@ html(class="page " + html.classList)&attributes(html.attrs)
 		block styles
 			link(rel="stylesheet" href!=`${baseDir}css/main.css?v=${Date.now()}`)
 		block head-end
-	body(class="page__body" + body.classList)&attributes(body.attrs)
+	body(class="page__body " + body.classList)&attributes(body.attrs)
 		block body-start
 		main(class="page__main " + main.classList)
 			block content

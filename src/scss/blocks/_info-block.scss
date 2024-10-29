@@ -73,16 +73,11 @@
 
 .info-block__text {
 	margin-bottom: rem(32px);
-
+	@include mobile {
+		margin-bottom: rem(16px);
+	}
 	&:last-child {
 		margin-bottom: 0;
-	}
-
-	@include laptop {
-		margin-bottom: rem(56px);
-	}
-	@include mobile {
-		margin-bottom: rem(32px);
 	}
 }
 
@@ -121,8 +116,16 @@
 	margin-bottom: rem(12px);
 }
 .info-block__btn {
+	margin-top: rem(32px);
+	@include laptop {
+		margin-top: rem(56px);
+	}
+
 	@include laptop_small {
 		margin-left: auto;
 		margin-right: auto;
+	}
+	@include mobile {
+		margin-top: rem(32px);
 	}
 }

@@ -1,0 +1,17 @@
+.bpium-iframe {
+	width: 100%;
+	position: relative;
+	border-radius: 10px;
+	background: #eee;
+	min-height: rem(685px);
+	margin-top: rem(40px);
+	@include laptop {
+		min-height: rem(455px);
+		margin-top: rem(32px);
+	}
+
+	@include mobile {
+		min-height: rem(210px);
+		margin-top: rem(16px);
+	}
+}

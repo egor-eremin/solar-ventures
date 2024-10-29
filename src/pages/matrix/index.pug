@@ -1,0 +1,26 @@
+extends ../../pug/base
+
+append vars
+    - baseDir = '../'
+    - title = ""
+    - meta.description = ""
+    - body.classList = "page__body-second"
+    - link.icon = "/favicons/favicon.ico"
+    - link.iconSvg = "/favicons/favicon.svg"
+    - link.appleTouchIcon = "/favicons/180.png"
+    - link.manifest = "/favicons/site.webmanifest"
+    - link.canonical = "https://cyberstage.rt-solar.ru/matrix/"
+    - currentPage = "matrix"
+
+block body-start
+    header.page-header.page-header_orange-logo
+        +header-second
+        include ../../pug/pages/matrix/promo
+block content
+    include ../../pug/pages/matrix/info-block
+    include ../../pug/pages/matrix/about
+    include ../../pug/pages/matrix/interactive
+    include ../../pug/pages/matrix/radar
+block footer
+    include ../../pug/blocks/footer-second
+

@@ -1,0 +1,25 @@
+.interactive {
+	&__btns {
+		display: flex;
+		justify-content: center;
+		margin: 0 rem(-12px);
+		margin-top: rem(60px);
+		@include laptop {
+			margin: rem(-12px);
+			margin-top: rem(56px);
+			flex-wrap: wrap;
+		}
+		@include mobile {
+			margin: rem(-12px) 0;
+			margin-top: rem(32px);
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+	.btn {
+		margin: rem(12px);
+		@include mobile {
+			margin: rem(12px) 0;
+		}
+	}
+}

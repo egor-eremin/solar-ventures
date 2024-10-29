@@ -1,6 +1,6 @@
 section.section.promo.promo-main
 	.wrapper
-		video.promo-main__video(src=`${baseDir}video/main.mp4` autoplay loop=false onended="this.pause(); this.currentTime = this.duration;" style="width: 100%; height: auto;" )
+		video.promo-main__video(src=`${baseDir}video/main.mp4` muted autoplay loop=false onended="this.pause(); this.currentTime = this.duration;" style="width: 100%; height: auto;" )
 
 		h1.title-h1_big.promo-main__title Программа <br> поддержки  <br> стартапов иб
 		button.promo-main__btn.btn.btn_white.promo__btn.js-go-to-form(data-target="callback-form") Подать заявку

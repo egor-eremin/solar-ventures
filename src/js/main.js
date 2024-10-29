@@ -847,40 +847,43 @@ function cardsAnimation() {
 		const profileSection = document.querySelector(".profile");
 		const container = document.querySelector(".scroll-container");
 		const cards = document.querySelectorAll(".profile__item");
-		const containerTop = profileSection.getBoundingClientRect().top;
-		const windowHeight = window.innerHeight;
 
-		// Высота каждой карточки
-		const cardHeight = 180;
-		if (screenWidth < 769) {
-			cards[0].style.transform = `translateY(0px)`;
-			cards[1].style.transform = `translateY(0px)`;
-			cards[2].style.transform = `translateY(0px)`;
-		}
-		if (screenWidth >= 769) {
-			const profileTop = profileSection.getBoundingClientRect().top;
-			if (profileTop > 0) {
+		if (profileSection !== null && container !== null && cards !== null) {
+			const containerTop = profileSection.getBoundingClientRect().top;
+			const windowHeight = window.innerHeight;
+
+			// Высота каждой карточки
+			const cardHeight = 180;
+			if (screenWidth < 769) {
 				cards[0].style.transform = `translateY(0px)`;
 				cards[1].style.transform = `translateY(0px)`;
 				cards[2].style.transform = `translateY(0px)`;
 			}
-			if (profileTop <= 0) {
-				const scrollProgress = Math.abs(containerTop);
-				// Движение первой карточки - на 1000 пикселей
-				if (scrollProgress <= 3 * cardHeight) {
-					cards[0].style.transform = `translateY(-${scrollProgress}px)`;
+			if (screenWidth >= 769) {
+				const profileTop = profileSection.getBoundingClientRect().top;
+				if (profileTop > 0) {
+					cards[0].style.transform = `translateY(0px)`;
+					cards[1].style.transform = `translateY(0px)`;
+					cards[2].style.transform = `translateY(0px)`;
 				}
+				if (profileTop <= 0) {
+					const scrollProgress = Math.abs(containerTop);
+					// Движение первой карточки - на 1000 пикселей
+					if (scrollProgress <= 3 * cardHeight) {
+						cards[0].style.transform = `translateY(-${scrollProgress}px)`;
+					}
 
-				if (scrollProgress > cardHeight) {
-					cards[1].style.transform = `translateY(-${
-						scrollProgress - cardHeight
-					}px)`;
-				}
+					if (scrollProgress > cardHeight) {
+						cards[1].style.transform = `translateY(-${
+							scrollProgress - cardHeight
+						}px)`;
+					}
 
-				if (scrollProgress > 2 * cardHeight) {
-					cards[2].style.transform = `translateY(-${
-						scrollProgress - 2 * cardHeight
-					}px)`;
+					if (scrollProgress > 2 * cardHeight) {
+						cards[2].style.transform = `translateY(-${
+							scrollProgress - 2 * cardHeight
+						}px)`;
+					}
 				}
 			}
 		}
@@ -888,24 +891,33 @@ function cardsAnimation() {
 }
 
 function caseSlider() {
+	var init = false;
+	let swiper;
+
 	function detectDevice() {
 		let screenWidth = window.screen.width;
-		if (screenWidth > 768) {
-			if (!init) {
-				init = true;
-				initSlider();
+
+		// Проверяем наличие элемента слайдера на странице
+		if (document.querySelector(".case__slider")) {
+			if (screenWidth > 768) {
+				if (!init) {
+					init = true;
+					initSlider();
+				}
+			} else {
+				if (init) {
+					swiper.destroy();
+					init = false;
+				}
 			}
 		} else {
+			// Если элемент отсутствует, инициализация не выполняется
 			if (init) {
 				swiper.destroy();
 				init = false;
 			}
 		}
 	}
-
-	var init = false;
-	let swiper;
-	detectDevice();
 
 	function initSlider() {
 		swiper = new Swiper(".case__slider", {
@@ -926,8 +938,9 @@ function caseSlider() {
 		swiper.update();
 	}
 
+	detectDevice();
+
 	$(window).resize(function () {
-		screenWidth = window.screen.width;
 		detectDevice();
 	});
 }
