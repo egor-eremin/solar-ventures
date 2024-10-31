@@ -1,7 +1,7 @@
 .matrix-promo {
 	padding: rem(226px) 0;
 	background-image: url("../images/matrix-bg.jpg");
-	background-size: auto;
+	background-size: contain;
 	@include laptop {
 		padding: rem(137px) 0 rem(180px);
 	}

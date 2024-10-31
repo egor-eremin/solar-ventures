@@ -1,7 +1,7 @@
 @font-face {
 	src: local("ONYSans-Regular"),
-		url("/fonts/ONYSans-Regular.woff2") format("woff2"),
-		url("/fonts/ONYSans-Regular.woff") format("woff");
+		url("../fonts/ONYSans-Regular.woff2") format("woff2"),
+		url("../fonts/ONYSans-Regular.woff") format("woff");
 	font-family: "Ony Sans";
 	font-weight: 400;
 	font-style: normal;
@@ -10,8 +10,8 @@
 
 @font-face {
 	src: local("ONYSemimono-Regular"),
-		url("/fonts/ONYSEMIMONO-REGULAR.woff2") format("woff2"),
-		url("/fonts/ONYSEMIMONO-REGULARr.woff") format("woff");
+		url("../fonts/ONYSEMIMONO-REGULAR.woff2") format("woff2"),
+		url("../fonts/ONYSEMIMONO-REGULARr.woff") format("woff");
 	font-family: "Ony Semimono";
 	font-weight: 400;
 	font-style: normal;
@@ -20,8 +20,8 @@
 
 @font-face {
 	src: local("ONYRealist-Regular"),
-		url("/fonts/ONYRealist-Regular.woff2") format("woff2"),
-		url("/fonts/ONYRealist-Regular.woff") format("woff");
+		url("../fonts/ONYRealist-Regular.woff2") format("woff2"),
+		url("../fonts/ONYRealist-Regular.woff") format("woff");
 	font-family: "ONY Realist";
 	font-weight: 400;
 	font-style: normal;
