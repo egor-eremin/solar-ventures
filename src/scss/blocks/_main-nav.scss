@@ -270,7 +270,7 @@
 	&.mobile {
 		display: none;
 	}
-	@include laptop {
+	@include tablet {
 		&.mobile {
 			display: block;
 		}
@@ -302,4 +302,8 @@
 	.main-nav__logo-second img:first-child {
 		display: block;
 	}
+}
+
+.no-button .main-nav__btn-consultation {
+	display: none !important;
 }

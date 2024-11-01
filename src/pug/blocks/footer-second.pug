@@ -1,23 +1,23 @@
 footer.footer.footer_light
     .wrapper.footer__wrapper
         .footer__top.footer__top_second
-            a.footer__link-footer.footer__link-footer_second(href="/")
+            a.footer__link-footer.footer__link-footer_second(href=`${baseDir}`)
                 img.footer__logo-footer(src=`${baseDir}images/logo_white.svg` alt="Логотип CYBERSTAGE" width="100%" height="100%")
         .footer__bottom.footer__bottom_second
             .main-nav__list-wrapper.footer__main-nav
                 ul.main-nav__list
                     li.main-nav__item(class={active : currentPage == "mentoring"})
-                        a.main-nav__link(href="/mentorstvo/") Менторство
+                        a.main-nav__link(href=`${baseDir}mentorstvo/`) Менторство
                     li.main-nav__item(class={active : currentPage == "advisory"})
-                        a.main-nav__link(href="/advisory-board/") Advisory board
+                        a.main-nav__link(href=`${baseDir}advisory-board/`) Advisory board
                     li.main-nav__item(class={active : currentPage == "technology-testing"})
-                        a.main-nav__link(href="#") Matrix
+                        a.main-nav__link(href=`${baseDir}matrix/`) Matrix
                     li.main-nav__item(class={active : currentPage == "technology-testing"})
-                        a.main-nav__link(href="/testirovanie-startap-tekhnologij/") Тестирование технологий
+                        a.main-nav__link(href=`${baseDir}testirovanie-startap-tekhnologij/`) Тестирование технологий
                     li.main-nav__item(class={active : currentPage == "attracting-investments"})
-                        a.main-nav__link(href="/privlechenie-investicij/") Привлечение инвестиций
+                        a.main-nav__link(href=`${baseDir}privlechenie-investicij/`) Привлечение инвестиций
                     li.main-nav__item(class={active : currentPage == ""})
-                        a.main-nav__link(href="") Участники программы
+                        a.main-nav__link(href=`${baseDir}participants/`) Участники программы
             .footer__company-information.footer__company-information_second
                 .footer__company-information-wrapper-inner.footer__company-information-wrapper-inner_second
                     p.footer__text.footer__text_address г. Москва, Никитский переулок, 7с1

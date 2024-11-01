@@ -5,15 +5,15 @@ append vars
 	- title = "Участники программы CYBЕRSTAGE"
 	- meta.description = "Участники программы CYBЕRSTAGE"
 	- body.classList = "page__body-second"
-	- link.icon = "/favicons/favicon.ico"
-	- link.iconSvg = "/favicons/favicon.svg"
-	- link.appleTouchIcon = "/favicons/180.png"
-	- link.manifest = "/favicons/site.webmanifest"
+	- link.icon = `${baseDir}favicons/favicon.ico`
+	- link.iconSvg = `${baseDir}favicons/favicon.svg`
+	- link.appleTouchIcon = `${baseDir}favicons/180.png`
+	- link.manifest = `${baseDir}favicons/site.webmanifest`
 	- link.canonical = "https://cyberstage.rt-solar.ru/participants/"
 	- currentPage = "participants"
 
 block body-start
-	header.page-header.page-header_dark
+	header.page-header
 		+header-second
 		include ../../pug/pages/participants/promo
 block content
