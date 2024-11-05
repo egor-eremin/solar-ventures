@@ -4,6 +4,7 @@ append vars
 	- baseDir = '../'
 	- title = "Тестирование стартап технологий — Cyber Stage"
 	- meta.description = "Тестирование стартап технологий. Помогаем протестировать ваши разработки с техническими командами Solar, сформулировать рекомендации по доработке и развитию. Доступ к технологиям Solar, Check-up ваших технологий, Запуск пилотного проекта."
+	- body.classList = "page__body-second"
 	- link.icon = `${baseDir}favicons/favicon.ico`
 	- link.iconSvg = `${baseDir}favicons/favicon.svg`
 	- link.appleTouchIcon = `${baseDir}favicons/180.png`
@@ -12,14 +13,14 @@ append vars
 	- currentPage = "technology-testing"
 
 block body-start
-	header.page-header.page-header_dark
-		+header
+	header.page-header
+		+header-second
 		include ../../pug/pages/technology-testing/promo
 block content
-	include ../../pug/pages/technology-testing/tabs
+	include ../../pug/pages/technology-testing/recommendations
 	include ../../pug/blocks/consultation-form
 	include ../../pug/blocks/success-form
 
 block footer
-	include ../../pug/blocks/footer
+	include ../../pug/blocks/footer-second
 

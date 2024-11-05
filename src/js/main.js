@@ -853,11 +853,21 @@ function cardsAnimation() {
 			const windowHeight = window.innerHeight;
 
 			// Высота каждой карточки
-			const cardHeight = 180;
+
+			let cardHeight = 180;
+			if (
+				container.classList.contains("recomendations__scroll-container")
+			) {
+				if (screenWidth < 1200) {
+					cardHeight = 230;
+				} else {
+					cardHeight = 180;
+				}
+			}
 			if (screenWidth < 769) {
-				cards[0].style.transform = `translateY(0px)`;
-				cards[1].style.transform = `translateY(0px)`;
-				cards[2].style.transform = `translateY(0px)`;
+				cards[0].style.transform = `translateY(0.1px)`;
+				cards[1].style.transform = `translateY(0.1px)`;
+				cards[2].style.transform = `translateY(0.1px)`;
 			}
 			if (screenWidth >= 769) {
 				const profileTop = profileSection.getBoundingClientRect().top;

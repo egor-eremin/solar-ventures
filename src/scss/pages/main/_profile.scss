@@ -66,6 +66,7 @@
 
 	@include laptop {
 		padding: rem(32px) 0 rem(24px);
+		align-items: flex-start;
 	}
 	@include tablet {
 		flex-direction: column;
@@ -126,5 +127,45 @@
 	@include tablet {
 		width: 100%;
 		margin-top: rem(16px);
+	}
+}
+.profile__item-list {
+	font-size: rem(20px);
+	line-height: 120%;
+	width: rem(566px);
+	@include laptop {
+		font-size: rem(18px);
+		line-height: 120%;
+		width: rem(348px);
+	}
+	@include tablet {
+		width: 100%;
+		margin-top: rem(16px);
+	}
+	li {
+		position: relative;
+		padding-left: rem(22px);
+		margin-bottom: rem(14px);
+		@include laptop {
+			margin-bottom: rem(10px);
+			padding-left: rem(17px);
+		}
+		&::before {
+			position: absolute;
+			content: "";
+			left: 0;
+			top: rem(9px);
+			background: var(--color-orange);
+			width: rem(6px);
+			height: rem(6px);
+			border-radius: 50%;
+			@include laptop {
+				width: rem(4px);
+				height: rem(4px);
+			}
+		}
+	}
+	li:last-child {
+		margin-bottom: 0;
 	}
 }

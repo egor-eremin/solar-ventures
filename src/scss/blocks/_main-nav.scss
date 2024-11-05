@@ -270,7 +270,7 @@
 	&.mobile {
 		display: none;
 	}
-	@include tablet {
+	@include laptop_small {
 		&.mobile {
 			display: block;
 		}
