@@ -855,9 +855,16 @@ function cardsAnimation() {
 			// Высота каждой карточки
 
 			let cardHeight = 180;
+
+			let scrollTrigger = windowHeight - 1.5 * cardHeight;
+
+			if (screenWidth < 1200) {
+				cardHeight = 140;
+			}
 			if (
 				container.classList.contains("recomendations__scroll-container")
 			) {
+				scrollTrigger = 0;
 				if (screenWidth < 1200) {
 					cardHeight = 230;
 				} else {
@@ -868,30 +875,44 @@ function cardsAnimation() {
 				cards[0].style.transform = `translateY(0.1px)`;
 				cards[1].style.transform = `translateY(0.1px)`;
 				cards[2].style.transform = `translateY(0.1px)`;
+				cards[3].style.transform = `translateY(0.1px)`;
 			}
 			if (screenWidth >= 769) {
 				const profileTop = profileSection.getBoundingClientRect().top;
-				if (profileTop > 0) {
-					cards[0].style.transform = `translateY(0px)`;
-					cards[1].style.transform = `translateY(0px)`;
-					cards[2].style.transform = `translateY(0px)`;
+
+				if (profileTop > scrollTrigger) {
+					cards.forEach(
+						(card) => (card.style.transform = "translateY(0px)")
+					);
 				}
-				if (profileTop <= 0) {
-					const scrollProgress = Math.abs(containerTop);
-					// Движение первой карточки - на 1000 пикселей
-					if (scrollProgress <= 3 * cardHeight) {
-						cards[0].style.transform = `translateY(-${scrollProgress}px)`;
+				if (profileTop <= scrollTrigger) {
+					const scrollProgress = Math.abs(
+						containerTop - scrollTrigger
+					);
+
+					const movementFactor = 1;
+
+					if (scrollProgress <= 10 * cardHeight) {
+						cards[0].style.transform = `translateY(${-(
+							scrollProgress * movementFactor
+						)}px)`;
 					}
 
 					if (scrollProgress > cardHeight) {
-						cards[1].style.transform = `translateY(-${
-							scrollProgress - cardHeight
+						cards[1].style.transform = `translateY(${
+							-(scrollProgress - cardHeight) * movementFactor
 						}px)`;
 					}
 
 					if (scrollProgress > 2 * cardHeight) {
-						cards[2].style.transform = `translateY(-${
-							scrollProgress - 2 * cardHeight
+						cards[2].style.transform = `translateY(${
+							-(scrollProgress - 2 * cardHeight) * movementFactor
+						}px)`;
+					}
+
+					if (scrollProgress > 3 * cardHeight) {
+						cards[3].style.transform = `translateY(${
+							-(scrollProgress - 3 * cardHeight) * movementFactor
 						}px)`;
 					}
 				}

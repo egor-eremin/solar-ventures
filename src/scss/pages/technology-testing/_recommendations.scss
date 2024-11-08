@@ -1,25 +1,31 @@
 .recomendations {
+	height: 150vh;
 	padding-top: rem(72px);
 	@include laptop {
 		padding-top: rem(64px);
+	}
+	@include tablet {
+		height: auto;
 	}
 	@include mobile {
 		padding-top: rem(40px);
 	}
 	.scroll-container {
-		@include laptop {
-			height: 690px;
-		}
+		// @include laptop {
+		// 	height: 690px;
+		// }
 		@include tablet {
 			height: auto;
 		}
 	}
 	.profile__list {
+		top: rem(500px);
 		@include laptop {
 			height: 230px;
 		}
 		@include tablet {
 			height: auto;
+			top: auto;
 		}
 	}
 }

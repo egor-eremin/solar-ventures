@@ -2,8 +2,9 @@ extends ../../pug/base
 
 append vars
 	- baseDir = '../'
-	- title = "Привлечение инвестиций, Венчурные инвестиции — Cyber Stage"
-	- meta.description = "Перспективным стартапам в сфере информационной безопасности, так же новых технологий для импортозамещения в критически важных и чувствительных отраслях мы поможем привлечь венчурные инвестиции от Solar и других фондов."
+	- title = "Привлечение инвестиций — CyberStage"
+	- meta.description = "Привлечение инвестиций — CyberStage. Поможем привлечь инвестиции через реализацию ключевых шагов: оценка готовности бизнеса к работе с инвестором, проверка позиционирования бизнеса, представление фондам и стратегическим инвесторам"
+	- body.classList = "page__body-second"
 	- link.icon = `${baseDir}favicons/favicon.ico`
 	- link.iconSvg = `${baseDir}favicons/favicon.svg`
 	- link.appleTouchIcon = `${baseDir}favicons/180.png`
@@ -12,14 +13,15 @@ append vars
 	- currentPage = "attracting-investments"
 
 block body-start
-	header.page-header.page-header_dark
-		+header
+	header.page-header
+		+header-second
 		include ../../pug/pages/privlechenie-investicij/promo
 block content
 	include ../../pug/pages/privlechenie-investicij/info-block
+	include ../../pug/pages/privlechenie-investicij/steps
 	include ../../pug/blocks/consultation-form
 	include ../../pug/blocks/success-form
 
 block footer
-	include ../../pug/blocks/footer
+	include ../../pug/blocks/footer-second
 
