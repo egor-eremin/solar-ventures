@@ -38,14 +38,20 @@
 	@include tablet {
 		img {
 			width: 100%;
-			max-height: rem(300px);
+			//max-height: rem(510px);
 			object-fit: cover;
 		}
 	}
+
 	@include mobile {
 		picture,
 		img {
 			border-radius: 5px;
+		}
+	}
+	@media (max-width: 400px) {
+		picture,
+		img {
 			height: 240px;
 		}
 	}

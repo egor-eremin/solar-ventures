@@ -38,6 +38,7 @@
 		}
 	}
 	.promo__img {
+		max-height: rem(380px);
 		border-radius: 10px;
 		@include laptop {
 			margin-bottom: rem(32px);
