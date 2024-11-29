@@ -7,10 +7,10 @@
 }
 
 .products-advantages__title {
-	margin-bottom: rem(96px);
+	margin-bottom: rem(32px);
 
 	@include laptop {
-		margin-bottom: rem(80px);
+		margin-bottom: rem(56px);
 	}
 
 	@include mobile {
@@ -19,166 +19,103 @@
 }
 
 .products-advantages__item {
-	padding: rem(24px);
+	border-radius: rem(10px);
+	padding: rem(20px);
 	background-color: var(--color-beige);
-	min-height: rem(364px);
+	min-height: rem(450px);
 	height: auto;
-
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 	@include onlyDesctop {
 		&:hover {
-			.products-advantages__icon-1-eye {
-				animation: animationEye 1.2s linear both infinite;
+			.products-advantages__icon-1_block-1 {
+				animation: animationBlock1 2.5s linear both infinite;
 			}
-
-			.products-advantages__icon-2_arrow-1 {
-				animation: animationArrow1 0.8s linear both infinite;
+			.products-advantages__icon-1_block-2 {
+				animation: animationBlock2 2.5s linear both infinite;
 			}
-
-			.products-advantages__icon-2_arrow-2 {
-				animation: animationArrow2 0.8s linear both infinite;
+			.products-advantages__icon-1_block-3 {
+				animation: animationBlock3 2.5s linear both infinite;
 			}
-
-			.products-advantages__icon-2_arrow-3 {
-				animation: animationArrow3 0.8s linear both infinite;
+			.products-advantages__icon-1_block-4 {
+				animation: animationBlock4 2.5s linear both infinite;
 			}
-
-			.products-advantages__icon-2_arrow-4 {
-				animation: animationArrow4 0.8s linear both infinite;
+			.products-advantages__icon-1_block-5 {
+				animation: animationBlock5 2.5s linear both infinite;
 			}
-
-			.products-advantages__icon-3_shield {
-				animation: animationShield 1s ease-in both infinite;
+			.products-advantages__icon-2_circle-1 circle {
+				animation: animationCircle1 2.5s linear both infinite;
 			}
-
-			.products-advantages__icon-bracket_1 {
-				animation: animationBracket1 1s ease-in both infinite;
+			.products-advantages__icon-2_circle-2 circle {
+				animation: animationCircle2 2.5s linear both infinite;
 			}
-
-			.products-advantages__icon-bracket_2 {
-				animation: animationBracket2 1s ease-in both infinite;
+			.products-advantages__icon-2_circle-3 circle {
+				animation: animationCircle3 2.5s linear both infinite;
 			}
-
-			.products-advantages__icon-square_1 {
-				animation: animationSquare1 1.2s linear both infinite;
+			.products-advantages__icon-2_circle-4 circle {
+				animation: animationCircle4 2.5s linear both infinite;
 			}
-
-			.products-advantages__icon-square_2 {
-				animation: animationSquare2 1.2s linear both infinite;
+			.products-advantages__icon-3_card-1 {
+				animation: animationCard1 2.5s linear both infinite;
 			}
-
-			.products-advantages__icon-square_3 {
-				animation: animationSquare3 1.2s linear both infinite;
+			.products-advantages__icon-3_card-2 {
+				animation: animationCard2 2.5s linear both infinite;
 			}
-
-			.products-advantages__icon-circle {
-				animation: animationCircle 1.8s ease-in both infinite;
+			.products-advantages__icon-3_card-3 {
+				animation: animationCard3 2.5s linear both infinite;
 			}
-
-			.products-advantages__icon-lightning {
-				animation: animationLightning 1.8s linear both infinite;
+			.products-advantages__icon-3_card-4 {
+				animation: animationCard4 2.5s linear both infinite;
 			}
-
-			.products-advantages__icon-second-hand {
-				animation: animationSecondHand 2.2s linear both infinite;
+			.products-advantages__icon-3_card-5 {
+				animation: animationCard5 2.5s linear both infinite;
 			}
-
-			.products-advantages__icon-diagram {
-				animation: animationDiagram 1.3s linear both infinite;
+			.products-advantages__icon-3_card-6 {
+				animation: animationCard6 2.5s linear both infinite;
 			}
-
-			.products-advantages__icon-check {
-				animation: animationCheck 1.5s linear both infinite;
+			.products-advantages__icon-4_star {
+				transform-origin: 127.5px 64px;
+				animation: animationStar 2.5s linear both infinite;
 			}
-
-			.products-advantages__icon-convenience-1 {
-				animation: animationConvenience1 1.6s linear both infinite;
-			}
-
-			.products-advantages__icon-convenience-2 {
-				animation: animationConvenience2 1.6s linear both infinite;
-			}
-
-			.products-inrights-advantages-icon-1__1 {
-				animation: products-inrights-advantages-icon-1__1 2s linear both infinite;
-			}
-
-			.products-inrights-advantages-icon-1__2 {
-				animation: products-inrights-advantages-icon-1__2 2s linear both infinite;
-			}
-
-			.products-inrights-advantages-icon-1__3 {
-				animation: products-inrights-advantages-icon-1__3 2s linear both infinite;
-			}
-
-			.products-inrights-advantages-icon-1__4 {
-				animation: products-inrights-advantages-icon-1__4 2s linear both infinite;
-			}
-
-			.products-inrights-advantages-icon-2__1 {
-				animation: products-inrights-advantages-icon-2__1 2s ease-in-out both infinite;
-			}
-
-			.products-inrights-advantages-icon-2__2 {
-				animation: products-inrights-advantages-icon-2__2 2s ease-in-out both infinite;
-			}
-
-			.products-inrights-advantages-icon-3__1 {
-				animation: products-inrights-advantages-icon-3__1 2s ease-in-out both infinite;
-			}
-
-			.products-inrights-advantages-icon-3__2 {
-				animation: products-inrights-advantages-icon-3__2 2s ease-in-out both infinite;
-			}
-
-			.products-inrights-advantages-icon-4__1 {
-				animation: products-inrights-advantages-icon-4__1 2s ease-in-out both infinite;
-			}
-
-			.products-inrights-advantages-icon-4__2 {
-				animation: products-inrights-advantages-icon-4__2 2s ease-in-out both infinite;
-			}
-
-			.products-inrights-advantages-icon-5 {
-				animation: products-inrights-advantages-icon-5 1.8s ease-in-out both infinite;
-			}
-
-			.products-inrights-advantages-icon-5__desktop {
-				animation: products-inrights-advantages-icon-5__desktop 1.8s ease-in-out both infinite;
-			}
-
-			.products-inrights-advantages-icon-5__mobile {
-				animation: products-inrights-advantages-icon-5__mobile 1.8s ease-in-out both infinite;
-			}
-
-			.solar-cpt-advantages__icon-1 {
-				animation: solar-cpt_advantages-icon-1 1.8s ease-in-out both infinite;
-			}
-
-			.solar-cpt-advantages__icon-2_path {
-				animation: solar-cpt_advantages-icon-2 1.8s ease-in-out both infinite;
-			}
-
-			.solar-cpt-advantages__icon-3 {
-				animation: solar-cpt_advantages-icon-3 1.8s ease-in-out both infinite;
+			.products-advantages__icon-4_triangle {
+				animation: animationTriangle 2.5s linear both infinite;
 			}
 		}
 	}
 
 	@include laptop {
 		padding: rem(20px);
-		min-height: rem(346px);
+		min-height: rem(314px);
 		width: rem(348px) !important;
 	}
 
 	@include mobile {
-		padding: rem(16px) rem(12px);
-		width: rem(228px) !important;
-		min-height: rem(324px);
+		padding: rem(16px);
+		width: rem(328px) !important;
+		min-height: rem(318px);
+		margin-bottom: rem(16px);
 	}
 }
-
+.products-advantages__item.swiper-slide1 {
+	background: #eee;
+}
+.products-advantages__item.swiper-slide2 {
+	background: #ceafff;
+}
+.products-advantages__item.swiper-slide3 {
+	background: #ffe147;
+}
+.products-advantages__item.swiper-slide4 {
+	background: #ffe9e1;
+}
+.products-advantages__item:last-child {
+	@include mobile {
+		margin-bottom: 0;
+	}
+}
 .products-advantages__icon-wrapper {
-	height: rem(155px);
+	//height: rem(155px);
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -195,18 +132,17 @@
 	}
 
 	@include mobile {
-		height: rem(100px);
-		margin-bottom: rem(16px);
+		height: rem(142px);
+		margin-bottom: rem(20px);
 	}
 }
 
 .products-advantages__item-title {
 	margin-bottom: rem(12px);
-	text-align: center;
+	text-transform: uppercase;
 }
 
 .products-advantages__text {
-	text-align: center;
 }
 
 .products-advantages__list-wrapper {
@@ -233,677 +169,514 @@
 	justify-content: flex-end;
 	gap: rem(8px);
 	margin-bottom: rem(16px);
+	@include mobile {
+		display: none;
+	}
 }
 
 .products-advantages__list {
 	height: auto;
+	@include mobile {
+		flex-direction: column;
+	}
 }
 
-
-@keyframes animationEye {
+@keyframes animationBlock1 {
 	0% {
-		transform: translate(0);
+		transform: translate(0, 0);
 	}
-
 	25% {
-		transform: translate(-5px);
+		transform: translate(rem(-40px), 0);
 	}
-
 	50% {
-		transform: translate(5px);
+		transform: translate(rem(-40px), 0);
 	}
-
-	100% {
-		transform: translate(0);
-	}
-}
-
-@keyframes animationArrow1 {
-	0% {
-		transform: translateY(0);
-	}
-
-	50% {
-		transform: translateY(-5px);
-	}
-
-	100% {
-		transform: translateY(0);
-	}
-}
-
-@keyframes animationArrow2 {
-	0% {
-		transform: translateX(0);
-	}
-
-	50% {
-		transform: translateX(5px);
-	}
-
-	100% {
-		transform: translateX(0);
-	}
-}
-
-@keyframes animationArrow3 {
-	0% {
-		transform: translateY(0);
-	}
-
-	50% {
-		transform: translateY(5px);
-	}
-
-	100% {
-		transform: translateY(0);
-	}
-}
-
-@keyframes animationArrow4 {
-	0% {
-		transform: translateX(0);
-	}
-
-	50% {
-		transform: translateX(-5px);
-	}
-
-	100% {
-		transform: translateX(0);
-	}
-}
-
-@keyframes animationShield {
-	0% {
-		transform: translateY(0);
-	}
-
-	33.3% {
-		transform: translateY(12px);
-	}
-
-	66.6% {
-		transform: translateY(-2px);
-	}
-
-	100% {
-		transform: translateY(0);
-	}
-}
-
-@keyframes animationBracket1 {
-	0% {
-		transform-origin: center;
-		transform: translateX(0);
-	}
-
-	50% {
-		transform-origin: center;
-		transform: translateX(0.5rem) scale(1.05, 1.05);
-	}
-
-	100% {
-		transform-origin: center;
-		transform: translateX(0);
-	}
-}
-
-@keyframes animationBracket2 {
-	0% {
-		transform-origin: center;
-		transform: translateX(0);
-	}
-
-	50% {
-		transform-origin: center;
-		transform: translateX(-0.5rem) scale(1.05, 1.05);
-	}
-
-	100% {
-		transform-origin: center;
-		transform: translateX(0);
-	}
-}
-
-@keyframes animationSquare1 {
-	0% {
-		transform-origin: center;
-		transform: translateY(0);
-	}
-
-	30% {
-		transform-origin: center;
-		transform: translateY(4px) scale(0.98);
-	}
-
-	70% {
-		transform-origin: center;
-		transform: translateY(4px) scale(0.98);
-	}
-
-	100% {
-		transform-origin: center;
-		transform: translateY(0);
-	}
-}
-
-@keyframes animationSquare2 {
-	0% {
-		transform-origin: center;
-		transform: translateX(0);
-	}
-
-	30% {
-		transform-origin: center;
-		transform: translateX(-2px) scale(0.98);
-	}
-
-	70% {
-		transform-origin: center;
-		transform: translateX(-2px) scale(0.98);
-	}
-
-	100% {
-		transform-origin: center;
-		transform: translateX(0);
-	}
-}
-
-@keyframes animationSquare3 {
-	0% {
-		transform-origin: center;
-		transform: translateX(0);
-	}
-
-	30% {
-		transform-origin: center;
-		transform: translateX(2px) scale(0.98);
-	}
-
-	70% {
-		transform-origin: center;
-		transform: translateX(2px) scale(0.98);
-	}
-
-	100% {
-		transform-origin: center;
-		transform: translateX(0);
-	}
-}
-
-@keyframes animationCircle {
-	0% {
-		transform: translateX(0);
-	}
-
-	20% {
-		transform: translateX(0);
-	}
-
-	50% {
-		transform: translateX(-28%);
-	}
-
-	70% {
-		transform: translateX(-28%);
-	}
-
-	100% {
-		transform: translateX(0);
-	}
-}
-
-@keyframes animationLightning {
-	0% {
-		opacity: 1;
-	}
-
-	30% {
-		opacity: 0.5;
-	}
-
-	70% {
-		opacity: 0.5;
-	}
-
-	100% {
-		opacity: 1;
-	}
-}
-
-@keyframes animationSecondHand {
-	0% {
-		transform-origin: left 98%;
-		transform: rotate(0);
-	}
-
-	20% {
-		transform-origin: left 98%;
-		transform: rotate(0);
-	}
-
-	40% {
-		transform-origin: left 98%;
-		transform: rotate(15deg);
-	}
-
-	60% {
-		transform-origin: left 98%;
-		transform: rotate(15deg);
-	}
-
-	80% {
-		transform-origin: left 98%;
-		transform: rotate(0);
-	}
-
-	100% {
-		transform-origin: left 98%;
-		transform: rotate(0);
-	}
-}
-
-@keyframes animationDiagram {
-	0% {
-		transform-origin: center;
-		transform: rotate(0);
-	}
-
-	50% {
-		transform-origin: center;
-		transform: rotate(-20deg);
-	}
-
-	100% {
-		transform-origin: center;
-		transform: rotate(0);
-	}
-}
-
-@keyframes animationCheck {
-	0% {
-		transform: translateY(0);
-	}
-
-	30% {
-		transform: translateY(1.25rem);
-	}
-
-	70% {
-		transform: translateY(1.25rem);
-	}
-
-	100% {
-		transform: translateY(0);
-	}
-}
-
-@keyframes animationConvenience1 {
-	0% {
-		transform-origin: top left;
+	75% {
 		transform: translate(0, 0);
 	}
-
-	30% {
-		transform-origin: top left;
-		transform: translate(-1rem, -1rem);
-	}
-
-	70% {
-		transform-origin: top left;
-		transform: translate(-1rem, -1rem);
-	}
-
 	100% {
-		transform-origin: top left;
+		transform: translate(0, 0);
+	}
+}
+@keyframes animationBlock2 {
+	0% {
+		transform: translate(0, 0);
+	}
+	25% {
+		transform: translate(rem(-30px), rem(-10px));
+	}
+	50% {
+		transform: translate(rem(-30px), rem(-10px));
+	}
+	75% {
+		transform: translate(0, 0);
+	}
+	100% {
+		transform: translate(0, 0);
+	}
+}
+@keyframes animationBlock3 {
+	0% {
+		transform: translate(0, 0);
+	}
+	25% {
+		transform: translate(rem(25px), 0px);
+	}
+	50% {
+		transform: translate(rem(25px), 0px);
+	}
+	75% {
+		transform: translate(0, 0);
+	}
+	100% {
+		transform: translate(0, 0);
+	}
+}
+@keyframes animationBlock4 {
+	0% {
+		transform: translate(0, 0);
+	}
+	25% {
+		transform: translate(rem(29px), rem(23px));
+	}
+	50% {
+		transform: translate(rem(29px), rem(23px));
+	}
+	75% {
+		transform: translate(0, 0);
+	}
+	100% {
+		transform: translate(0, 0);
+	}
+}
+@keyframes animationBlock5 {
+	0% {
+		transform: translate(0, 0);
+	}
+	25% {
+		transform: translate(rem(19px), rem(19px));
+	}
+	50% {
+		transform: translate(rem(19px), rem(19px));
+	}
+	75% {
+		transform: translate(0, 0);
+	}
+	100% {
 		transform: translate(0, 0);
 	}
 }
 
-@keyframes animationConvenience2 {
+@keyframes animationCircle1 {
 	0% {
-		transform-origin: bottom right;
-		transform: translate(0, 0);
+		r: rem(27px);
 	}
-
-	30% {
-		transform-origin: bottom right;
-		transform: translate(0.5rem, 0.5rem);
+	25% {
+		r: rem(27px);
 	}
-
-	70% {
-		transform-origin: bottom right;
-		transform: translate(0.5rem, 0.5rem);
-	}
-
-	100% {
-		transform-origin: bottom right;
-		transform: translate(0, 0);
-	}
-}
-
-@keyframes products-inrights-advantages-icon-1__1 {
-	0% {
-		transform-origin: top left;
-		transform: scale(1);
-	}
-
-	30% {
-		transform-origin: top left;
-		transform: scale(0.8);
-	}
-
-	70% {
-		transform-origin: top left;
-		transform: scale(0.8);
-	}
-
-	100% {
-		transform-origin: top left;
-		transform: scale(1);
-	}
-}
-
-@keyframes products-inrights-advantages-icon-1__2 {
-	0% {
-		transform-origin: top right;
-		transform: scale(1);
-	}
-
-	30% {
-		transform-origin: top right;
-		transform: scale(0.8);
-	}
-
-	70% {
-		transform-origin: top right;
-		transform: scale(0.8);
-	}
-
-	100% {
-		transform-origin: top right;
-		transform: scale(1);
-	}
-}
-
-@keyframes products-inrights-advantages-icon-1__3 {
-	0% {
-		transform-origin: bottom right;
-		transform: scale(1);
-	}
-
-	30% {
-		transform-origin: bottom right;
-		transform: scale(0.8);
-	}
-
-	70% {
-		transform-origin: bottom right;
-		transform: scale(0.8);
-	}
-
-	100% {
-		transform-origin: bottom right;
-		transform: scale(1);
-	}
-}
-
-@keyframes products-inrights-advantages-icon-1__4 {
-	0% {
-		transform-origin: bottom left;
-		transform: scale(1);
-	}
-
-	30% {
-		transform-origin: bottom left;
-		transform: scale(0.8);
-	}
-
-	70% {
-		transform-origin: bottom left;
-		transform: scale(0.8);
-	}
-
-	100% {
-		transform-origin: bottom left;
-		transform: scale(1);
-	}
-}
-
-@keyframes products-inrights-advantages-icon-2__1 {
-	0% {
-		transform-origin: left center;
-		transform: translateX(0);
-	}
-
-	30% {
-		transform-origin: left center;
-		transform: translateX(-1.25rem);
-	}
-
-	70% {
-		transform-origin: left center;
-		transform: translateX(-1.25rem);
-	}
-
-	100% {
-		transform-origin: left center;
-		transform: translateX(0);
-	}
-}
-
-@keyframes products-inrights-advantages-icon-2__2 {
-	0% {
-		transform-origin: left center;
-		transform: translateX(0);
-	}
-
-	30% {
-		transform-origin: left center;
-		transform: translateX(-0.3125rem);
-	}
-
-	70% {
-		transform-origin: left center;
-		transform: translateX(-0.3125rem);
-	}
-
-	100% {
-		transform-origin: left center;
-		transform: translateX(0);
-	}
-}
-
-@keyframes products-inrights-advantages-icon-3__1 {
-	0% {
-		transform-origin: left center;
-		transform: translateY(0);
-	}
-
-	30% {
-		transform-origin: left center;
-		transform: translateY(0.3125rem);
-	}
-
-	70% {
-		transform-origin: left center;
-		transform: translateY(0.3125rem);
-	}
-
-	100% {
-		transform-origin: left center;
-		transform: translateY(0);
-	}
-}
-
-@keyframes products-inrights-advantages-icon-3__2 {
-	0% {
-		transform-origin: left center;
-		transform: translateY(0);
-	}
-
-	30% {
-		transform-origin: left center;
-		transform: translateY(-0.3125rem);
-	}
-
-	70% {
-		transform-origin: left center;
-		transform: translateY(-0.3125rem);
-	}
-
-	100% {
-		transform-origin: left center;
-		transform: translateY(0);
-	}
-}
-
-@keyframes products-inrights-advantages-icon-4__1 {
-	0% {
-		transform-origin: left center;
-		transform: translateY(0) translateX(0);
-	}
-
-	30% {
-		transform-origin: left center;
-		transform: translateY(-0.5rem) translateX(0.3125rem);
-	}
-
-	70% {
-		transform-origin: left center;
-		transform: translateY(-0.5rem) translateX(0.3125rem);
-	}
-
-	100% {
-		transform-origin: left center;
-		transform: translateY(0) translateX(0);
-	}
-}
-
-@keyframes products-inrights-advantages-icon-4__2 {
-	0% {
-		transform-origin: left center;
-		transform: translateY(0) translateX(0);
-	}
-
-	30% {
-		transform-origin: left center;
-		transform: translateY(0.5rem) translateX(-0.3125rem);
-	}
-
-	70% {
-		transform-origin: left center;
-		transform: translateY(0.5rem) translateX(-0.3125rem);
-	}
-
-	100% {
-		transform-origin: left center;
-		transform: translateY(0) translateX(0);
-	}
-}
-
-@keyframes products-inrights-advantages-icon-5__desktop {
-	0% {
-		opacity: 1;
-	}
-
 	50% {
-		opacity: 0;
+		r: rem(19.5px);
 	}
-
+	75% {
+		r: rem(19.5px);
+	}
 	100% {
-		opacity: 1;
+		r: rem(27px);
 	}
 }
-
-@keyframes products-inrights-advantages-icon-5__mobile {
+@keyframes animationCircle2 {
 	0% {
-		opacity: 0;
+		r: rem(18px);
 	}
-
+	25% {
+		r: rem(18px);
+	}
 	50% {
-		opacity: 1;
+		r: rem(25px);
 	}
-
+	75% {
+		r: rem(25px);
+	}
 	100% {
-		opacity: 0;
+		r: rem(18px);
 	}
 }
-
-@keyframes products-inrights-advantages-icon-5 {
+@keyframes animationCircle3 {
 	0% {
-		transform: rotate(0);
+		r: rem(11px);
 	}
-
+	25% {
+		r: rem(11px);
+	}
 	50% {
-		transform: rotate(75deg);
+		r: rem(30.5px);
 	}
-
+	75% {
+		r: rem(30.5px);
+	}
 	100% {
-		transform: rotate(0);
+		r: rem(11px);
+	}
+}
+@keyframes animationCircle4 {
+	0% {
+		r: rem(26px);
+	}
+	25% {
+		r: rem(26px);
+	}
+	50% {
+		r: rem(14.5px);
+	}
+	75% {
+		r: rem(14.5px);
+	}
+	100% {
+		r: rem(26px);
 	}
 }
 
-
-@keyframes solar-cpt_advantages-icon-1 {
+@keyframes animationCard1 {
 	0% {
-		transform: scale(1);
+		transform: matrix(
+			-0.965936,
+			0.258783,
+			-0.707133 -0.70708,
+			313.754,
+			91.3197
+		);
 	}
-
-	33% {
-		transform: scale(0.8);
+	25% {
+		transform: matrix(
+			-0.965936,
+			0.258783,
+			-0.707133,
+			-0.70708,
+			313.754,
+			91.3197
+		);
 	}
-
-	69% {
-		transform: scale(0.8);
+	50% {
+		transform: matrix(
+			-0.965936,
+			0.258783,
+			-0.707133,
+			-0.70708,
+			327.754,
+			72.3197
+		);
 	}
-
+	75% {
+		transform: matrix(
+			-0.965936,
+			0.258783,
+			-0.707133,
+			-0.70708,
+			327.754,
+			72.3197
+		);
+	}
 	100% {
-		transform: scale(1);
+		transform: matrix(
+			-0.965936,
+			0.258783,
+			-0.707133,
+			-0.70708,
+			313.754,
+			91.3197
+		);
 	}
 }
 
-@keyframes solar-cpt_advantages-icon-2 {
+@keyframes animationCard2 {
 	0% {
-		transform-origin: bottom center;
-		transform: translate(0, 0);
+		transform: matrix(
+			-0.965936,
+			0.258783,
+			-0.707133 -0.70708,
+			319.754,
+			71.3197
+		);
 	}
-
-	33% {
-		transform-origin: bottom center;
-		transform: translate(rem(-8px), 1px);
+	25% {
+		transform: matrix(
+			-0.965936,
+			0.258783,
+			-0.707133,
+			-0.70708,
+			319.754,
+			71.3197
+		);
 	}
-
-	69% {
-		transform-origin: bottom center;
-		transform: translate(rem(-8px), 1px);
+	50% {
+		transform: matrix(
+			-0.965936,
+			0.258783,
+			-0.707133,
+			-0.70708,
+			339.754,
+			46.3197
+		);
 	}
-
+	75% {
+		transform: matrix(
+			-0.965936,
+			0.258783,
+			-0.707133,
+			-0.70708,
+			339.754,
+			46.3197
+		);
+	}
 	100% {
-		transform-origin: bottom center;
-		transform: translate(0, 0);
+		transform: matrix(
+			-0.965936,
+			0.258783,
+			-0.707133,
+			-0.70708,
+			319.754,
+			71.3197
+		);
 	}
 }
 
-@keyframes solar-cpt_advantages-icon-3 {
+@keyframes animationCard3 {
 	0% {
-		transform-origin: bottom center;
-		transform: scaleX(1) scaleY(1);
+		transform: matrix(
+			-0.965936,
+			0.258783,
+			-0.707133 -0.70708,
+			240.754,
+			144.3197
+		);
 	}
-
-	33% {
-		transform-origin: bottom center;
-		transform: scaleX(0.9) scaleY(0.8);
+	25% {
+		transform: matrix(
+			-0.965936,
+			0.258783,
+			-0.707133,
+			-0.70708,
+			240.754,
+			144.3197
+		);
 	}
-
-	69% {
-		transform-origin: bottom center;
-		transform: scaleX(0.9) scaleY(0.8);
+	50% {
+		transform: matrix(
+			-0.965936,
+			0.258783,
+			-0.707133,
+			-0.70708,
+			250.754,
+			134.3197
+		);
 	}
-
+	75% {
+		transform: matrix(
+			-0.965936,
+			0.258783,
+			-0.707133,
+			-0.70708,
+			250.754,
+			134.3197
+		);
+	}
 	100% {
-		transform-origin: bottom center;
-		transform: scaleX(1) scaleY(1);
+		transform: matrix(
+			-0.965936,
+			0.258783,
+			-0.707133,
+			-0.70708,
+			240.754,
+			144.3197
+		);
+	}
+}
+@keyframes animationCard4 {
+	0% {
+		transform: matrix(
+			-0.965936,
+			0.258783,
+			-0.707133 -0.70708,
+			247.754,
+			129.3197
+		);
+	}
+	25% {
+		transform: matrix(
+			-0.965936,
+			0.258783,
+			-0.707133,
+			-0.70708,
+			247.754,
+			129.3197
+		);
+	}
+	50% {
+		transform: matrix(
+			-0.965936,
+			0.258783,
+			-0.707133,
+			-0.70708,
+			257.754,
+			112.3197
+		);
+	}
+	75% {
+		transform: matrix(
+			-0.965936,
+			0.258783,
+			-0.707133,
+			-0.70708,
+			257.754,
+			112.3197
+		);
+	}
+	100% {
+		transform: matrix(
+			-0.965936,
+			0.258783,
+			-0.707133,
+			-0.70708,
+			247.754,
+			129.3197
+		);
+	}
+}
+@keyframes animationCard5 {
+	0% {
+		transform: matrix(
+			-0.965936,
+			0.258783,
+			-0.707133 -0.70708,
+			175.754,
+			185.32
+		);
+	}
+	25% {
+		transform: matrix(
+			-0.965936,
+			0.258783,
+			-0.707133,
+			-0.70708,
+			175.754,
+			185.32
+		);
+	}
+	50% {
+		transform: matrix(
+			-0.965936,
+			0.258783,
+			-0.707133,
+			-0.70708,
+			185.754,
+			165.32
+		);
+	}
+	75% {
+		transform: matrix(
+			-0.965936,
+			0.258783,
+			-0.707133,
+			-0.70708,
+			185.754,
+			165.32
+		);
+	}
+	100% {
+		transform: matrix(
+			-0.965936,
+			0.258783,
+			-0.707133,
+			-0.70708,
+			175.754,
+			185.32
+		);
+	}
+}
+@keyframes animationCard6 {
+	0% {
+		transform: matrix(
+			-0.965936,
+			0.258783,
+			-0.707133 -0.70708,
+			168.754,
+			200.32
+		);
+	}
+	25% {
+		transform: matrix(
+			-0.965936,
+			0.258783,
+			-0.707133,
+			-0.70708,
+			168.754,
+			200.32
+		);
+	}
+	50% {
+		transform: matrix(
+			-0.965936,
+			0.258783,
+			-0.707133,
+			-0.70708,
+			178.754,
+			190.32
+		);
+	}
+	75% {
+		transform: matrix(
+			-0.965936,
+			0.258783,
+			-0.707133,
+			-0.70708,
+			178.754,
+			190.32
+		);
+	}
+	100% {
+		transform: matrix(
+			-0.965936,
+			0.258783,
+			-0.707133,
+			-0.70708,
+			168.754,
+			200.32
+		);
+	}
+}
+
+@keyframes animationStar {
+	0% {
+		transform: rotate(0deg);
+	}
+	25% {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotate(70deg);
+	}
+	75% {
+		transform: rotate(70deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+@keyframes animationTriangle {
+	0% {
+		transform: translateY(0);
+	}
+	25% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(rem(-15px));
+	}
+	75% {
+		transform: translateY(rem(-15px));
+	}
+	100% {
+		transform: translateY(0);
 	}
 }

@@ -1,5 +1,5 @@
 .recomendations {
-	height: 150vh;
+	//height: 150vh;
 	padding-top: rem(72px);
 	@include laptop {
 		padding-top: rem(64px);
@@ -19,8 +19,10 @@
 		}
 	}
 	.profile__list {
-		top: rem(500px);
+		top: calc(100vh - 180px * 1.5);
+		//top: rem(500px);
 		@include laptop {
+			top: calc(100vh - 230px);
 			height: 230px;
 		}
 		@include tablet {

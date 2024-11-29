@@ -4,6 +4,7 @@ append vars
 	- baseDir = '../'
 	- title = "Менторство, Менторство и помощь экспертов Солар — Cyber Stage"
 	- meta.description = "Менторство — помощь экспертов Солар. Найдём эксперта для решения задач и подберем программу менторства: Развитие продаж и поиск клиентов. Идея, продукт, технология. HR и таланты. Маркетинг и PR. Привлечение инвестиций."
+	- body.classList = "page__body-second"
 	- link.icon = `${baseDir}favicons/favicon.ico`
 	- link.iconSvg = `${baseDir}favicons/favicon.svg`
 	- link.appleTouchIcon = `${baseDir}favicons/180.png`
@@ -12,8 +13,8 @@ append vars
 	- currentPage = "mentoring"
 
 block body-start
-	header.page-header.page-header_dark
-		+header
+	header.page-header
+		+header-second
 		include ../../pug/pages/mentoring/promo
 block content
 	include ../../pug/pages/mentoring/products-advantages
@@ -23,5 +24,5 @@ block content
 	include ../../pug/blocks/success-form
 
 block footer
-	include ../../pug/blocks/footer
+	include ../../pug/blocks/footer-second
 

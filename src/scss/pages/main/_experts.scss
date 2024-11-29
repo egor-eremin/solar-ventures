@@ -2,6 +2,15 @@
 	overflow: hidden;
 	position: relative;
 }
+.experts__title-header {
+	margin-bottom: rem(32px);
+	@include laptop {
+		margin-bottom: rem(64px);
+	}
+	@include mobile {
+		margin-bottom: rem(32px);
+	}
+}
 
 .experts__text {
 	position: absolute;
@@ -29,7 +38,7 @@
 
 	@include laptop {
 		width: rem(232px);
-		padding-top: rem(15px);
+		padding-top: rem(32px);
 	}
 
 	@include tablet {
@@ -38,6 +47,7 @@
 		right: auto;
 		bottom: auto;
 		width: rem(280px);
+		padding-top: rem(15px);
 		margin-top: rem(24px);
 	}
 
@@ -52,9 +62,15 @@
 	width: rem(1050px);
 	margin-left: rem(420px);
 
+	width: 73.75rem;
+	margin-left: 14.75rem;
+	margin-left: 30rem;
 	@include laptop {
 		width: rem(900px);
 		margin-left: rem(180px);
+
+		margin-left: 40px;
+		margin-left: 0;
 	}
 
 	@include tablet {
@@ -65,6 +81,8 @@
 		width: rem(610px);
 		margin-left: 0;
 		min-height: rem(366px);
+
+		// margin-left: -122px;
 	}
 }
 
@@ -75,18 +93,22 @@
 	height: rem(483px);
 	position: relative;
 
+	height: 36.9375rem;
+
 	&.swiper-slide-active {
 		width: rem(361px) !important;
-
+		width: 29.5rem !important;
 		.experts__avatar {
 			height: rem(483px);
-
+			height: 36.9375rem;
 			@include laptop {
 				height: rem(399px);
+				height: 24.9375rem;
 			}
 
 			@include mobile {
 				height: rem(250px);
+				height: 15.625rem;
 			}
 		}
 
@@ -145,25 +167,33 @@
 
 .experts__avatar {
 	height: rem(334px);
+	height: 25.5625rem;
 	position: relative;
 	width: 100%;
 	transition: 0.3s ease-out;
 
 	@include laptop {
 		height: rem(285px);
+		height: 17.8125rem;
 	}
 
 	@include mobile {
 		height: rem(203px);
+		height: 12.6875rem;
 	}
 }
 
-.experts__img, .experts__img-grey {
+.experts__img,
+.experts__img-grey {
+	border-radius: 10px;
 	position: absolute;
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
 	transition: 0.3s ease-out;
+	@include mobile {
+		border-radius: 5px;
+	}
 }
 
 .experts__img {
@@ -202,13 +232,16 @@
 .experts__pagination {
 	position: static;
 	width: auto;
-	margin-bottom: rem(6px);
-
+	margin-bottom: rem(24px);
+	display: flex;
+	justify-content: flex-end;
 	@include mobile {
-		margin-bottom: 0;
+		display: none;
 	}
 }
-
+.js-experts__prev {
+	margin-right: rem(12px);
+}
 .experts__item-text {
 	@include laptop {
 		font-size: $font-size-text_small;
@@ -365,7 +398,7 @@
 	padding-left: rem(30px);
 
 	&::before {
-		content: '';
+		content: "";
 		position: absolute;
 		width: rem(6px);
 		height: rem(6px);

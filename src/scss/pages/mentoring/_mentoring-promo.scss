@@ -1,0 +1,75 @@
+.mentoring-promo {
+	padding: rem(152px) 0 rem(80px);
+	@include mobile {
+		padding: rem(76px) 0 rem(40px);
+	}
+}
+.mentoring-promo__title-inner {
+	position: relative;
+}
+.mentoring-promo .promo-inner-page__title {
+	max-width: rem(1048px);
+	@include laptop_small {
+		max-width: rem(671px);
+	}
+	@include mobile {
+		max-width: rem(290px);
+	}
+}
+.mentoring-promo .promo__title {
+	text-transform: none;
+	margin-bottom: rem(173px);
+	letter-spacing: -0.03em;
+	line-height: 96%;
+	@include laptop_small {
+		margin-bottom: 0;
+		letter-spacing: normal;
+	}
+	@include mobile {
+	}
+	span {
+		line-height: 80%;
+		@include laptop {
+			font-size: 5.0625rem;
+			font-family: var(--font-primary_second);
+			line-height: 96%;
+		}
+		@include laptop_small {
+			letter-spacing: normal;
+		}
+		@include mobile {
+			font-size: 2.5rem;
+		}
+	}
+	span:last-child {
+		margin-left: 12.5rem;
+		@include laptop_small {
+			margin-left: 0;
+		}
+	}
+}
+
+.mentoring-promo .promo__img {
+	position: absolute;
+	left: 49%;
+	transform: translateX(-50%);
+	bottom: 45px;
+	max-width: rem(170px);
+	@include laptop_small {
+		position: relative;
+		bottom: auto;
+		left: auto;
+		transform: translateX(0);
+		width: rem(224px);
+		max-width: 100%;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: rem(32px);
+		margin-top: rem(5px);
+		border-radius: 5px;
+	}
+	@include mobile {
+		width: rem(156px);
+	}
+}

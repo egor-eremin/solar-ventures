@@ -1,39 +1,16 @@
 section.section.experts
 	.wrapper
-		.prev-line.section__prev-line
-			p.prev-line__text Постоянные менторы solar
-		.experts__title-wrapper
-			p.title-h2.section__title-h2.experts__title(role="heading" aria-level="2") Готовы помочь в решении  задач развития
-			.pagination.experts__pagination
-				.pagination__wrapper.experts__pagination-wrapper
-					button.pagination__arrow.pagination__arrow-prev.js-experts__prev
-						+svg("arrow-slide-prev")(class="pagination__svg pagination__svg_orange")
-					.circle-animate.js-experts-moon
-						.circle-animate__elem.circle-animate__elem1
-							| <svg class="circle-animate__svg circle-animate__svg_1"
-							|   xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox='0 0 20 20'>
-							|   <defs>
-							|     <mask id="mask-experts-1">
-							|        <circle cx="10" cy="10" r="11" fill="white" />
-							|        <ellipse class="circle-animate__circle-mask-1" cx="10" cy="10" rx="10" ry="10" fill="black" />
-							|     </mask>
-							|   </defs>
-							|   <ellipse class="circle-animate__circle-svg-1 circle-animate__circle-orange" cx="10" cy="10" rx="9" ry="9" mask="url(#mask-experts-1)" />
-							| </svg>
-						.circle-animate__elem.circle-animate__elem2
-							| <svg class="circle-animate__svg circle-animate__svg_2"
-							|   xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox='0 0 20 20'>
-							|   <defs>
-							|     <mask id="mask-experts-2">
-							|        <circle cx="10" cy="10" r="10" fill="white" />
-							|        <ellipse class="circle-animate__circle-mask-2" cx="10" cy="10" rx="0" ry="10" fill="black" />
-							|     </mask>
-							|   </defs>
-							|   <ellipse class="circle-animate__circle-svg-2 circle-animate__circle-orange" cx="10" cy="10" rx="9" ry="9" mask="url(#mask-experts-2)" />
-							| </svg>
-					p.pagination__number.pagination__number_orange.js-experts-number
-					button.pagination__arrow.pagination__arrow-next.js-experts__next
-						+svg("arrow-slide-next")(class="pagination__svg pagination__svg_orange")
+		.title-header.experts__title-header
+			p.title-h2_second(role="heading" aria-level="2") Готовы помочь в решении задач развития
+			p.text.title-header__subtitle
+				span (
+				| Постоянные менторы cyberstage
+				span )
+		.pagination.experts__pagination
+			button.pagination__arrow.pagination__arrow-prev.js-experts__prev
+				+svg("arrow-slide-prev")(class="pagination__svg pagination__svg_orange")
+			button.pagination__arrow.pagination__arrow-next.js-experts__next
+				+svg("arrow-slide-next")(class="pagination__svg pagination__svg_orange")
 		.experts__slider-block
 			.experts__slider-container
 				.experts__slider.swiper.js-experts-slider
@@ -45,13 +22,13 @@ section.section.experts
 							.experts__text
 								p.title-h3.title-h3_dark.experts__item-title(role="heading" aria-level="3") Дмитрий Бондарь
 								p.text.text_middle.experts__item-text Директор департамента управления доступом
-						.experts__slider-item.swiper-slide
-							.experts__avatar
-								img.experts__img(src=`${baseDir}images/experts-7.jpg` alt="Николай Белобров")
-								img.experts__img-grey(src=`${baseDir}images/experts-7_grey.jpg` alt="Николай Белобров")
-							.experts__text
-								p.title-h3.title-h3_dark.experts__item-title(role="heading" aria-level="3") Николай Белобров
-								p.text.text_middle.experts__item-text Заместитель директора центра интеграции
+						//- .experts__slider-item.swiper-slide
+						//- 	.experts__avatar
+						//- 		img.experts__img(src=`${baseDir}images/experts-7.jpg` alt="Николай Белобров")
+						//- 		img.experts__img-grey(src=`${baseDir}images/experts-7_grey.jpg` alt="Николай Белобров")
+						//- 	.experts__text
+						//- 		p.title-h3.title-h3_dark.experts__item-title(role="heading" aria-level="3") Николай Белобров
+						//- 		p.text.text_middle.experts__item-text Заместитель директора центра интеграции
 						.experts__slider-item.swiper-slide
 							.experts__avatar
 								img.experts__img(src=`${baseDir}images/experts-1.jpg` alt="Александр Баринов")
@@ -66,13 +43,13 @@ section.section.experts
 							.experts__text
 								p.title-h3.title-h3_dark.experts__item-title(role="heading" aria-level="3") Марина Овсянникова
 								p.text.text_middle.experts__item-text Директор по маркетингу и PR<br> ГК “Солар”
-						.experts__slider-item.swiper-slide
-							.experts__avatar
-								img.experts__img(src=`${baseDir}images/expert-9.jpg` alt="Игорь Хереш")
-								img.experts__img-grey(src=`${baseDir}images/expert-9_grey.jpg` alt="Игорь Хереш")
-							.experts__text
-								p.title-h3.title-h3_dark.experts__item-title(role="heading" aria-level="3") Игорь Хереш
-								p.text.text_middle.experts__item-text Директор Департамента управления активами и M&A
+						//- .experts__slider-item.swiper-slide
+						//- 	.experts__avatar
+						//- 		img.experts__img(src=`${baseDir}images/expert-9.jpg` alt="Игорь Хереш")
+						//- 		img.experts__img-grey(src=`${baseDir}images/expert-9_grey.jpg` alt="Игорь Хереш")
+						//- 	.experts__text
+						//- 		p.title-h3.title-h3_dark.experts__item-title(role="heading" aria-level="3") Игорь Хереш
+							p.text.text_middle.experts__item-text Директор Департамента управления активами и M&A
 						.experts__slider-item.swiper-slide
 							.experts__avatar
 								img.experts__img(src=`${baseDir}images/experts-6.jpg` alt="Владимир Бенгин")

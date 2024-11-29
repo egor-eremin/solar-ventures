@@ -280,7 +280,7 @@ function validationForm() {
 			let formData = new FormData(formCallback);
 			let xhr = new XMLHttpRequest();
 
-			xhr.open("POST", "/file.php");
+			xhr.open("POST", "/mailer-cyberstage.php");
 
 			xhr.onreadystatechange = function () {
 				if (xhr.readyState == 4) {
@@ -422,7 +422,7 @@ function initExpertsSlider() {
 		});
 
 		const expertsSwiper = new Swiper(".js-experts-slider", {
-			initialSlide: 2,
+			initialSlide: 3,
 			slidesPerView: 5,
 			touchRatio: 0.5,
 			loop: true,
@@ -438,60 +438,60 @@ function initExpertsSlider() {
 			},
 		});
 
-		const expertsSwiperFake = new Swiper(".js-experts-fake-slider", {
-			// initialSlide: 1,
-			slidesPerView: 1,
-			touchRatio: 0.5,
-			loop: true,
-			slidesPerGroup: 1,
-			// slideToClickedSlide: false,
-			navigation: {
-				prevEl: ".js-experts__prev",
-				nextEl: ".js-experts__next",
-			},
-			keyboard: {
-				enabled: true,
-				onlyInViewport: true,
-			},
-			on: {
-				init() {
-					showsSlideNumber.call(this, ".js-experts-number");
-					updateMoon.call(this, ".js-experts-moon");
-				},
-				slideChange() {
-					showsSlideNumber.call(this, ".js-experts-number");
-				},
-			},
-		});
+		// const expertsSwiperFake = new Swiper(".js-experts-fake-slider", {
+		// 	// initialSlide: 1,
+		// 	slidesPerView: 1,
+		// 	touchRatio: 0.5,
+		// 	loop: true,
+		// 	slidesPerGroup: 1,
+		// 	// slideToClickedSlide: false,
+		// 	navigation: {
+		// 		prevEl: ".js-experts__prev",
+		// 		nextEl: ".js-experts__next",
+		// 	},
+		// 	keyboard: {
+		// 		enabled: true,
+		// 		onlyInViewport: true,
+		// 	},
+		// 	on: {
+		// 		init() {
+		// 			showsSlideNumber.call(this, ".js-experts-number");
+		// 			updateMoon.call(this, ".js-experts-moon");
+		// 		},
+		// 		slideChange() {
+		// 			showsSlideNumber.call(this, ".js-experts-number");
+		// 		},
+		// 	},
+		// });
 
-		expertsSwiperFake.on("slideNextTransitionStart", function () {
-			const direction = "toNext";
-			const curSlide = expertsSwiperFake.realIndex + 1;
+		// expertsSwiperFake.on("slideNextTransitionStart", function () {
+		// 	const direction = "toNext";
+		// 	const curSlide = expertsSwiperFake.realIndex + 1;
 
-			updateMoon.call(this, ".js-experts-moon", direction);
-			if (curSlide === 1) {
-				removeTransition(".js-experts-moon");
-			}
-		});
+		// 	updateMoon.call(this, ".js-experts-moon", direction);
+		// 	if (curSlide === 1) {
+		// 		removeTransition(".js-experts-moon");
+		// 	}
+		// });
 
-		expertsSwiperFake.on("slidePrevTransitionStart", function () {
-			const direction = "toPrev";
-			const curSlide = expertsSwiperFake.realIndex + 1;
-			const allSlides = expertsSwiperFake.slides.length;
+		// expertsSwiperFake.on("slidePrevTransitionStart", function () {
+		// 	const direction = "toPrev";
+		// 	const curSlide = expertsSwiperFake.realIndex + 1;
+		// 	const allSlides = expertsSwiperFake.slides.length;
 
-			if (curSlide === allSlides) {
-				removeTransition(".js-experts-moon");
-			}
-			updateMoon.call(this, ".js-experts-moon", direction);
-		});
+		// 	if (curSlide === allSlides) {
+		// 		removeTransition(".js-experts-moon");
+		// 	}
+		// 	updateMoon.call(this, ".js-experts-moon", direction);
+		// });
 
-		expertsSwiper.on("slideNextTransitionStart", function () {
-			expertsSwiperFake.slideNext();
-		});
+		// expertsSwiper.on("slideNextTransitionStart", function () {
+		// 	expertsSwiperFake.slideNext();
+		// });
 
-		expertsSwiper.on("slidePrevTransitionStart", function () {
-			expertsSwiperFake.slidePrev();
-		});
+		// expertsSwiper.on("slidePrevTransitionStart", function () {
+		// 	expertsSwiperFake.slidePrev();
+		// });
 	}
 }
 
@@ -532,17 +532,6 @@ function initProductsAdvantagesSlider() {
 		const productsAdvantagesWrapper = document.querySelector(
 			".products-advantages__list"
 		);
-		const productsAdvantagesItems =
-			productsAdvantagesWrapper.querySelectorAll(
-				".products-advantages__item"
-			);
-
-		if (productsAdvantagesItems.length / 3 < 2) {
-			productsAdvantagesItems.forEach((element) => {
-				const cloneElement = element.cloneNode(true);
-				productsAdvantagesWrapper.appendChild(cloneElement);
-			});
-		}
 
 		function initSwiper() {
 			if (!swiperProductsAdvantages) {
@@ -576,26 +565,44 @@ function initProductsAdvantagesSlider() {
 			}
 		}
 
-		// function destroySwiper() {
-		// 	if (swiperProductsAdvantages) {
-		// 		swiperProductsAdvantages.destroy();
-		// 		swiperProductsAdvantages = undefined;
-		// 	}
-		// }
+		function destroySwiper() {
+			if (swiperProductsAdvantages) {
+				swiperProductsAdvantages.destroy();
+				swiperProductsAdvantages = undefined;
+			}
+		}
 
-		// function checkScreenSize() {
-		// 	if (window.innerWidth <= 1200) {
-		// 		destroySwiper();
-		// 	} else {
-		// 		initSwiper();
-		// 	}
-		// }
+		function checkScreenSize() {
+			if (window.innerWidth > 650) {
+				const productsAdvantagesItems =
+					productsAdvantagesWrapper.querySelectorAll(
+						".products-advantages__item"
+					);
 
-		// checkScreenSize();
+				if (productsAdvantagesItems.length / 3 < 2) {
+					productsAdvantagesItems.forEach((element) => {
+						const cloneElement = element.cloneNode(true);
+						cloneElement.classList.add("clone");
+						productsAdvantagesWrapper.appendChild(cloneElement);
+					});
+				}
+				if (!swiperProductsAdvantages) initSwiper();
+			} else {
+				destroySwiper();
+				const clonedItems = productsAdvantagesWrapper.querySelectorAll(
+					".products-advantages__item.clone"
+				);
+				clonedItems.forEach((clone) => {
+					clone.remove();
+				});
+			}
+		}
 
-		// window.addEventListener('resize', checkScreenSize);
+		checkScreenSize();
 
-		initSwiper();
+		window.addEventListener("resize", checkScreenSize);
+
+		//initSwiper();
 	}
 }
 
@@ -864,9 +871,16 @@ function cardsAnimation() {
 			if (
 				container.classList.contains("recomendations__scroll-container")
 			) {
-				scrollTrigger = 0;
+				scrollTrigger = windowHeight - 2 * cardHeight;
 				if (screenWidth < 1200) {
 					cardHeight = 230;
+				} else {
+					cardHeight = 180;
+				}
+			}
+			if (container.classList.contains("steps__scroll-container")) {
+				if (screenWidth < 1200) {
+					cardHeight = 260;
 				} else {
 					cardHeight = 180;
 				}
@@ -892,28 +906,40 @@ function cardsAnimation() {
 
 					const movementFactor = 1;
 
-					if (scrollProgress <= 10 * cardHeight) {
+					if (scrollProgress <= (cards.length - 1) * cardHeight) {
 						cards[0].style.transform = `translateY(${-(
 							scrollProgress * movementFactor
 						)}px)`;
 					}
 
-					if (scrollProgress > cardHeight) {
+					if (
+						scrollProgress > cardHeight &&
+						scrollProgress <= (cards.length - 1) * cardHeight
+					) {
 						cards[1].style.transform = `translateY(${
 							-(scrollProgress - cardHeight) * movementFactor
 						}px)`;
 					}
 
-					if (scrollProgress > 2 * cardHeight) {
+					if (
+						scrollProgress > 2 * cardHeight &&
+						scrollProgress <= (cards.length - 1) * cardHeight
+					) {
 						cards[2].style.transform = `translateY(${
 							-(scrollProgress - 2 * cardHeight) * movementFactor
 						}px)`;
 					}
 
-					if (scrollProgress > 3 * cardHeight) {
-						cards[3].style.transform = `translateY(${
-							-(scrollProgress - 3 * cardHeight) * movementFactor
-						}px)`;
+					if (cards.length > 4) {
+						if (
+							scrollProgress > 3 * cardHeight &&
+							scrollProgress <= (cards.length - 1) * cardHeight
+						) {
+							cards[3].style.transform = `translateY(${
+								-(scrollProgress - 3 * cardHeight) *
+								movementFactor
+							}px)`;
+						}
 					}
 				}
 			}

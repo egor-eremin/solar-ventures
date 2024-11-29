@@ -1,9 +1,5 @@
 .profile {
-	height: 40vh;
 	height: 100vh;
-	// @media (min-width: 1024px) and (max-height: 670px) {
-	// 	height: 200vh;
-	// }
 	@include tablet {
 		height: auto;
 	}
@@ -23,8 +19,6 @@
 	position: sticky;
 	// top: rem(600px);
 	top: calc(100vh - 180px * 1.5);
-
-	//top: 500px;
 
 	height: 180px;
 	display: flex;
