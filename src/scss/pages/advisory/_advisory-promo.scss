@@ -1,0 +1,14 @@
+.advisory-promo__title {
+	text-transform: none;
+	margin-bottom: 0;
+}
+.advisory-promo__img {
+	max-width: rem(170px);
+	margin-bottom: rem(32px);
+	@include laptop {
+		max-width: rem(224px);
+	}
+	@include mobile {
+		max-width: rem(156px);
+	}
+}

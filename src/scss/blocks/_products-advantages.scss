@@ -17,6 +17,17 @@
 		margin-bottom: rem(32px);
 	}
 }
+.products-advantages__advisory-title {
+	margin-bottom: rem(80px);
+
+	@include laptop {
+		margin-bottom: rem(56px);
+	}
+
+	@include mobile {
+		margin-bottom: rem(32px);
+	}
+}
 
 .products-advantages__item {
 	border-radius: rem(10px);
@@ -81,6 +92,56 @@
 			.products-advantages__icon-4_triangle {
 				animation: animationTriangle 2.5s linear both infinite;
 			}
+			.products-advantages__icon-5_block-1 {
+				animation: animationRectangle1 2.5s linear both infinite;
+			}
+			.products-advantages__icon-5_block-2 {
+				animation: animationRectangle2 2.5s linear both infinite;
+			}
+			.products-advantages__icon-5_block-3 {
+				animation: animationRectangle3 2.5s linear both infinite;
+			}
+			.products-advantages__icon-5_gradient-1 {
+				animation: animationGradient1 2.5s linear both infinite;
+			}
+			.products-advantages__icon-5_gradient-2 {
+				animation: animationGradient2 2.5s linear both infinite;
+			}
+			.products-advantages__icon-5_gradient-3 {
+				animation: animationGradient3 2.5s linear both infinite;
+			}
+			.products-advantages__icon-6_rectangle-1 {
+				animation: animationTranslateRectangle1 2.5s linear both
+					infinite;
+			}
+			.products-advantages__icon-6_rectangle-2 {
+				animation: animationTranslateRectangle2 2.5s linear both
+					infinite;
+				transform-origin: 196.25px 128.5px;
+			}
+			.products-advantages__icon-6_rectangle-3 {
+				animation: animationTranslateRectangle3 2.5s linear both
+					infinite;
+			}
+			.products-advantages__icon-6_rectangle-4 {
+				animation: animationTranslateRectangle4 2.5s linear both
+					infinite;
+				transform-origin: 188.55px 196.865px;
+			}
+			.products-advantages__icon-7_circle-1 {
+				animation: animationCircle5 2.5s linear both infinite;
+
+				transition: r 2.5s ease-in-out;
+			}
+			.products-advantages__icon-7_circle-2 {
+				animation: animationCircle6 2.5s linear both infinite;
+			}
+			.products-advantages__icon-7_circle-3 {
+				animation: animationCircle7 2.5s linear both infinite;
+			}
+			.products-advantages__icon-7_circle-4 {
+				animation: animationCircle8 2.5s linear both infinite;
+			}
 		}
 	}
 
@@ -109,6 +170,21 @@
 .products-advantages__item.swiper-slide4 {
 	background: #ffe9e1;
 }
+
+.products-advisory__list-wrapper .products-advantages__item.swiper-slide1 {
+	background: #ceafff;
+}
+.products-advisory__list-wrapper .products-advantages__item.swiper-slide2 {
+	background: #ffe147;
+}
+.products-advisory__list-wrapper .products-advantages__item.swiper-slide3 {
+	background: #ffe9e1;
+}
+
+.products-advantages__advisory-pagination {
+	display: none !important;
+}
+
 .products-advantages__item:last-child {
 	@include mobile {
 		margin-bottom: 0;
@@ -125,6 +201,7 @@
 		overflow: initial;
 		width: auto;
 		max-height: 100%;
+		max-width: 100%;
 	}
 
 	@include laptop {
@@ -680,3 +757,228 @@
 		transform: translateY(0);
 	}
 }
+
+@keyframes animationRectangle1 {
+	0% {
+		height: rem(175.643px);
+		y: rem(12.7917px);
+	}
+	25% {
+		height: rem(175.643px);
+		y: rem(12.7917px);
+	}
+	50% {
+		height: rem(228.723px);
+		y: rem(-13.7917px);
+	}
+	75% {
+		height: rem(228.723px);
+		y: rem(-13.7917px);
+	}
+	100% {
+		height: rem(175.643px);
+		y: rem(12.7917px);
+	}
+}
+@keyframes animationRectangle2 {
+	0% {
+		height: rem(204.546px);
+		y: rem(3px);
+	}
+	25% {
+		height: rem(204.546px);
+		y: rem(3px);
+	}
+	50% {
+		height: rem(266.361px);
+		y: rem(-28px);
+	}
+	75% {
+		height: rem(266.361px);
+		y: rem(-28px);
+	}
+	100% {
+		height: rem(204.546px);
+		y: rem(3px);
+	}
+}
+@keyframes animationRectangle3 {
+	0% {
+		height: rem(194.755px);
+		y: rem(12.7917px);
+	}
+	25% {
+		height: rem(194.755px);
+		y: rem(12.7917px);
+	}
+	50% {
+		height: rem(253.61px);
+		y: rem(-17.7917px);
+	}
+	75% {
+		height: rem(253.61px);
+		y: rem(-17.7917px);
+	}
+	100% {
+		height: rem(194.755px);
+		y: rem(12.7917px);
+	}
+}
+
+@keyframes animationGradient1 {
+	0% {
+		width: rem(70.4416px);
+		x: rem(20.2891px);
+	}
+	25% {
+		width: rem(70.4416px);
+		x: rem(20.2891px);
+	}
+	50% {
+		width: rem(50.4416px);
+		x: rem(30.2891px);
+	}
+	75% {
+		width: rem(50.4416px);
+		x: rem(30.2891px);
+	}
+	100% {
+		width: rem(70.4416px);
+		x: rem(20.2891px);
+	}
+}
+
+@keyframes animationGradient2 {
+	0% {
+		width: rem(65.023px);
+		x: rem(112.792px);
+	}
+	25% {
+		width: rem(65.023px);
+		x: rem(112.792px);
+	}
+	50% {
+		width: rem(39px);
+		x: rem(125px);
+	}
+	75% {
+		width: rem(39px);
+		x: rem(125px);
+	}
+	100% {
+		width: rem(65.023px);
+		x: rem(112.792px);
+	}
+}
+
+@keyframes animationGradient3 {
+	0% {
+		width: rem(68.1193px);
+		x: rem(199.876px);
+	}
+	25% {
+		width: rem(68.1193px);
+		x: rem(199.876px);
+	}
+	50% {
+		width: rem(47.4416px);
+		x: rem(210.2891px);
+	}
+	75% {
+		width: rem(47.4416px);
+		x: rem(210.2891px);
+	}
+	100% {
+		width: rem(68.1193px);
+		x: rem(199.876px);
+	}
+}
+
+@keyframes animationTranslateRectangle1 {
+	0% {
+		transform: translateY(0);
+	}
+	25% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(rem(3px));
+	}
+	75% {
+		transform: translateY(rem(3px));
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+@keyframes animationTranslateRectangle2 {
+	0% {
+		transform: rotate(0deg);
+	}
+	25% {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: translateY(rem(2px)) rotate(-2deg);
+	}
+	75% {
+		transform: translateY(rem(2px)) rotate(-2deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+@keyframes animationTranslateRectangle3 {
+	0% {
+		transform: translateY(0);
+	}
+	25% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(rem(8px));
+	}
+	75% {
+		transform: translateY(rem(8px));
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+@keyframes animationTranslateRectangle4 {
+	0% {
+		transform: translateY(0px) rotate(0deg);
+	}
+	25% {
+		transform: translateY(0px) rotate(0deg);
+	}
+	50% {
+		transform: translateY(rem(15px)) rotate(-10deg);
+	}
+	75% {
+		transform: translateY(rem(15px)) rotate(-10deg);
+	}
+	100% {
+		transform: translateY(0px) rotate(0deg);
+	}
+}
+
+// @keyframes animationCircle5 {
+// 	0% {
+// 		r: 1;
+// 	}
+// 	25% {
+// 		r: 1;
+// 	}
+// 	50% {
+// 		r: 0.5;
+// 	}
+// 	75% {
+// 		r: 0.5;
+// 	}
+// 	100% {
+// 		r: 1;
+// 	}
+// }

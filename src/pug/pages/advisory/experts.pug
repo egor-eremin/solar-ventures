@@ -1,39 +1,16 @@
 section.section.experts
 	.wrapper
-		.prev-line.section__prev-line
-			p.prev-line__text Уже участвуют в advisory board
-		.experts__title-wrapper
-			p.title-h2.section__title-h2.experts__title(role="heading" aria-level="2") Участники экспертного совета
-			.pagination.experts__pagination
-				.pagination__wrapper.experts__pagination-wrapper
-					button.pagination__arrow.pagination__arrow-prev.js-experts__prev
-						+svg("arrow-slide-prev")(class="pagination__svg pagination__svg_orange")
-					.circle-animate.js-experts-moon
-						.circle-animate__elem.circle-animate__elem1
-							| <svg class="circle-animate__svg circle-animate__svg_1"
-							|   xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox='0 0 20 20'>
-							|   <defs>
-							|     <mask id="mask-experts-1">
-							|        <circle cx="10" cy="10" r="11" fill="white" />
-							|        <ellipse class="circle-animate__circle-mask-1" cx="10" cy="10" rx="10" ry="10" fill="black" />
-							|     </mask>
-							|   </defs>
-							|   <ellipse class="circle-animate__circle-svg-1 circle-animate__circle-orange" cx="10" cy="10" rx="9" ry="9" mask="url(#mask-experts-1)" />
-							| </svg>
-						.circle-animate__elem.circle-animate__elem2
-							| <svg class="circle-animate__svg circle-animate__svg_2"
-							|   xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox='0 0 20 20'>
-							|   <defs>
-							|     <mask id="mask-experts-2">
-							|        <circle cx="10" cy="10" r="10" fill="white" />
-							|        <ellipse class="circle-animate__circle-mask-2" cx="10" cy="10" rx="0" ry="10" fill="black" />
-							|     </mask>
-							|   </defs>
-							|   <ellipse class="circle-animate__circle-svg-2 circle-animate__circle-orange" cx="10" cy="10" rx="9" ry="9" mask="url(#mask-experts-2)" />
-							| </svg>
-					p.pagination__number.pagination__number_orange.js-experts-number
-					button.pagination__arrow.pagination__arrow-next.js-experts__next
-						+svg("arrow-slide-next")(class="pagination__svg pagination__svg_orange")
+		.title-header.experts__title-header
+			p.title-h2_second(role="heading" aria-level="2") Участники экспертного совета
+			p.text.title-header__subtitle
+				span (
+				| Уже участвуют в advisory board
+				span )
+		.pagination.experts__pagination
+			button.pagination__arrow.pagination__arrow-prev.js-experts__prev
+				+svg("arrow-slide-prev")(class="pagination__svg pagination__svg_orange")
+			button.pagination__arrow.pagination__arrow-next.js-experts__next
+				+svg("arrow-slide-next")(class="pagination__svg pagination__svg_orange")
 		.experts__slider-block
 			.experts__slider-container
 				.experts__slider.swiper.js-experts-slider
@@ -45,10 +22,10 @@ section.section.experts
 							.experts__text
 								p.title-h3.title-h3_dark.experts__item-title(role="heading" aria-level="3") Сергей Демидов
 								p.text.text_middle.experts__item-text Заместитель Председателя Правления по информационной безопасности Московской биржи
-								a.link.experts__item-button.js-experts-button(data-target="expert-1") Биография эксперта
-									| <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-									| <path fill-rule="evenodd" clip-rule="evenodd" d="M11.25 12.75V18H12.75V12.75H18V11.25H12.75V6H11.25V11.25H6V12.75H11.25Z" fill="#FE6E36"/>
-									| </svg>
+								//- a.link.experts__item-button.js-experts-button(data-target="expert-1") Биография эксперта
+								//- 	| <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								//- 	| <path fill-rule="evenodd" clip-rule="evenodd" d="M11.25 12.75V18H12.75V12.75H18V11.25H12.75V6H11.25V11.25H6V12.75H11.25Z" fill="#FE6E36"/>
+								//- 	| </svg>
 						.experts__slider-item.swiper-slide
 							.experts__avatar
 								img.experts__img(src=`${baseDir}images/advisory-experts-5.jpg` alt="Давид Мартиросов")
@@ -56,10 +33,10 @@ section.section.experts
 							.experts__text
 								p.title-h3.title-h3_dark.experts__item-title(role="heading" aria-level="3") Давид Мартиросов
 								p.text.text_middle.experts__item-text Вице-президент по ИТ-эксплуатации и инфраструктуре ПАО «Ростелеком» и генеральный директор ООО&nbsp;«Базис»
-								a.link.experts__item-button.js-experts-button(data-target="expert-2") Биография эксперта
-									| <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-									| <path fill-rule="evenodd" clip-rule="evenodd" d="M11.25 12.75V18H12.75V12.75H18V11.25H12.75V6H11.25V11.25H6V12.75H11.25Z" fill="#FE6E36"/>
-									| </svg>
+								//- a.link.experts__item-button.js-experts-button(data-target="expert-2") Биография эксперта
+								//- 	| <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								//- 	| <path fill-rule="evenodd" clip-rule="evenodd" d="M11.25 12.75V18H12.75V12.75H18V11.25H12.75V6H11.25V11.25H6V12.75H11.25Z" fill="#FE6E36"/>
+								//- 	| </svg>
 						.experts__slider-item.swiper-slide
 							.experts__avatar
 								img.experts__img(src=`${baseDir}images/advisory-experts-1.jpg` alt="Дмитрий Гадарь")
@@ -67,10 +44,10 @@ section.section.experts
 							.experts__text
 								p.title-h3.title-h3_dark.experts__item-title(role="heading" aria-level="3") Дмитрий Гадарь
 								p.text.text_middle.experts__item-text Директор Департамента информационной безопасности “Тинькофф”
-								a.link.experts__item-button.js-experts-button(data-target="expert-3") Биография эксперта
-									| <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-									| <path fill-rule="evenodd" clip-rule="evenodd" d="M11.25 12.75V18H12.75V12.75H18V11.25H12.75V6H11.25V11.25H6V12.75H11.25Z" fill="#FE6E36"/>
-									| </svg>
+								//- a.link.experts__item-button.js-experts-button(data-target="expert-3") Биография эксперта
+								//- 	| <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								//- 	| <path fill-rule="evenodd" clip-rule="evenodd" d="M11.25 12.75V18H12.75V12.75H18V11.25H12.75V6H11.25V11.25H6V12.75H11.25Z" fill="#FE6E36"/>
+								//- 	| </svg>
 						.experts__slider-item.swiper-slide
 							.experts__avatar
 								img.experts__img(src=`${baseDir}images/advisory-experts-2.jpg` alt="Вячеслав Касимов")
@@ -78,10 +55,10 @@ section.section.experts
 							.experts__text
 								p.title-h3.title-h3_dark.experts__item-title(role="heading" aria-level="3") Вячеслав Касимов
 								p.text.text_middle.experts__item-text CISO Московского кредитного банка
-								a.link.experts__item-button.js-experts-button(data-target="expert-4") Биография эксперта
-									| <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-									| <path fill-rule="evenodd" clip-rule="evenodd" d="M11.25 12.75V18H12.75V12.75H18V11.25H12.75V6H11.25V11.25H6V12.75H11.25Z" fill="#FE6E36"/>
-									| </svg>
+								//- a.link.experts__item-button.js-experts-button(data-target="expert-4") Биография эксперта
+								//- 	| <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								//- 	| <path fill-rule="evenodd" clip-rule="evenodd" d="M11.25 12.75V18H12.75V12.75H18V11.25H12.75V6H11.25V11.25H6V12.75H11.25Z" fill="#FE6E36"/>
+								//- 	| </svg>
 						.experts__slider-item.swiper-slide
 							.experts__avatar
 								img.experts__img(src=`${baseDir}images/advisory-experts-3.jpg` alt="Антон Карпов")
@@ -89,10 +66,10 @@ section.section.experts
 							.experts__text
 								p.title-h3.title-h3_dark.experts__item-title(role="heading" aria-level="3") Антон Карпов
 								p.text.text_middle.experts__item-text Вице-президент и директор по ИБ VK
-								a.link.experts__item-button.js-experts-button(data-target="expert-5") Биография эксперта
-									| <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-									| <path fill-rule="evenodd" clip-rule="evenodd" d="M11.25 12.75V18H12.75V12.75H18V11.25H12.75V6H11.25V11.25H6V12.75H11.25Z" fill="#FE6E36"/>
-									| </svg>
+								//- a.link.experts__item-button.js-experts-button(data-target="expert-5") Биография эксперта
+								//- 	| <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								//- 	| <path fill-rule="evenodd" clip-rule="evenodd" d="M11.25 12.75V18H12.75V12.75H18V11.25H12.75V6H11.25V11.25H6V12.75H11.25Z" fill="#FE6E36"/>
+								//- 	| </svg>
 						.experts__slider-item.swiper-slide
 							.experts__avatar
 								img.experts__img(src=`${baseDir}images/advisory-experts-10.jpg` alt="Евгения Григорьева")
@@ -100,10 +77,10 @@ section.section.experts
 							.experts__text
 								p.title-h3.title-h3_dark.experts__item-title(role="heading" aria-level="3") Евгения Григорьева
 								p.text.text_middle.experts__item-text Действующий Advisory Board директор в нескольких российских компаниях
-								a.link.experts__item-button.js-experts-button(data-target="expert-6") Биография эксперта
-									| <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-									| <path fill-rule="evenodd" clip-rule="evenodd" d="M11.25 12.75V18H12.75V12.75H18V11.25H12.75V6H11.25V11.25H6V12.75H11.25Z" fill="#FE6E36"/>
-									| </svg>
+								//- a.link.experts__item-button.js-experts-button(data-target="expert-6") Биография эксперта
+								//- 	| <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								//- 	| <path fill-rule="evenodd" clip-rule="evenodd" d="M11.25 12.75V18H12.75V12.75H18V11.25H12.75V6H11.25V11.25H6V12.75H11.25Z" fill="#FE6E36"/>
+								//- 	| </svg>
 		.experts__slider-fake-slider.swiper.js-experts-fake-slider.visually-hidden
 			.experts__slider-fake-wrapper.swiper-wrapper
 		.experts__bio

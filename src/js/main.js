@@ -535,6 +535,13 @@ function initProductsAdvantagesSlider() {
 
 		function initSwiper() {
 			if (!swiperProductsAdvantages) {
+				const swiperContainer = document.querySelector(
+					".js-advantages-slider-init"
+				);
+				const slidesCount = swiperContainer
+					? swiperContainer.children.length
+					: 0;
+
 				swiperProductsAdvantages = new Swiper(
 					".js-advantages-slider-init",
 					{
@@ -681,6 +688,114 @@ function openBioExpert() {
 		});
 	});
 }
+
+setTimeout(() => {
+	let item = document.querySelector(".products-advantages__item3");
+	if (item) {
+		item.addEventListener("mouseenter", function () {
+			let circle = document.querySelector(
+				".products-advantages__icon-7_circle-1"
+			);
+			let circle2 = document.querySelector(
+				".products-advantages__icon-7_circle-2"
+			);
+			let circle3 = document.querySelector(
+				".products-advantages__icon-7_circle-3"
+			);
+			let radius1 = 1; // Начальный радиус для первого круга
+			let radius2 = 1; // Начальный радиус для второго круга
+			let radius3 = 1;
+			let isShrinking = true; // Флаг для изменения радиусов
+			let isAnimating = false;
+
+			if (!isAnimating) {
+				isAnimating = true;
+
+				// Функция для плавного изменения радиуса первого круга
+				function updateRadius() {
+					if (isShrinking) {
+						if (radius1 > 0.5) {
+							radius1 -= 0.05;
+							circle.setAttribute("r", radius1);
+						} else {
+							isShrinking = false;
+						}
+					} else {
+						if (radius1 < 1) {
+							radius1 += 0.05;
+							circle.setAttribute("r", radius1);
+						} else {
+							isShrinking = true;
+						}
+					}
+				}
+
+				// Функция для плавного изменения радиуса второго круга
+				function updateRadius2() {
+					if (isShrinking) {
+						if (radius2 > 0.7) {
+							radius2 -= 0.07;
+							circle2.setAttribute("r", radius2);
+						} else {
+							isShrinking = false;
+						}
+					} else {
+						if (radius2 < 1) {
+							radius2 += 0.07;
+							circle2.setAttribute("r", radius2);
+						} else {
+							isShrinking = true;
+						}
+					}
+				}
+
+				function updateRadius3() {
+					if (isShrinking) {
+						if (radius3 > 0.8) {
+							radius3 -= 0.08;
+							circle3.setAttribute("r", radius3);
+						} else {
+							isShrinking = false;
+						}
+					} else {
+						if (radius3 < 1) {
+							radius3 += 0.08;
+							circle3.setAttribute("r", radius3);
+						} else {
+							isShrinking = true;
+						}
+					}
+				}
+
+				// Бесконечный интервал для плавного изменения радиусов
+				interval1 = setInterval(updateRadius, 50);
+				interval2 = setInterval(updateRadius2, 150); // Для второго круга
+				interval3 = setInterval(updateRadius3, 150);
+			}
+		});
+
+		item.addEventListener("mouseleave", function () {
+			let circle = document.querySelector(
+				".products-advantages__icon-7_circle-1"
+			);
+			let circle2 = document.querySelector(
+				".products-advantages__icon-7_circle-2"
+			);
+			let circle3 = document.querySelector(
+				".products-advantages__icon-7_circle-3"
+			);
+			clearInterval(interval1); // Останавливаем анимацию первого круга
+			clearInterval(interval2); // Останавливаем анимацию второго круга
+			clearInterval(interval3);
+			circle.setAttribute("r", 1); // Восстанавливаем радиус первого круга
+			circle2.setAttribute("r", 1); // Восстанавливаем радиус второго круга
+			circle3.setAttribute("r", 1);
+			isAnimating = false;
+		});
+	} else {
+		console.log(".products-advantages__item3 не найден на странице");
+	}
+}, 200);
 
 function initPartnersSlider() {
 	if (document.querySelector(".partners") !== null) {

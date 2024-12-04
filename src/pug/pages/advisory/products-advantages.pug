@@ -1,70 +1,230 @@
 section.section.section_first.products-advantages
 	.wrapper.products-advantages__wrapper
-		p.title-h2.section__title-h2(role="heading" aria-level="2") Наша цель — объединять стартапы и экспертов
-		.pagination.products-advantages__pagination
+		p.title-h2_second.section__title-h2.products-advantages__title.products-advantages__advisory-title(role="heading" aria-level="2") Наша цель —  объединять стартапы и экспертов
+		.pagination.products-advantages__pagination.products-advantages__advisory-pagination
 			button.pagination__arrow.pagination__arrow-prev.js-products-advantages__prev
 				+svg("arrow-slide-prev")(class="pagination__svg pagination__svg_orange")
 			button.pagination__arrow.pagination__arrow-next.js-products-advantages__next
 				+svg("arrow-slide-next")(class="pagination__svg pagination__svg_orange")
-		.products-advantages__list-wrapper.swiper.js-advantages-slider-init
+		.products-advantages__list-wrapper.js-advantages-slider-init.products-advisory__list-wrapper.swiper
 			.products-advantages__list.swiper-wrapper
-				.products-advantages__item.swiper-slide
+				.products-advantages__item.swiper-slide.swiper-slide1
+					p.text.text_big.products-advantages__item-title(role="heading" aria-level="3") СОЗДАЕМ СРЕДУ ДЛЯ РАЗВИТИЯ
+
 					.products-advantages__icon-wrapper
-						| <svg width="200" height="155" viewBox="0 0 200 155" fill="none" xmlns="http://www.w3.org/2000/svg">
-						| <path class="products-advantages__icon-3_shield" d="M143.7 23H56.4894C54.0988 23 51 27.0675 51 28.4884V78.4172C51 91.0636 58.1184 103.035 71.7003 115.042C81.3511 123.568 90.6831 128.541 95.6059 131.703C96.934 132.555 98.51 133.017 100.086 133C101.662 133 103.238 132.555 104.566 131.703C109.507 128.541 118.821 123.586 128.472 115.042C142.054 103.035 149.172 91.0636 149.172 78.4172V28.4884C149.172 27.0497 146.091 23 143.683 23H143.7Z" fill="url(#paint0_linear_619_263)"/>
-						| <defs>
-						| <linearGradient id="paint0_linear_619_263" x1="76.3846" y1="7.13461" x2="149.365" y2="133" gradientUnits="userSpaceOnUse">
-						| <stop stop-color="#FE6E36"/>
-						| <stop offset="1" stop-color="#FE6E36" stop-opacity="0"/>
-						| </linearGradient>
-						| </defs>
-						| </svg>
-					p.title-h4.products-advantages__item-title(role="heading" aria-level="3") Создаём среду для развития
+						<svg width="386" height="256" viewBox="0 0 386 256" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+						<g clip-path="url(#clip0_4507_6289)">
+						<rect width="386" height="256" fill="#CEAFFF"/>
+						<path class="products-advantages__icon-6_rectangle-4" d="M205.468 217.92L18.895 177.736C14.9204 176.88 12.9331 176.452 12.6828 175.982C12.4684 175.58 12.5123 175.089 12.7945 174.732C13.1242 174.314 15.1559 174.246 19.2193 174.108L205.256 167.812C205.39 167.808 205.456 167.805 205.523 167.811C205.581 167.816 205.64 167.825 205.697 167.839C205.761 167.854 205.824 167.877 205.949 167.923L363.881 225.812C363.979 225.848 364.028 225.866 364.078 225.88C364.122 225.891 364.167 225.901 364.213 225.907C364.264 225.914 364.316 225.917 364.42 225.922L205.762 217.959C205.707 217.956 205.679 217.954 205.651 217.952C205.626 217.949 205.602 217.946 205.577 217.942C205.55 217.937 205.523 217.931 205.468 217.92Z" fill="url(#paint0_radial_4507_6289)"/>
+						<path class="products-advantages__icon-6_rectangle-4" d="M205.468 217.92L18.895 177.736C14.9204 176.88 12.9331 176.452 12.6828 175.982C12.4684 175.58 12.5123 175.089 12.7945 174.732C13.1242 174.314 15.1559 174.246 19.2193 174.108L205.256 167.812C205.39 167.808 205.456 167.805 205.523 167.811C205.581 167.816 205.64 167.825 205.697 167.839C205.761 167.854 205.824 167.877 205.949 167.923L363.881 225.812C363.979 225.848 364.028 225.866 364.078 225.88C364.122 225.891 364.167 225.901 364.213 225.907C364.264 225.914 364.316 225.917 364.42 225.922L205.762 217.959C205.707 217.956 205.679 217.954 205.651 217.952C205.626 217.949 205.602 217.946 205.577 217.942C205.55 217.937 205.523 217.931 205.468 217.92Z" fill="url(#pattern0_4507_6289)" fill-opacity="0.05"/>
+						<g filter="url(#filter0_f_4507_6289)">
+						<path class="products-advantages__icon-6_rectangle-4" d="M206.885 213.72L64.4409 180.952C60.7077 180.093 58.8411 179.663 58.5966 179.195C58.3871 178.793 58.4336 178.306 58.7151 177.951C59.0437 177.537 60.9578 177.468 64.786 177.33L206.659 172.201C206.801 172.196 206.872 172.194 206.942 172.2C207.005 172.205 207.067 172.216 207.127 172.231C207.195 172.249 207.262 172.275 207.394 172.327L329.785 220.244C329.888 220.284 329.939 220.304 329.992 220.319C330.039 220.332 330.087 220.343 330.135 220.35C330.166 220.355 330.196 220.358 330.236 220.36L207.198 213.764C207.139 213.761 207.109 213.76 207.079 213.757C207.053 213.754 207.027 213.75 207.001 213.746C206.972 213.74 206.943 213.734 206.885 213.72Z" fill="url(#paint1_radial_4507_6289)"/>
+						</g>
+						<path class="products-advantages__icon-6_rectangle-3" d="M201.273 165.954L-8 138.712L201.12 138.711C201.177 138.711 201.206 138.711 201.234 138.713C201.26 138.714 201.285 138.716 201.31 138.719C201.339 138.722 201.367 138.727 201.424 138.737L341.791 162.309C347.577 163.281 350.469 163.767 350.738 164.245C350.968 164.654 350.926 165.162 350.631 165.527C350.287 165.954 347.354 165.954 341.487 165.954H201.273Z" fill="url(#paint2_radial_4507_6289)"/>
+						<path class="products-advantages__icon-6_rectangle-3" d="M201.273 165.954L-8 138.712L201.12 138.711C201.177 138.711 201.206 138.711 201.234 138.713C201.26 138.714 201.285 138.716 201.31 138.719C201.339 138.722 201.367 138.727 201.424 138.737L341.791 162.309C347.577 163.281 350.469 163.767 350.738 164.245C350.968 164.654 350.926 165.162 350.631 165.527C350.287 165.954 347.354 165.954 341.487 165.954H201.273Z" fill="url(#pattern1_4507_6289)" fill-opacity="0.05"/>
+						<g filter="url(#filter1_f_4507_6289)">
+						<path class="products-advantages__icon-6_rectangle-3" d="M201.566 163.026L37.2754 141.639L201.413 141.639C201.471 141.639 201.499 141.639 201.528 141.64C201.553 141.642 201.579 141.644 201.604 141.647C201.632 141.65 201.661 141.655 201.717 141.664L307.216 159.382C313.002 160.353 315.895 160.839 316.164 161.318C316.394 161.726 316.351 162.234 316.057 162.599C315.713 163.026 312.78 163.026 306.913 163.026H201.566Z" fill="url(#paint3_radial_4507_6289)"/>
+						</g>
+						<path d="M269.538 107.626C270.179 107.626 270.5 107.626 270.748 107.498C270.963 107.387 271.143 107.203 271.25 106.985C271.373 106.735 271.367 106.42 271.354 105.791C271.136 94.909 268.977 84.1589 264.983 74.093C260.764 63.4617 254.58 53.8019 246.785 45.6651C238.989 37.5282 229.735 31.0737 219.55 26.6701C209.364 22.2665 198.448 20 187.423 20C176.399 20 165.483 22.2665 155.297 26.6701C145.112 31.0738 135.858 37.5282 128.062 45.6651C120.267 53.8019 114.083 63.4617 109.864 74.093C105.87 84.1589 103.711 94.909 103.493 105.791C103.48 106.42 103.474 106.735 103.597 106.985C103.704 107.203 103.884 107.387 104.099 107.498C104.347 107.626 104.668 107.626 105.309 107.626L187.423 107.626H269.538Z" fill="url(#paint4_radial_4507_6289)"/>
+						<path d="M269.538 107.626C270.179 107.626 270.5 107.626 270.748 107.498C270.963 107.387 271.143 107.203 271.25 106.985C271.373 106.735 271.367 106.42 271.354 105.791C271.136 94.909 268.977 84.1589 264.983 74.093C260.764 63.4617 254.58 53.8019 246.785 45.6651C238.989 37.5282 229.735 31.0737 219.55 26.6701C209.364 22.2665 198.448 20 187.423 20C176.399 20 165.483 22.2665 155.297 26.6701C145.112 31.0738 135.858 37.5282 128.062 45.6651C120.267 53.8019 114.083 63.4617 109.864 74.093C105.87 84.1589 103.711 94.909 103.493 105.791C103.48 106.42 103.474 106.735 103.597 106.985C103.704 107.203 103.884 107.387 104.099 107.498C104.347 107.626 104.668 107.626 105.309 107.626L187.423 107.626H269.538Z" fill="url(#pattern2_4507_6289)" fill-opacity="0.05"/>
+						<path class="products-advantages__icon-6_rectangle-1" d="M208.5 117C167.333 114.667 84.2 110 81 110H304.5L208.5 117Z" fill="url(#paint5_radial_4507_6289)"/>
+						<path class="products-advantages__icon-6_rectangle-1" d="M208.5 117C167.333 114.667 84.2 110 81 110H304.5L208.5 117Z" fill="url(#pattern3_4507_6289)" fill-opacity="0.05"/>
+						<path class="products-advantages__icon-6_rectangle-2" d="M210.084 123C157.589 125.333 32.0805 125.5 28 125.5L214 134H364.5L210.084 123Z" fill="url(#paint6_radial_4507_6289)"/>
+						<path class="products-advantages__icon-6_rectangle-2" d="M210.084 123C157.589 125.333 32.0805 125.5 28 125.5L214 134H364.5L210.084 123Z" fill="url(#pattern4_4507_6289)" fill-opacity="0.05"/>
+						<g filter="url(#filter2_f_4507_6289)">
+						<path d="M206.352 126C176.556 127.061 105.316 127.136 103 127.136L208.575 131H294L206.352 126Z" fill="url(#paint7_radial_4507_6289)"/>
+						</g>
+						<g filter="url(#filter3_f_4507_6289)">
+						<path d="M208.154 115C182.92 113.667 131.962 111 130 111H267L208.154 115Z" fill="url(#paint8_radial_4507_6289)"/>
+						</g>
+						</g>
+						<defs>
+						<pattern id="pattern0_4507_6289" patternContentUnits="objectBoundingBox" width="4.0868" height="24.7448">
+						<use xlink:href="#image0_4507_6289" transform="scale(0.00399101 0.0241648)"/>
+						</pattern>
+						<filter id="filter0_f_4507_6289" x="52.584" y="166.314" width="283.535" height="59.9292" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+						<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+						<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+						<feGaussianBlur stdDeviation="2.94129" result="effect1_foregroundBlur_4507_6289"/>
+						</filter>
+						<pattern id="pattern1_4507_6289" patternContentUnits="objectBoundingBox" width="4.00694" height="52.7859">
+						<use xlink:href="#image0_4507_6289" transform="scale(0.00391303 0.0515488)"/>
+						</pattern>
+						<filter id="filter1_f_4507_6289" x="31.3928" y="135.756" width="290.801" height="33.1523" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+						<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+						<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+						<feGaussianBlur stdDeviation="2.94129" result="effect1_foregroundBlur_4507_6289"/>
+						</filter>
+						<pattern id="pattern2_4507_6289" patternContentUnits="objectBoundingBox" width="8.56487" height="8.20551">
+						<use xlink:href="#image0_4507_6289" transform="scale(0.00836414 0.00801319)"/>
+						</pattern>
+						<pattern id="pattern3_4507_6289" patternContentUnits="objectBoundingBox" width="6.43415" height="205.433">
+						<use xlink:href="#image0_4507_6289" transform="scale(0.00628335 0.200618)"/>
+						</pattern>
+						<pattern id="pattern4_4507_6289" patternContentUnits="objectBoundingBox" width="4.2735" height="130.73">
+						<use xlink:href="#image0_4507_6289" transform="scale(0.00417334 0.127666)"/>
+						</pattern>
+						<filter id="filter2_f_4507_6289" x="97.1174" y="120.117" width="202.765" height="16.7652" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+						<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+						<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+						<feGaussianBlur stdDeviation="2.94129" result="effect1_foregroundBlur_4507_6289"/>
+						</filter>
+						<filter id="filter3_f_4507_6289" x="124.117" y="105.117" width="148.765" height="15.7652" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+						<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+						<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+						<feGaussianBlur stdDeviation="2.94129" result="effect1_foregroundBlur_4507_6289"/>
+						</filter>
+						<radialGradient id="paint0_radial_4507_6289" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(196.713 201.706) rotate(107.2) scale(44.1487 331.954)">
+						<stop offset="0.0799761" stop-color="white"/>
+						<stop offset="1" stop-color="white" stop-opacity="0"/>
+						</radialGradient>
+						<radialGradient id="paint1_radial_4507_6289" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(200.132 200.291) rotate(106.163) scale(36.3951 259.003)">
+						<stop offset="0.0799761" stop-color="#D4AEFF"/>
+						<stop offset="1" stop-color="#D4AEFF" stop-opacity="0"/>
+						</radialGradient>
+						<radialGradient id="paint2_radial_4507_6289" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(177.643 155.328) rotate(94.39) scale(19.0519 312.958)">
+						<stop offset="0.0799761" stop-color="white"/>
+						<stop offset="1" stop-color="white" stop-opacity="0"/>
+						</radialGradient>
+						<radialGradient id="paint3_radial_4507_6289" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(183.016 154.684) rotate(94.39) scale(14.9569 245.69)">
+						<stop offset="0.0799761" stop-color="#D4AEFF"/>
+						<stop offset="1" stop-color="#D4AEFF" stop-opacity="0"/>
+						</radialGradient>
+						<radialGradient id="paint4_radial_4507_6289" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(187.423 107.626) rotate(90) scale(87.626 83.9494)">
+						<stop offset="0.735" stop-color="white" stop-opacity="0"/>
+						<stop offset="1" stop-color="white"/>
+						</radialGradient>
+						<radialGradient id="paint5_radial_4507_6289" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(191 105.5) rotate(5.58724) scale(184.878 2191.98)">
+						<stop offset="0.0799761" stop-color="white"/>
+						<stop offset="1" stop-color="white" stop-opacity="0"/>
+						</radialGradient>
+						<radialGradient id="paint6_radial_4507_6289" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(187.769 134.5) rotate(-4.38692) scale(235.32 2195.99)">
+						<stop offset="0.0799761" stop-color="white"/>
+						<stop offset="1" stop-color="white" stop-opacity="0"/>
+						</radialGradient>
+						<radialGradient id="paint7_radial_4507_6289" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(206.707 134.75) rotate(-93.5031) scale(24.4206 1139.72)">
+						<stop offset="0.592794" stop-color="#D4AEFF"/>
+						<stop offset="1" stop-color="#D4AEFF" stop-opacity="0"/>
+						</radialGradient>
+						<radialGradient id="paint8_radial_4507_6289" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(204.387 108) rotate(93.1416) scale(19.5294 817.792)">
+						<stop offset="0.592794" stop-color="#D4AEFF"/>
+						<stop offset="1" stop-color="#D4AEFF" stop-opacity="0"/>
+						</radialGradient>
+						<clipPath id="clip0_4507_6289">
+						<rect width="386" height="256" fill="white"/>
+						</clipPath>
+						</defs>
+						</svg>
 					p.text.products-advantages__text Организуем процессы для роста прорывных проектов и стартапов в сфере ИБ и ИТ
-				.products-advantages__item.swiper-slide
+				.products-advantages__item.swiper-slide.swiper-slide2
+					p.text.text_big.products-advantages__item-title(role="heading" aria-level="3") РАЗВИВАЕМ НАПРАВЛЕНИЕ ПОДДЕРЖКИ “ADVISORY BOARD”
 					.products-advantages__icon-wrapper
-						| <svg class="solar-cpt-advantages__icon-2" xmlns="http://www.w3.org/2000/svg" width="112" height="110" viewBox="0 0 112 110" fill="none">
-						| <path d="M110.103 110H1.2441C0.556734 110 0 109.443 0 108.756C0 78.0578 24.9753 53.0825 55.6734 53.0825C86.3715 53.0825 111.347 78.0578 111.347 108.756C111.347 109.443 110.79 110 110.103 110Z" fill="url(#paint0_linear_391_207)"/>
-						| <path class="solar-cpt-advantages__icon-2_path" d="M55.6733 54.4293C70.7035 54.4293 82.8879 42.2449 82.8879 27.2146C82.8879 12.1844 70.7035 0 55.6733 0C40.6431 0 28.4587 12.1844 28.4587 27.2146C28.4587 42.2449 40.6431 54.4293 55.6733 54.4293Z" fill="url(#paint1_linear_391_207)"/>
-						| <defs>
-						| <linearGradient id="paint0_linear_391_207" x1="55.6734" y1="53.0825" x2="55.6734" y2="110" gradientUnits="userSpaceOnUse">
-						| <stop stop-color="#FFD1C0"/>
-						| <stop offset="1" stop-color="#FFD7C7" stop-opacity="0.1"/>
-						| </linearGradient>
-						| <linearGradient id="paint1_linear_391_207" x1="55.6733" y1="0" x2="55.6733" y2="54.4293" gradientUnits="userSpaceOnUse">
-						| <stop stop-color="#FE6E36"/>
-						| <stop offset="1" stop-color="#FFD7C7"/>
-						| </linearGradient>
-						| </defs>
-						| </svg>
-					p.title-h4.products-advantages__item-title(role="heading" aria-level="3") Развиваем направление поддержки «Advisory board»
-					p.text.products-advantages__text Собрали пул лидеров с уникальным опытом в операционном менеджменте, маркетинге, кадрах, продажах и построении партнерств
-				.products-advantages__item.swiper-slide
+						<svg width="288" height="237" viewBox="0 0 288 237" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+						<rect class="products-advantages__icon-5_block-1" x="11" y="12.7917" width="89.0196" height="175.643" rx="5" fill="url(#paint0_linear_4106_13417)"/>
+						<rect class="products-advantages__icon-5_block-1" x="11" y="12.7917" width="89.0196" height="175.643" rx="5" fill="url(#pattern0_4106_13417)" fill-opacity="0.05"/>
+						<g filter="url(#filter0_f_4106_13417)">
+						<rect class="products-advantages__icon-5_gradient-1"  x="20.2891" y="27.6273" width="70.4416" height="186.564" rx="5" fill="#FFE147"/>
+						<rect class="products-advantages__icon-5_gradient-1"  x="20.2891" y="27.6273" width="70.4416" height="186.564" rx="5" fill="url(#pattern1_4106_13417)" fill-opacity="0.05"/>
+						</g>
+						<rect class="products-advantages__icon-5_block-2" x="99.2461" y="3" width="92.1159" height="204.546" rx="5" fill="url(#paint1_linear_4106_13417)"/>
+						<g filter="url(#filter1_f_4106_13417)">
+						<rect class="products-advantages__icon-5_gradient-2" x="112.792" y="19.8668" width="65.023" height="196.78" rx="5" fill="#FFE147"/>
+						<rect class="products-advantages__icon-5_gradient-2" x="112.792" y="19.8668" width="65.023" height="196.78" rx="5" fill="url(#pattern2_4106_13417)" fill-opacity="0.05"/>
+						</g>
+						<rect class="products-advantages__icon-5_block-3" x="190.587" y="12.7917" width="86.6973" height="194.755" rx="5" fill="url(#paint2_linear_4106_13417)"/>
+						<rect class="products-advantages__icon-5_block-3" x="190.587" y="12.7917" width="86.6973" height="194.755" rx="5" fill="url(#pattern3_4106_13417)" fill-opacity="0.05"/>
+						<g filter="url(#filter2_f_4106_13417)">
+						<rect class="products-advantages__icon-5_gradient-3" x="199.876" y="27.6273" width="68.1193" height="186.564" rx="5" fill="#FFE147"/>
+						<rect class="products-advantages__icon-5_gradient-3" x="199.876" y="27.6273" width="68.1193" height="186.564" rx="5" fill="url(#pattern4_4106_13417)" fill-opacity="0.05"/>
+						</g>
+						<defs>
+						<pattern id="pattern0_4106_13417" patternContentUnits="objectBoundingBox" width="11.5031" height="5.83">
+						<use xlink:href="#image0_4106_13417" transform="scale(0.0112335 0.00569336)"/>
+						</pattern>
+						<filter id="filter0_f_4106_13417" x="0.489063" y="7.82732" width="110.041" height="226.164" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+						<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+						<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+						<feGaussianBlur stdDeviation="9.9" result="effect1_foregroundBlur_4106_13417"/>
+						</filter>
+						<pattern id="pattern1_4106_13417" patternContentUnits="objectBoundingBox" width="14.5369" height="5.48873">
+						<use xlink:href="#image0_4106_13417" transform="scale(0.0141962 0.00536009)"/>
+						</pattern>
+						<filter id="filter1_f_4106_13417" x="92.9925" y="0.0668221" width="104.623" height="236.38" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+						<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+						<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+						<feGaussianBlur stdDeviation="9.9" result="effect1_foregroundBlur_4106_13417"/>
+						</filter>
+						<pattern id="pattern2_4106_13417" patternContentUnits="objectBoundingBox" width="15.7483" height="5.20377">
+						<use xlink:href="#image0_4106_13417" transform="scale(0.0153792 0.00508181)"/>
+						</pattern>
+						<pattern id="pattern3_4106_13417" patternContentUnits="objectBoundingBox" width="11.8112" height="5.2579">
+						<use xlink:href="#image0_4106_13417" transform="scale(0.0115344 0.00513467)"/>
+						</pattern>
+						<filter id="filter2_f_4106_13417" x="180.076" y="7.82732" width="107.719" height="226.164" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+						<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+						<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+						<feGaussianBlur stdDeviation="9.9" result="effect1_foregroundBlur_4106_13417"/>
+						</filter>
+						<pattern id="pattern4_4106_13417" patternContentUnits="objectBoundingBox" width="15.0324" height="5.48873">
+						<use xlink:href="#image0_4106_13417" transform="scale(0.0146801 0.00536009)"/>
+						</pattern>
+						<linearGradient id="paint0_linear_4106_13417" x1="55.8347" y1="-2.55058" x2="53.6359" y2="228.628" gradientUnits="userSpaceOnUse">
+						<stop offset="0.0799761" stop-color="white"/>
+						<stop offset="1" stop-color="white" stop-opacity="0"/>
+						</linearGradient>
+						<linearGradient id="paint1_linear_4106_13417" x1="145.64" y1="-14.867" x2="142.805" y2="270.368" gradientUnits="userSpaceOnUse">
+						<stop offset="0.0799761" stop-color="white"/>
+						<stop offset="1" stop-color="white" stop-opacity="0"/>
+						</linearGradient>
+						<linearGradient id="paint2_linear_4106_13417" x1="234.252" y1="-4.21995" x2="232.294" y2="252.116" gradientUnits="userSpaceOnUse">
+						<stop offset="0.0799761" stop-color="white"/>
+						<stop offset="1" stop-color="white" stop-opacity="0"/>
+						</linearGradient>
+
+						</defs>
+						</svg>
+
+					p.text.products-advantages__text Собрали пул лидеров с уникальным опытом в операционном менеджменте, маркетинге, кадрах, продажах и построении партнерств
+
+				.products-advantages__item.products-advantages__item3.swiper-slide.swiper-slide3
+					p.text.text_big.products-advantages__item-title(role="heading" aria-level="3") ПОМОГАЕМ  СТАРТАПУ СФОРМУЛИРОВАТЬ ЗАПРОС И НАЙТИ РЕШЕНИЕ
 					.products-advantages__icon-wrapper
-						| <svg width="115" height="114" viewBox="0 0 115 114" fill="none" xmlns="http://www.w3.org/2000/svg">
-						| <path class="products-inrights-advantages-icon-1__4" d="M43.8665 108.96C43.8665 113.432 38.4497 115.686 35.2505 112.523L1.47721 78.7132C-1.68563 75.5504 0.568344 70.0972 5.03994 70.0972H36.632C40.631 70.0972 43.8665 73.3328 43.8665 77.3318V108.924V108.96Z" fill="url(#paint0_linear_844_205)"/>
-						| <path class="products-inrights-advantages-icon-1__1" d="M43.8665 36.6321C43.8665 40.6311 40.631 43.8666 36.632 43.8666H5.03994C0.568344 43.8666 -1.68563 38.4498 1.47721 35.2506L35.2869 1.47733C38.4497 -1.68551 43.9029 0.568467 43.9029 5.04007V36.6321H43.8665Z" fill="url(#paint1_linear_844_205)"/>
-						| <path class="products-inrights-advantages-icon-1__3" d="M112.523 78.7133L78.7129 112.523C75.5501 115.686 70.0969 113.432 70.0969 108.96V77.3681C70.0969 73.3692 73.3325 70.1336 77.3315 70.1336H108.923C113.395 70.1336 115.649 75.5504 112.486 78.7496L112.523 78.7133Z" fill="url(#paint2_linear_844_205)"/>
-						| <path class="products-inrights-advantages-icon-1__2" d="M108.96 43.8668H77.3682C73.3692 43.8668 70.1337 40.6312 70.1337 36.6322V5.04019C70.1337 0.568589 75.5505 -1.68539 78.7497 1.47745L112.559 35.2871C115.722 38.4499 113.468 43.9031 108.997 43.9031L108.96 43.8668Z" fill="url(#paint3_linear_844_205)"/>
-						| <defs>
-						| <linearGradient id="paint0_linear_844_205" x1="42.0473" y1="69.8414" x2="19.242" y2="94.7847" gradientUnits="userSpaceOnUse">
-						| <stop stop-color="#FE6E36"/>
-						| <stop offset="1" stop-color="#F3D6CA"/>
-						| </linearGradient>
-						| <linearGradient id="paint1_linear_844_205" x1="42.0473" y1="44.1854" x2="17.104" y2="21.3801" gradientUnits="userSpaceOnUse">
-						| <stop stop-color="#FE6E36"/>
-						| <stop offset="1" stop-color="#F3D6CA"/>
-						| </linearGradient>
-						| <linearGradient id="paint2_linear_844_205" x1="69.8412" y1="71.2667" x2="92.6465" y2="94.7847" gradientUnits="userSpaceOnUse">
-						| <stop stop-color="#FE6E36"/>
-						| <stop offset="1" stop-color="#F3D6CA"/>
-						| </linearGradient>
-						| <linearGradient id="paint3_linear_844_205" x1="71.2667" y1="45.6108" x2="94.7847" y2="21.3801" gradientUnits="userSpaceOnUse">
-						| <stop stop-color="#FE6E36"/>
-						| <stop offset="1" stop-color="#F3D6CA"/>
-						| </linearGradient>
-						| </defs>
-						| </svg>
-					p.title-h4.products-advantages__item-title(role="heading" aria-level="3") Помогаем  стартапу сформулировать запрос и найти решение
-					p.text.products-advantages__text Подберём advisory-ментора, вместе с которым вы создадите решающее конкурентное преимущество на текущей ступени развития бизнеса
+						<svg width="386" height="256" viewBox="0 0 386 256" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+						<rect width="386" height="256" fill="#FFE9E1"/>
+						<circle cx="192.865" cy="127.865" r="113.865" fill="url(#paint0_radial_4106_13463)"/>
+						<circle cx="192.865" cy="127.865" r="113.865" fill="url(#pattern0_4106_13463)" fill-opacity="0.05"/>
+						<ellipse cx="192.866" cy="127.865" rx="62.0864" ry="62.0864" fill="url(#paint1_radial_4106_13463)"/>
+						<ellipse cx="192.866" cy="127.865" rx="62.0864" ry="62.0864" fill="url(#pattern1_4106_13463)" fill-opacity="0.05"/>
+						<circle  cx="192.865" cy="127.865" r="28.5262" fill="url(#paint2_radial_4106_13463)"/>
+						<circle  cx="192.865" cy="127.865" r="28.5262" fill="url(#pattern2_4106_13463)" fill-opacity="0.05"/>
+						<defs>
+						<pattern id="pattern0_4106_13463" patternContentUnits="objectBoundingBox" width="4.49655" height="4.49655">
+						<use xlink:href="#image0_4106_13463" transform="scale(0.00439116)"/>
+						</pattern>
+						<pattern id="pattern1_4106_13463" patternContentUnits="objectBoundingBox" width="8.24657" height="8.24657">
+						<use xlink:href="#image0_4106_13463" transform="scale(0.00805329)"/>
+						</pattern>
+						<pattern id="pattern2_4106_13463" patternContentUnits="objectBoundingBox" width="17.9484" height="17.9484">
+						<use xlink:href="#image0_4106_13463" transform="scale(0.0175278)"/>
+						</pattern>
+						<radialGradient class="products-advantages__icon-7_circle-3" id="paint0_radial_4106_13463" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(192.865 127.865) rotate(90) scale(113.865)">
+						<stop offset="0.735" stop-color="white" stop-opacity="0"/>
+						<stop offset="1" stop-color="white"/>
+						</radialGradient>
+						<radialGradient class="products-advantages__icon-7_circle-2" id="paint1_radial_4106_13463" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(192.866 127.865) rotate(90) scale(62.0864 62.0864)">
+						<stop offset="0.74" stop-color="white" stop-opacity="0"/>
+						<stop offset="1" stop-color="white"/>
+						</radialGradient>
+						<radialGradient class="products-advantages__icon-7_circle-1" id="paint2_radial_4106_13463" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(192.865 127.865) rotate(90) scale(28.5262)">
+						<stop offset="0.74" stop-color="white" stop-opacity="0"/>
+						<stop offset="1" stop-color="white"/>
+						</radialGradient>
+						</defs>
+						</svg>
+
+					p.text.products-advantages__text Подберем advisory-ментора, с которым вы обеспечите себе конкурентное преимущество на текущей ступени развития бизнеса
+
 		button.btn.btn_big.btn_orange.products-advantages__btn.js-go-to-form(data-target="callback-form") Оставить заявку
+
+
+
